@@ -1,0 +1,55 @@
+[component] ===> [store] ===> [adapter] ===> API/data convert
+
+store:
+        [root]
+[fs]              [us]
+
+
+
+adapters :
+
+[BaseAjax]
+[PostAdapter] extends [BaseAjax]
+[UserAdapter] extends [BaseAjax]
+
+
+
+
+[user1]               [post] 123
+[user2]               [post] 234
+[user3]               [post]
+[user4]               [post]
+[user5]               [post]
+[user6]               [post]
+
+
+
+
+// NO "LIKE" ENTITY:
+User
+- Posts[]
+
+Post[]
+- Users[]
+
+
+
+
+// YES "LIKE" ENTITY:
+
+User
+- id
+- Likes[]
+
+Post
+- id
+- createdBy
+- Likes[]
+
+Like
+ - userId
+ - postId
+ - type (smiley, sad...)
+ - timestamp
+ - ...
+

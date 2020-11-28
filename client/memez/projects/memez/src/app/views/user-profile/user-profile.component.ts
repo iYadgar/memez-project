@@ -1,0 +1,19 @@
+import {Component, OnInit} from '@angular/core';
+import {RootStore} from '../../stores/root.store';
+import {UserStore} from '../../stores/entities/user.store';
+
+
+@Component({
+  selector   : 'mem-user-profile',
+  templateUrl: './user-profile.component.html',
+  styleUrls  : ['./user-profile.component.css']
+})
+export class UserProfileComponent implements OnInit {
+
+  constructor(public us: UserStore) {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

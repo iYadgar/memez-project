@@ -1,0 +1,28 @@
+<div class="user-profile-wrapper">
+
+
+  <div class="user-card">
+    <div class="user-picture">picture</div>
+    <div class="user-name">{{us.root.log.currentUser.name}}</div>
+    <div class="user-details">
+      This is the user details.
+    </div>
+    <div class="user-details">
+      This is the user details.
+    </div>
+    <div class="user-details">
+      This is the user details.
+    </div>
+    <div class="user-details">
+      This is the user details.
+    </div>
+
+  </div>
+
+  <mem-post-box (newPost)="us.root.ps.post($event)"></mem-post-box>
+  <div class="posts-container" *mobxAutorun>
+    <mem-post
+      *ngFor="let post of us.root.ps.posts"
+      [post]="post"></mem-post>
+  </div>
+</div>

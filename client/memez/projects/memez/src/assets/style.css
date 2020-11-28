@@ -1,0 +1,470 @@
+html, body, mem-layout {
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(#b86168, #F2F2F2 25%);
+}
+
+.app-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+}
+
+.app-navbar {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background: #a63841a6;
+  justify-content: space-between;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  overflow: auto;
+}
+
+mem-feed {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  overflow: scroll;
+  background: #ffffffa3;
+}
+
+
+.post-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  border-radius: 30px;
+  background: white;
+}
+
+.post-box-input {
+  display: flex;
+  width: 270px;
+  justify-content: space-evenly;
+}
+
+.post-input {
+  padding: 10px;
+}
+
+input {
+  border-radius: 10px;
+  background: #e0e0e0;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.post-box-btn {
+  display: flex;;
+  padding: 10px;
+
+
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: #5C9DF2;
+  cursor: pointer;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+
+}
+
+.btn:hover {
+  background: #60a3ff;
+}
+
+
+mem-post {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 20px;
+  width: 90%;
+  margin: 10px;
+  background: white;
+}
+
+.post-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.post-profile {
+  display: flex;
+  flex: 1;
+  height: 80px;
+}
+
+.post-avatar {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  width: 80px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+}
+
+.post-user-name {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  margin: 7px;
+  color: #305473;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+.post-content {
+  display: flex;
+  flex: 2;
+
+  justify-content: center;
+  margin-top: 9px;
+}
+
+.feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+
+.post {
+  display: flex;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.post-date-time {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-end;
+  margin: 10px;
+  justify-content: start;
+  color: #5c9df25c;
+}
+
+.main-header {
+  font-family: "PT Sans Caption";
+}
+
+
+.main-header {
+  display: flex;
+  align-items: center;
+
+  margin: 20px;
+
+}
+
+
+.main-title {
+  display: flex;
+  font-size: 4em;
+}
+
+.title-img {
+  display: flex;
+  height: 60px;
+  margin: 20px;
+}
+
+
+.navbar-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 90px;
+  border-right: 0.6px solid #45494c;
+  height: 100%;
+  border-left: 0.5px solid #45494c;
+  text-transform: uppercase;
+  font-family: 'Rubik';
+  background: #d249549c;
+}
+
+
+.navbar-btns {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+  margin: 10px;
+}
+
+
+.navbar-btn:hover {
+  background: #ff7a859c;
+}
+
+mem-user-profile {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  overflow: scroll;
+  background: #ffffffa3;
+}
+
+
+.user-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+
+  align-items: center;
+}
+
+.user-card {
+  display: flex;
+  width: 80%;
+  height: 360px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  margin: 10px;
+  flex-direction: column;
+  border-radius: 30px;
+  align-items: center;
+  background: white;
+}
+
+.user-picture {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+}
+
+.user-name {
+  display: flex;
+  font-size: 2.2em;
+  margin: 9px;
+  text-transform: capitalize;
+  color: #305473;
+  font-family: 'PT Sans Caption', sans-serif;
+}
+
+
+.user-details {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+
+img.delete-icon {
+  display: flex;
+  height: 25px;
+}
+
+.delete-btn {
+  display: flex;
+  width: 45px;
+  justify-content: center;
+  height: 45px;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.post-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.delete-btn:hover {
+  background: #f2f2f2;
+}
+
+
+mem-login {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  display: flex;
+  height: 70%;
+  width: 70%;
+  border-radius: 220px;
+}
+
+.login-landing {
+  display: flex;
+  flex: 1;
+  border-right: 1px solid #e0e0e0;
+  background: #b86168;
+  border-bottom-left-radius: 210px;
+  border-top-left-radius: 210px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 210px;
+  border-top-right-radius: 210px;
+  background: #ffffffa3;
+}
+
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  width: 80%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: white;
+}
+
+
+.user-name-input {
+  display: flex;
+  height: 32px;
+  width: 140px;
+  padding: 10px;
+}
+
+.submit-btn.btn {
+  display: flex;
+  width: 80px;
+  height: 40px;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+
+
+.login-img {
+  display: flex;
+  height: 61%;
+  margin: 30px;
+}
+
+
+.like-dashboard {
+  display: flex;
+  height: 35px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+img {
+}
+
+.like-img {
+  display: flex;
+}
+
+
+.like-btn.btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  width: 46px;
+  justify-content: center;
+  margin: 5px;
+}
+
+.like-btn {
+  display: flex;
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  height: 10px;
+}
+
+
+.mat-icon.like-icon:active {
+  font-size: 1.3em;
+}
+
+
+mat-icon.mat-icon.notranslate.like-icon.material-icons.mat-icon-no-color {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+
+.likes-amount {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.delete-and-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.liked-user {
+  text-transform: capitalize;
+}

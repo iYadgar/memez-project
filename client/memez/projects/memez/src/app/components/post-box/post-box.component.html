@@ -1,0 +1,14 @@
+<div class="post-box">
+
+  <div class="post-box-title">post your meme</div>
+
+  <div class="post-box-input">
+    <input #post_input
+           (keydown.enter)="postToFeed(post_input.value)"
+           class="post-input" type="text" placeholder="write something...">
+    <div class="post-box-btn btn" (click)="postToFeed(post_input.value)">
+      POST
+    </div>
+  </div>
+
+</div>

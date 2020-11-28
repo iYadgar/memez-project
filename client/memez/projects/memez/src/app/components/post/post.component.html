@@ -1,0 +1,53 @@
+<div class="post-wrapper">
+
+  <div class="post-profile">
+
+    <div class="post-avatar">
+      avatar
+    </div>
+
+    <div class="post-user-name">
+      User Name
+    </div>
+
+    <div class="delete-and-date">
+
+      <div class="delete-btn"
+           (click)="onPostDeleted(post)">
+        <img class="delete-icon" src="./assets/svg's/delete.svg" alt="">
+      </div>
+
+
+      <div class="post-date-time">
+        <div class="post-date">
+          {{post.date}}
+        </div>
+        <div class="post-time">
+          {{post.time}}
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="post-content">
+    {{post.content}}
+  </div>
+  <div class="like-dashboard">
+    <div class="like-btn">
+      <mat-icon (click)="onPostLiked(post)"
+                class="like-icon">favorite
+      </mat-icon>
+
+    </div>
+    <div class="likes-amount"
+         *ngIf="post.likes.length"
+         (click)="onDashboardClicked(post)">
+      {{post.likes.length}}</div>
+  </div>
+
+
+</div>

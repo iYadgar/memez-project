@@ -1,0 +1,38 @@
+1. create a login screen
+ - the user only needs to write down his name. check user store to verify that the user exists (in mock).
+
+2. after login, navigate to Feed
+3. add a "like" like (same as facebook)
+4. when displaying a post, display number of likes
+5. when clicking the likes number, show a dialog with all the users that liked this post (can use material design dialog or primeng or vanilla) (MODAL)
+
+what you need:
+1. login view component
+2. login store (hold current user info - username, password...)
+3. Like store
+
+entity stores
+- users
+- posts
+- likes
+
+view stores
+- feed store
+- userprofile store
+- login store
+
+
+
+next lesson spec:
+1. create server-side BE with node and express
+2. create GET API endpoints - getUsers, getPosts, getLikes, Login
+3. return Mock data from the server
+4. make POST API endpoints - createUser, createPost, createLike
+5. create mongo db with collections: users, posts, likes  (official mongodb npm package)
+
+FE:
+6. create createUser, createPost, createLike functions in the adapters and stores.
+
+
+FE bonus :
+make another BaseAdapter that saves and loads the data from localstorage.

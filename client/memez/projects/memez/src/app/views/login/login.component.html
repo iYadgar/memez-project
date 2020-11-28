@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+  <div class="login-landing">
+    <div class="main-title">MEMEZ</div>
+    <img class="login-img" src="./assets/svg's/Trollface.svg" alt="">
+
+  </div>
+  <div class="login-form">
+    <div class="form-wrapper">
+      <input #user_name
+             (keydown.enter)="ls.handleLogin(user_name.value)"
+             type="text" placeholder="enter your name" class="user-name-input">
+      <div (click)="ls.handleLogin(user_name.value)"
+           class="submit-btn btn">login
+      </div>
+    </div>
+  </div>
+</div>
