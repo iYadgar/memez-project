@@ -350,7 +350,7 @@ mem-login {
   flex-direction: column;
 }
 
-.login-form {
+.landing-form {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -467,4 +467,48 @@ mat-icon.mat-icon.notranslate.like-icon.material-icons.mat-icon-no-color {
 
 .liked-user {
   text-transform: capitalize;
+}
+
+
+.login-form {
+   display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 210px;
+  border-top-right-radius: 210px;
+  background: #ffffffa3;
+}
+
+.sign-up-button {
+    display: flex;
+    font-family: 'Montserrat';
+}
+
+span {}
+
+span.sign-up-route {
+    display: flex;
+    margin-left: 8px;
+    text-transform: capitalize;
+    font-family: 'PT Sans Caption';
+    cursor: pointer;
+    color: #5C9DF2;
+    text-decoration: underline;
+}
+
+mem-sign-up {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.sign-up-form {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    background: #ffffffa3;
+    align-items: center;
 }

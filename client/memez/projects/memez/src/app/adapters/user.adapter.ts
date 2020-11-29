@@ -1,6 +1,6 @@
 import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
-import {IUser}           from '../types/Entities/IUser';
+import {IUser}           from '../../../../../../../shared/types/Entities/IUser';
 import {HttpClient}      from '@angular/common/http';
 
 
@@ -20,6 +20,11 @@ export class UserAdapter extends BaseAjaxAdapter {
 
   async getUsers(): Promise<IUser[]> {
     return this.request('users');
+  }
+
+  async createNewUser(userName: string): Promise<IUser> {
+
+    return this.post('users', userName);
   }
 
 }

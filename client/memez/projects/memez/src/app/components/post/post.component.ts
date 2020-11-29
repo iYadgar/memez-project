@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {IPost}                                          from '../../types/Entities/IPost';
+import {IPost}                                          from '../../../../../../../../shared/types/Entities/IPost';
 
 @Component({
   selector   : 'mem-post',

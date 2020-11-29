@@ -1,10 +1,15 @@
 import {Request, Response} from "express";
 import {getPostService, getPostsService} from "./services";
 
-import {MOCK_POSTS} from "../../shared/mock/MOCK_POSTS";
-
-
+//get all posts
 export const getPostsController = (req: Request, res: Response) => {
     const posts = getPostsService()
-    res.json(posts)
+    res.json(posts).end()
+}
+//get specific post
+export const getPostController = (req: Request, res: Response) => {
+    const post = getPostService(req.params.id);
+    return post ? res.json(post).end() : res.status(404).json({msg: 'Post was not found'}).end()
+
+
 }

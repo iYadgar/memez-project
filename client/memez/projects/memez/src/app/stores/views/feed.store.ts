@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {RootStore} from '../root.store';
 import {MatDialog} from '@angular/material/dialog';
 import {action} from 'mobx-angular';
-import {IPost} from '../../types/Entities/IPost';
+import {IPost} from '../../../../../../../../shared/types/Entities/IPost';
 import {LikeDialogBoxComponent} from '../../components/like-dialog-box/like-dialog-box.component';
 
 @Injectable({providedIn: 'root'})

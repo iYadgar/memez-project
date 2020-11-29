@@ -1,8 +1,8 @@
 import {ILike} from './ILike';
 
 export interface IPost {
-  id: number
-  user_id: number
+  id: string
+  user_id: string
   content: string
   date: string
   time: string

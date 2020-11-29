@@ -1,7 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {toJS} from 'mobx';
-import {IUser} from '../../types/Entities/IUser';
+import {IUser} from '../../../../../../../../shared/types/Entities/IUser';
 
 @Component({
   selector: 'mem-dialog-box',

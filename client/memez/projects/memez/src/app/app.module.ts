@@ -15,6 +15,8 @@ import {MatButtonModule}         from '@angular/material/button';
 import {MatIconModule}           from '@angular/material/icon';
 import {LikeDialogBoxComponent}  from './components/like-dialog-box/like-dialog-box.component';
 import {MatDialogModule}         from '@angular/material/dialog';
+import { SignUpComponent } from './views/sign-up/sign-up.component';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import {MatDialogModule}         from '@angular/material/dialog';
     NavbarComponent,
     PostBoxComponent,
     LoginComponent,
-    LikeDialogBoxComponent
+    LikeDialogBoxComponent,
+    SignUpComponent
   ],
   imports     : [
     BrowserModule,

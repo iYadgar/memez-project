@@ -10,15 +10,13 @@ import {Router}            from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(
-    public ls: LoginStore,
-    private route: Router
+    public log: LoginStore,
   ) {
   }
 
   ngOnInit(): void {
 
   }
-
 
 
 }

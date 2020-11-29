@@ -9,6 +9,7 @@ const
 //middleware
 app.use(bodyParser.json());
 
+/*
 app.get('/api/users', (req: Request, res: Response) => {
     res.json(MOCK_USERS)
         .end()
@@ -22,6 +23,7 @@ app.get('/api/users/:id', (req: Request, res: Response) => {
     return res.json(found)
         .end()
 })
+*/
 
 
 

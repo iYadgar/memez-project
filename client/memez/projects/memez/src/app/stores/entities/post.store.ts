@@ -1,19 +1,18 @@
-import {Injectable} from '@angular/core';
+import {Injectable}         from '@angular/core';
 import {action, observable} from 'mobx-angular';
-import {RootStore} from '../root.store';
-import {IPost} from '../../types/Entities/IPost';
-
-import * as dayjs from 'dayjs';
-import {autorun} from 'mobx';
-import {MOCK_POSTS} from '../../../../../../../../shared/mock/MOCK_POSTS';
-import {ILike} from '../../types/Entities/ILike';
+import {RootStore}          from '../root.store';
+import {IPost}              from '../../../../../../../../shared/types/Entities/IPost';
+import * as dayjs           from 'dayjs';
+import {autorun}            from 'mobx';
+import {MOCK_POSTS}         from '../../../../../../../../shared/mock/MOCK_POSTS';
+import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostStore {
   @observable posts: IPost[] = [];
-  useMock: boolean = true;
+  useMock: boolean = false;
 
   constructor(
     public root: RootStore
@@ -29,19 +28,19 @@ export class PostStore {
       return this.posts = MOCK_POSTS;
     } else {
       this.posts = await this.root
-        .postAdapter
-        .getPosts();
+                             .postAdapter
+                             .getPosts();
     }
   }
 
   @action post(str: string) {
     let newPost: IPost = {
-      id: 1,
-      user_id: 5,
+      id     : `${Math.floor((Math.random()) * 100)}`,
+      user_id: `${Math.floor((Math.random()) * 100)}`,
       content: str,
-      date: dayjs().format('DD.MM.YY'),
-      time: dayjs().format('HH:mm'),
-      likes: []
+      date   : dayjs().format('DD.MM.YY'),
+      time   : dayjs().format('HH:mm'),
+      likes  : []
     }
     this.posts.unshift(newPost);
     this.root.log.currentUser.posts.push(newPost)

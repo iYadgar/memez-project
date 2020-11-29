@@ -7,10 +7,13 @@
   <div class="login-form">
     <div class="form-wrapper">
       <input #user_name
-             (keydown.enter)="ls.handleLogin(user_name.value)"
+             (keydown.enter)="log.handleLogin(user_name.value)"
              type="text" placeholder="enter your name" class="user-name-input">
-      <div (click)="ls.handleLogin(user_name.value)"
+      <div (click)="log.handleLogin(user_name.value)"
            class="submit-btn btn">login
+      </div>
+      <div class="sign-up-button">
+        New to MEMEZ ? <span class="sign-up-route" (click)="log.routeToSignUp()">sign up</span>
       </div>
     </div>
   </div>

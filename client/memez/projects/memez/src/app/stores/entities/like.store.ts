@@ -1,9 +1,9 @@
 import {Injectable}         from '@angular/core';
 import {action, observable} from 'mobx-angular';
-import {ILike}              from '../../types/Entities/ILike';
+import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
 import {RootStore}          from '../root.store';
 import {MOCK_LIKES}         from '../../../../../../../../shared/mock/MOCK_LIKES';
-import {IPost}              from '../../types/Entities/IPost';
+import {IPost}              from '../../../../../../../../shared/types/Entities/IPost';
 import * as dayjs           from 'dayjs';
 import {autorun}            from 'mobx';
 import {MatDialog}              from '@angular/material/dialog';
@@ -14,7 +14,7 @@ import {LikeDialogBoxComponent} from '../../components/like-dialog-box/like-dial
 
 export class LikeStore {
   @observable likes: ILike[] = [];
-  USE_MOCK: boolean          = true;
+  USE_MOCK: boolean          = false;
 
   constructor(
     public root: RootStore) {
@@ -33,7 +33,7 @@ export class LikeStore {
 
   @action createLike(post: IPost) {
     let newLike: ILike = {
-      id       : Math.floor((Math.random()) * 100),
+      id       : `${Math.floor((Math.random()) * 100)}`,
       timestamp: dayjs().format('DD.MM.YY'),
       user_id  : this.root.log.currentUser.id,
       post_id  : post.id

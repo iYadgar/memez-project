@@ -1,7 +1,7 @@
 import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
 import {HttpClient}      from '@angular/common/http';
-import {ILike}           from '../types/Entities/ILike';
+import {ILike}           from '../../../../../../../shared/types/Entities/ILike';
 
 
 @Injectable({
