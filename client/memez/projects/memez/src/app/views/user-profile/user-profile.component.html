@@ -19,10 +19,5 @@
 
   </div>
 
-  <mem-post-box (newPost)="us.root.ps.createPost($event)"></mem-post-box>
-  <div class="posts-container" *mobxAutorun>
-    <mem-post
-      *ngFor="let post of us.root.ps.posts"
-      [post]="post"></mem-post>
-  </div>
+
 </div>
