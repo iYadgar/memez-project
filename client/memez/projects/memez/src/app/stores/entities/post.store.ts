@@ -1,11 +1,11 @@
-import {Injectable}         from '@angular/core';
-import {action, observable} from 'mobx-angular';
-import {RootStore}          from '../root.store';
-import {IPost}              from '../../../../../../../../shared/types/Entities/IPost';
-import * as dayjs           from 'dayjs';
-import {autorun}            from 'mobx';
-import {MOCK_POSTS}         from '../../../../../../../../shared/mock/MOCK_POSTS';
-import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
+import {Injectable}              from '@angular/core';
+import {action, observable}      from 'mobx-angular';
+import {RootStore}               from '../root.store';
+import {IPost}                   from '../../../../../../../../shared/types/Entities/IPost';
+import * as dayjs                from 'dayjs';
+import {autorun, reaction, toJS} from 'mobx';
+import {MOCK_POSTS}              from '../../../../../../../../shared/mock/MOCK_POSTS';
+import {ILike}                   from '../../../../../../../../shared/types/Entities/ILike';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +20,7 @@ export class PostStore {
     this.root.ps = this;  //self-registration at root store
     window['postStore'] = this;
 
+
   }
 
   @action
@@ -33,25 +34,43 @@ export class PostStore {
     }
   }
 
-  @action post(str: string) {
-    let newPost: IPost = {
-      id     : `${Math.floor((Math.random()) * 100)}`,
-      user_id: `${Math.floor((Math.random()) * 100)}`,
-      content: str,
-      date   : dayjs().format('DD.MM.YY'),
-      time   : dayjs().format('HH:mm'),
-      likes  : []
+  @action
+  async createPost(content: string) {
+    let postInput = {
+      user_id: this.root.log.currentUser.id,
+      content: content,
     }
-    this.posts.unshift(newPost);
+
+    const newPost = await this.root.postAdapter.createPost(postInput)
+    //push post to posts array
+    this.posts.unshift(newPost)
+    //push post to current user posts array
     this.root.log.currentUser.posts.push(newPost)
 
 
   }
 
-  @action deletePost(post: IPost) {
-    let index = this.posts.indexOf(post);
-    this.posts.splice(index, 1);
+  @action
+  async deletePost(post: IPost) {
+    const currentUserPost = this.root.log
+                                .currentUser.posts
+                                .some(up => up.id === post.id)
+    if (currentUserPost) {
+      await this.root.postAdapter.deletePost(post.id);
+      const
+        postIndex       = this.posts.indexOf(post),
+        postIndexInUser = this.root.log.currentUser.posts.indexOf(post)
+
+      //remove post for posts array
+      this.posts.splice(postIndex, 1);
+
+      //remove post from current user array
+      this.root.log.currentUser.posts.splice(postIndexInUser, 1)
+    } else {
+      alert('This is not your post to DELETE ! ! ! ')
+    }
   }
+
 
   @action postLiked(post: IPost, newLike: ILike) {
     // Find if the current user has already liked the post

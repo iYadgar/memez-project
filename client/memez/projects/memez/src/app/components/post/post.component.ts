@@ -1,16 +1,18 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IPost}                                          from '../../../../../../../../shared/types/Entities/IPost';
+import {IUser}                                          from "../../../../../../../../shared/types/Entities/IUser";
 
 @Component({
   selector   : 'mem-post',
   templateUrl: './post.component.html',
-  styleUrls  : ['./post.component.css']
+  styleUrls  : ['./post.component.css'],
+
 })
 export class PostComponent implements OnInit {
   @Input() post: IPost;
   @Output() postDeleted = new EventEmitter();
-  @Output() postLiked   = new EventEmitter();
-  @Output() likeClicked = new EventEmitter()
+  @Output() postLiked = new EventEmitter();
+  @Output() dashboardClicked = new EventEmitter()
 
   constructor() {
   }
@@ -26,8 +28,9 @@ export class PostComponent implements OnInit {
   onPostLiked(post: IPost) {
     this.postLiked.emit(post);
   }
-  onDashboardClicked(post : IPost){
-    this.likeClicked.emit(post)
+
+  onDashboardClicked(post: IPost) {
+    this.dashboardClicked.emit(post)
   }
 
 }

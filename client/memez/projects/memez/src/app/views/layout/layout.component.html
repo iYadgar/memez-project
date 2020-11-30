@@ -1,6 +1,10 @@
 <div class="app-wrapper">
 
-  <mem-navbar *ngIf="log.currentUser"></mem-navbar>
+  <mem-navbar *ngIf="log.currentUser"
+              (profileClick)="ls.routeToProfile()"
+              (headerClick)="ls.routeToFeed()"
+              (feedClick)="ls.routeToFeed()"
+  ></mem-navbar>
 
 
   <div class="app-content">

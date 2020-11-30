@@ -3,9 +3,7 @@ import {RootStore}          from '../root.store';
 import {action, observable} from 'mobx-angular';
 import {IUser}              from '../../../../../../../../shared/types/Entities/IUser';
 import {Router}             from '@angular/router';
-import {autorun, toJS}      from 'mobx';
-import {MOCK_POSTS}         from '../../../../../../../../shared/mock/MOCK_POSTS';
-import {MOCK_LIKES}         from '../../../../../../../../shared/mock/MOCK_LIKES';
+
 
 @Injectable({providedIn: 'root'})
 
@@ -25,7 +23,7 @@ export class LoginStore {
 
 
   @action verifyUser(name: string) {
-    let foundUser = this.root.us.users.find(ele => ele.name === name);
+    let foundUser = this.root.us.users.find(ele => ele.name === name.toLowerCase());
     if (!foundUser) {
       alert('User does not exist');
       return;
@@ -35,7 +33,7 @@ export class LoginStore {
 
   }
 
-  handleLogin(name: string) {
+  @action handleLogin(name: string) {
     this.verifyUser(name);
     if (this.currentUser) {
       this.router.navigateByUrl('feed').then();

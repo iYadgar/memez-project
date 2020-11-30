@@ -1,6 +1,5 @@
-import {Express} from "express";
-import {getPostController, getPostsController} from "./controllers";
-
+import {Express}                                                                           from "express";
+import {createPostController, deletePostController, getPostController, getPostsController} from "./controllers";
 
 
 export function postRoutes(app: Express) {
@@ -8,4 +7,8 @@ export function postRoutes(app: Express) {
     app.get('/api/posts', getPostsController)
     //get specific post
     app.get('/api/posts/:id', getPostController)
+    //upload new post
+    app.post('/api/posts', createPostController)
+    //delete post
+    app.delete('/api/posts/:id', deletePostController)
 }

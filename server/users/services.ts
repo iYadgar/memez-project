@@ -1,6 +1,7 @@
 import {MOCK_USERS}   from "../../shared/mock/MOCK_USERS";
-import {IUser}        from "../../shared/types/Entities/IUser";
 import {v4 as uuidv4} from 'uuid'
+import {IUser}        from "../../shared/types/Entities/IUser";
+
 
 
 // Get all users
@@ -13,7 +14,7 @@ export const getUserService = (id: string) => {
     }
     return false
 }
-
+// Create new User
 export const createUserService = (name: string) => {
     const newUser: IUser = {
         id   : uuidv4(),

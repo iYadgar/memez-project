@@ -7,7 +7,7 @@
     </div>
 
     <div class="post-user-name">
-      User Name
+      {{post.user_name}}
     </div>
 
     <div class="delete-and-date">
@@ -36,7 +36,8 @@
   <div class="post-content">
     {{post.content}}
   </div>
-  <div class="like-dashboard">
+  <div class="like-dashboard"
+  >
     <div class="like-btn">
       <mat-icon (click)="onPostLiked(post)"
                 class="like-icon">favorite
@@ -46,7 +47,8 @@
     <div class="likes-amount"
          *ngIf="post.likes.length"
          (click)="onDashboardClicked(post)">
-      {{post.likes.length}}</div>
+      {{post.likes.length}}
+    </div>
   </div>
 
 

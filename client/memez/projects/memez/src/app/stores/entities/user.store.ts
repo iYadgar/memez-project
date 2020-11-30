@@ -2,7 +2,7 @@ import {Injectable}         from '@angular/core';
 import {action, observable} from 'mobx-angular';
 import {RootStore}          from '../root.store';
 import {IUser}              from '../../../../../../../../shared/types/Entities/IUser';
-import {autorun}            from 'mobx';
+import {autorun, reaction}  from 'mobx';
 import {MOCK_USERS}         from '../../../../../../../../shared/mock/MOCK_USERS';
 import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
 
@@ -19,9 +19,7 @@ export class UserStore {
   ) {
     this.root.us = this;
     window['userStore'] = this;
-    autorun(() => {
-      console.log(`users array has changed to ${this.users.map(user => user.name)}`);
-    });
+
   }
 
   @action

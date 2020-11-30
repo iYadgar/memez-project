@@ -21,4 +21,12 @@ export class LikeAdapter extends BaseAjaxAdapter {
     return this.request<ILike[]>('likes');
   }
 
+  async createLike(likeIds): Promise<ILike> {
+    return this.post('likes', likeIds)
+  }
+
+  async unlike(likeId: string): Promise<ILike> {
+    return this.delete(`likes/${likeId}`)
+  }
+
 }

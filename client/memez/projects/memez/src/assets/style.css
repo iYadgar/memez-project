@@ -138,6 +138,7 @@ mem-post {
   margin: 7px;
   color: #305473;
   font-family: 'PT Sans Caption', sans-serif;
+  text-transform: capitalize;
 }
 
 .post-content {
@@ -187,9 +188,8 @@ mem-post {
 .main-header {
   display: flex;
   align-items: center;
-
   margin: 20px;
-
+  cursor: pointer;
 }
 
 
