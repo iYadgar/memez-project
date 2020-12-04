@@ -23,9 +23,11 @@ export class LayoutStore {
 
   routeToProfile() {
     this.router.navigateByUrl('profile')
-        .then();
+      .then();
 
   }
+
+   
 
 
 }

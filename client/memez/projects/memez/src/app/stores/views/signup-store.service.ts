@@ -38,7 +38,7 @@ export class SignupStore {
       this.routeToLogin()
       console.log('user has been created')
       const newUser = await this.root.userAdapter.createNewUser(userInput)
-      this.root.us.users.push(newUser)
+      await this.root.us.getUsers()
 
 
     }

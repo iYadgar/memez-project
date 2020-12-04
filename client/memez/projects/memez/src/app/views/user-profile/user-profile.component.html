@@ -16,7 +16,17 @@
     <div class="user-details">
       This is the user details.
     </div>
+  </div>
 
+
+  <div class="posts-container" *mobxAutorun>
+    <mem-post
+      *ngFor="let post of us.root.ps.userPosts"
+      [post]="post"
+      (postDeleted)="us.root.ps.deletePost($event)"
+      (postLiked)="us.root.likeStore.handleLike($event)"
+      (dashboardClicked)="us.root.fs.handleDialog($event)"
+    ></mem-post>
   </div>
 
 

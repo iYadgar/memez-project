@@ -9,6 +9,7 @@ import {Router}                                  from '@angular/router';
 export class NavbarComponent implements OnInit {
   @Output() profileClick = new EventEmitter()
   @Output() feedClick = new EventEmitter()
+  @Output() logoutClick = new EventEmitter()
   @Output() headerClick = new EventEmitter()
 
   constructor(
@@ -31,6 +32,7 @@ export class NavbarComponent implements OnInit {
   headerClicked() {
     this.headerClick.emit();
   }
+
 
 
 }

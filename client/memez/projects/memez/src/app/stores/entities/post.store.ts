@@ -33,6 +33,12 @@ export class PostStore {
       .reverse()
   }
 
+  @computed get userPosts() {
+    const userPosts: IPost[] = this.posts
+      .filter(post => post.postedBy._id === this.root.log.currentUser._id)
+    return userPosts.reverse()
+  }
+
   @action
   async getPosts(): Promise<IPost[]> {
     /* if (this.useMock) {
@@ -71,7 +77,6 @@ export class PostStore {
       alert('This is not your post to DELETE ! ! ! ')
     }
   }
-
 
 
 }
