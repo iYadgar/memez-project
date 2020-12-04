@@ -1,6 +1,9 @@
+import {IUser} from "./IUser";
+import {IPost} from "./IPost";
+
 export interface ILike {
-  id: string
+  _id: string
   timestamp: string
-  user_id: string
-  post_id: string
+  userLiked: IUser
+  postLiked: IPost
 }

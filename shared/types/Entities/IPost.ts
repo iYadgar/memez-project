@@ -1,11 +1,11 @@
 import {ILike} from './ILike';
+import {IUser} from "./IUser";
 
-export interface IPost {
-    id: string
-    user_id: string
-    user_name?: string
-    content: string
-    date: string
-    time: string
-    likes: ILike[]
+export interface IPost extends Document {
+	_id: string
+	content: string
+	postedBy: IUser
+	date: string
+	time: string
+	likes: ILike[]
 }

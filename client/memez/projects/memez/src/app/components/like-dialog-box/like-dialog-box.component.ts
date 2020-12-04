@@ -1,13 +1,13 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnInit}                from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {toJS} from 'mobx';
-import {IUser} from '../../../../../../../../shared/types/Entities/IUser';
+import {toJS}                                     from 'mobx';
+import {IUser}                                    from '../../../../../../../../shared/types/Entities/IUser';
 
 @Component({
-  selector: 'mem-dialog-box',
-  templateUrl: './like-dialog-box.component.html',
-  styleUrls: ['./like-dialog-box.component.css']
-})
+             selector   : 'mem-dialog-box',
+             templateUrl: './like-dialog-box.component.html',
+             styleUrls  : ['./like-dialog-box.component.css']
+           })
 export class LikeDialogBoxComponent implements OnInit {
 
 
@@ -18,7 +18,7 @@ export class LikeDialogBoxComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data);
+    console.log(toJS(this.data));
   }
 
 }

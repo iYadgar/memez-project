@@ -1,55 +1,65 @@
-import {MOCK_LIKES}   from "../../shared/mock/MOCK_LIKES";
-import {ILike}        from "../../shared/types/Entities/ILike";
-import {IUser}        from "../../shared/types/Entities/IUser";
-import {MOCK_USERS}   from "../../shared/mock/MOCK_USERS";
-import {IPost}        from "../../shared/types/Entities/IPost";
-import {MOCK_POSTS}   from "../../shared/mock/MOCK_POSTS";
-import {v4 as uuidv4} from 'uuid'
-import dayjs          from 'dayjs';
+import dayjs     from 'dayjs';
+import likeModel from "../models/like-model";
+import userModel from "../models/user-model";
+import postModel from "../models/post-model";
 
 
 // Get all likes
-export const getLikesService = (): ILike[] => MOCK_LIKES
+export const getLikesService = async () => {
+	const likes = await likeModel.find()
+		.populate('postedBy')
+		.populate('likedBy')
+		.exec()
+	return likes
+}
+
 // Get specific like
-export const getLikeService = (id: string) => {
-    const found = MOCK_LIKES.find(ele => ele.id === id)
-    return found ? found : false
+export const getLikeService = async (id: string) => {
+	const like = await likeModel.findById(id)
+		.populate('postedBy')
+		.populate('likedBy')
+		.exec()
+	return like
+
 }
 
 // create new like
-export const createLikeService = (user_id: string, post_id: string) => {
-    const userLiked: IUser | undefined = MOCK_USERS.find(user => user.id === user_id)
-    const postLiked: IPost | undefined = MOCK_POSTS.find(post => post.id === post_id)
+export const createLikeService = async (user_id: string, post_id: string) => {
+	const newLike = await likeModel.create({
+											   timestamp: dayjs().format('DD.MM.YY'),
+											   userLiked: user_id,
+											   postLiked: post_id
 
-    const newLike: ILike = {
-        id       : uuidv4(),
-        timestamp: dayjs().format('DD.MM.YY'),
-        user_id  : user_id,
-        post_id  : post_id
-    }
-    if (userLiked !== undefined && postLiked !== undefined) {
-        MOCK_LIKES.push(newLike)
-        userLiked.likes.push(newLike)
-        postLiked.likes.push(newLike)
-    }
+										   })
+	return newLike
 
-    return user_id && post_id ? newLike : false
+
+}
+
+export const pushLikeToUserService = async (user_id: string, like: any) => {
+	await userModel
+		.findByIdAndUpdate(user_id,
+						   {$push: {likes: like._id}},
+						   {new: true, useFindAndModify: false})
+
+}
+
+export const pushLikeToPostService = async (post_id: string, like: any) => {
+	await postModel
+		.findByIdAndUpdate(post_id, {
+							   $push: {likes: like._id}
+						   },
+						   {
+							   new: true, useFindAndModify: false
+						   })
+
 }
 
 //delete like
-export const unlikeService = (like_id: string) => {
-    const
-        likeToDelete: ILike | undefined = MOCK_LIKES.find(like => like.id === like_id),
-        postUnliked: IPost | undefined  = MOCK_POSTS
-            .find(post => post.likes
-                              .some(like => like.id === like_id));
-
-    if (likeToDelete && postUnliked) {
-        const
-            likeIndex       = MOCK_LIKES.indexOf(likeToDelete),
-            likeIndexInPost = MOCK_POSTS.indexOf(postUnliked)
-        MOCK_LIKES.splice(likeIndex, 1)
-        MOCK_POSTS.splice(likeIndexInPost, 1)
-    }
-    return likeToDelete ? likeToDelete : false
+export const unlikeService = async (like_id: string) => {
+	const likeToDelete = await likeModel.findByIdAndDelete(like_id, {
+		useFindAndModify: false
+	})
+		.exec()
+	return likeToDelete
 }

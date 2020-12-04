@@ -1,56 +1,60 @@
-import {MOCK_POSTS}   from "../../shared/mock/MOCK_POSTS";
-import {v4 as uuidv4} from 'uuid'
-import {IPost}        from "../../shared/types/Entities/IPost";
-import dayjs          from 'dayjs';
-import {MOCK_USERS}   from "../../shared/mock/MOCK_USERS";
-import {IUser}        from "../../shared/types/Entities/IUser";
-import {ILike}        from "../../shared/types/Entities/ILike";
-import {MOCK_LIKES}   from "../../shared/mock/MOCK_LIKES";
+import dayjs     from 'dayjs';
+import postModel from '../models/post-model'
+import userModel from "../models/user-model";
+import {IPost}   from "../../shared/types/Entities/IPost";
 
 // Get all posts
-export const getPostsService = () => MOCK_POSTS
+export const getPostsService = async () => {
+	const posts = await postModel.find()
+		.populate({
+					  path    : 'likes',
+					  populate: {
+						  path : 'userLiked',
+						  model: 'userModel'
+					  }
+				  })
+		.populate('postedBy')
+		.exec()
+	return posts
+
+}
 // Get Specific post
-export const getPostService = (id: any) => {
-    const found = MOCK_POSTS.find((ele: IPost) => ele.id === id)
-    if (found) {
-        return found
-    }
-    return false
+export const getPostService = async (id: string) => {
+	const post = await postModel.findById(id)
+		.populate('likes')
+		.populate('postedBy')
+		.exec()
+	return post
+
 }
 
 // Create new post
-export const createPostService = (content: string, user_id: string) => {
-    const userPosted: IUser | undefined = MOCK_USERS.find(user => user.id === user_id)
-    const newPost: IPost = {
-        id     : uuidv4(),
-        user_id: user_id,
-        user_name : userPosted?.name,
-        content: content,
-        date   : dayjs().format('DD.MM.YY'),
-        time   : dayjs().format('HH:mm'),
-        likes  : []
-    }
-    if (userPosted !== undefined) {
-        MOCK_POSTS.unshift(newPost)
-        userPosted.posts.push(newPost)
-    }
-    return content ? newPost : false
+export const createPostService = async (content: string, user_id: string) => {
+	const
+		newPost = await postModel.create({
+											 content : content,
+											 postedBy: user_id,
+											 date    : dayjs().format('DD.MM.YY'),
+											 time    : dayjs().format('HH:mm')
+										 });
+
+
+	return newPost.populate('postedBy').execPopulate();
+}
+
+
+export const addPostToUserService = async (post : any, user_id: string) => {
+	await userModel.findByIdAndUpdate(user_id,
+									  {$push: {posts: post._id}},
+									  {useFindAndModify: false}).exec()
+
 }
 
 
 // Delete post
-export const deletePostService = (post_id: string) => {
-    const
-        postToDelete: IPost | undefined = MOCK_POSTS.find(post => post.id === post_id),
-        userPosted: IUser | undefined   = MOCK_USERS.find(user => user.posts.find(up => up.id === post_id))
-
-    if (postToDelete && userPosted) {
-        const
-            postIndex       = MOCK_POSTS.indexOf(postToDelete),
-            userPostedIndex = MOCK_USERS.indexOf(userPosted);
-
-        MOCK_POSTS.splice(postIndex, 1);
-        MOCK_USERS.splice(userPostedIndex, 1);
-    }
-    return postToDelete ? postToDelete : false
+export const deletePostService = async (post_id: string) => {
+	return await postModel.findByIdAndDelete(post_id, {
+		useFindAndModify: false
+	})
+		.exec()
 }

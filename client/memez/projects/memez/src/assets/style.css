@@ -512,3 +512,42 @@ mem-sign-up {
     background: #ffffffa3;
     align-items: center;
 }
+
+.like-timestamp {
+    color:  #5c9df25c;
+    margin-left: 150px;
+}
+
+mem-dialog-box.ng-star-inserted {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 47vw;
+    overflow: auto;
+}
+
+ul.liked-user-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: revert;
+    overflow: auto;
+}
+
+li.liked-user.ng-star-inserted {
+    display: flex;
+    /* margin: 5px; */
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.like-user-name {
+    display: flex;
+    color: #305473;
+    font-family: 'PT Sans Caption', sans-serif;
+    text-transform: capitalize;
+}
+
+mat-dialog-container#mat-dialog-0 {
+    overflow: scroll;
+}

@@ -23,10 +23,11 @@ export class LoginStore {
 
 
   @action verifyUser(name: string) {
-    let foundUser = this.root.us.users.find(ele => ele.name === name.toLowerCase());
+    const foundUser = this.root.us
+      .users
+      .find(user => user.name.toLowerCase() === name.toLowerCase())
     if (!foundUser) {
-      alert('User does not exist');
-      return;
+      return alert('user does not exist...')
     }
     return this.currentUser = foundUser
 
