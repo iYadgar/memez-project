@@ -8,8 +8,8 @@ import {autorun, reaction, toJS}      from 'mobx';
 import {ILike}                        from '../../../../../../../../shared/types/Entities/ILike';
 
 @Injectable({
-              providedIn: 'root'
-            })
+  providedIn: 'root'
+})
 export class PostStore {
   @observable posts: IPost[] = [];
 
@@ -42,7 +42,7 @@ export class PostStore {
   @action
   async getPosts(): Promise<IPost[]> {
     /* if (this.useMock) {
-       return this.posts = MOCK_POSTS;
+     return this.posts = MOCK_POSTS;
      } */
     return this.posts = await this.root
       .postAdapter
