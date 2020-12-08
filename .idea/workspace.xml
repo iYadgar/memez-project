@@ -15,8 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +127,7 @@
       <workItem from="1607331598156" duration="9491000" />
       <workItem from="1607355154085" duration="267000" />
       <workItem from="1607411974055" duration="9933000" />
-      <workItem from="1607427015565" duration="6825000" />
+      <workItem from="1607427015565" duration="8284000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -194,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607432839482</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Problem with likes">
+      <created>1607438546049</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607438546049</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +228,8 @@
     <MESSAGE value="added controllers and handlers architecture" />
     <MESSAGE value="For Omer" />
     <MESSAGE value="For Omer 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="For Omer 2" />
+    <MESSAGE value="Problem with likes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem with likes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
