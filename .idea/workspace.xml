@@ -16,8 +16,7 @@
     <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/db.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/db.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/main.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/handlers/user.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/user.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +136,7 @@
       <workItem from="1607331598156" duration="9491000" />
       <workItem from="1607355154085" duration="267000" />
       <workItem from="1607411974055" duration="9933000" />
-      <workItem from="1607427015565" duration="15147000" />
+      <workItem from="1607427015565" duration="15312000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -223,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607449635178</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Working post-get">
+      <created>1607450569506</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607450569506</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +261,8 @@
     <MESSAGE value="Problem with likes" />
     <MESSAGE value="Flat Problem" />
     <MESSAGE value="Post problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Post problem" />
+    <MESSAGE value="Working post-get" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working post-get" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,7 +8,7 @@ import {IPost}    from "../../shared/types/Entities/IPost";
 //get all posts
 export const getPostsHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-		const posts = this.postController.getPosts()
+		const posts = await this.postController.getPosts()
 
 		return res.send(posts)
 

@@ -65,11 +65,11 @@ export class DBController extends BaseController implements IDBController {
 		return this.likesCollection.find({}).toArray()
 	}
 
-	getPosts(): Promise<IPost[]> {
+	async getPosts(): Promise<IPost[]> {
 		return this.postsCollection.find({}).toArray()
 	}
 
-	getUsers(): Promise<IUser[]> {
+	async getUsers(): Promise<IUser[]> {
 		return this.usersCollection.find({}).toArray()
 	}
 
@@ -77,7 +77,7 @@ export class DBController extends BaseController implements IDBController {
 		return this.likesCollection.insertOne(like);
 	}
 
-	savePost(post: IPost): Promise<any> {
+	async savePost(post: IPost): Promise<any> {
 		return this.postsCollection.insertOne(post);
 	}
 
