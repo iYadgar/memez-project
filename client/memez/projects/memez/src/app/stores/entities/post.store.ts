@@ -92,10 +92,10 @@ export class PostStore {
     }
   }
 
-  @action
+ /* @action
   async getOnePost(post : IPost){
     return await this.root.postAdapter.getOnePost()
-  }
+  }*/
 
 
 }

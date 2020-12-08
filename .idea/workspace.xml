@@ -15,25 +15,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/db.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/db.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/handlers/like.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/like.handler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/models/like.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/like.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/models/post.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/post.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/ILike.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/ILike.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/IPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/IPost.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/IUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/IUser.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +129,7 @@
       <workItem from="1607331598156" duration="9491000" />
       <workItem from="1607355154085" duration="267000" />
       <workItem from="1607411974055" duration="9933000" />
-      <workItem from="1607427015565" duration="4918000" />
+      <workItem from="1607427015565" duration="6825000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -203,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607420493489</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="For Omer 2">
+      <created>1607432839482</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607432839482</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +222,8 @@
     <MESSAGE value="added HTTP Controller" />
     <MESSAGE value="added controllers and handlers architecture" />
     <MESSAGE value="For Omer" />
-    <option name="LAST_COMMIT_MESSAGE" value="For Omer" />
+    <MESSAGE value="For Omer 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="For Omer 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

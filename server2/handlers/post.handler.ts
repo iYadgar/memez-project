@@ -6,9 +6,17 @@ import {IMainController}   from "../controllers/main.controller";
 export const getPostsHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
 		const
-			posts        = await this.postController.getPosts(),
-			likePromises = posts.map(post =>)
-		return res.send()
+			posts         = (await this.postController.getPosts()).map(p => p.toObject()),
+			post_response = posts.map( (post) => {
+				let newPost = {
+					...post,
+					likes:  this.likeController.getLikeFromPost(post)
+
+				}
+				return newPost
+			})
+		console.log(post_response.map(async p => await p.likes))
+		return res.send(post_response)
 
 	} catch (err) {
 		return res.status(404).send({msg: 'get posts was unsuccessful ' + err})
