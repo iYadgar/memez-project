@@ -36,7 +36,7 @@ export class DBController extends BaseController implements IDBController {
 		super();
 	}
 
-	async init(): Promise<any> {
+	async init(): Promise<void> {
 		const This = this;
 
 		return new Promise((resolve, reject) => {
@@ -56,7 +56,7 @@ export class DBController extends BaseController implements IDBController {
 				This.postsCollection = This.db.collection('posts')
 				This.usersCollection = This.db.collection('users')
 
-				Promise.resolve()
+				resolve()
 			});
 		})
 	}

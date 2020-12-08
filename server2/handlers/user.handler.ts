@@ -27,7 +27,7 @@ export const getUsersHandler = async function (this: IMainController, req: Reque
  }*/
 
 export const createUserHandler = async function (this: IMainController, req: Request, res: Response) {
-	const user_name: IUser = req.body.name
+	const user_name: IUser = {name: req.body.name}
 
 	try {
 		const newUser = await this.userController.saveUser(user_name)

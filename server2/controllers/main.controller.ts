@@ -54,9 +54,7 @@ export class MainController extends BaseController implements IMainController {
 		// Get specific user
 		/*this.httpController.events.addListener('user', getUserHandler.bind(this))*/
 		// Create new user
-		this.httpController.events.addListener('create_user', ()=>{
-		    console.log('mashu')
-		})
+		this.httpController.events.addListener('create_user', createUserHandler.bind(this))
 		// Get all posts
 		this.httpController.events.addListener('all_posts', getPostsHandler.bind(this))
 		// Get specific post
