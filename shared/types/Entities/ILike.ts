@@ -4,7 +4,6 @@ import {IPost} from "./IPost";
 export interface ILike {
 	_id?: string
 	timestamp: string
-	userLiked?: IUser
-	postLiked?: IPost
-	currentUserLiked?: boolean
+	userLiked?:string
+	postLiked?: string
 }

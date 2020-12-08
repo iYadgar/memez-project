@@ -1,13 +1,12 @@
-import {IUserM}                          from "../models/user.model";
 import {BaseController, IBaseController} from "./base.controller";
+import {IUser}                           from "../../shared/types/Entities/IUser";
 
 
 export interface IUserController extends IBaseController {
-	getUsers(): Promise<IUserM[]>;
+	saveUser(user: IUser): Promise<any>
 
-	getUser(id: IUserM['_id']): Promise<IUserM>;
+	getUsers(): Promise<IUser[]>
 
-	createUser(name: IUserM['name']): Promise<IUserM>;
 }
 
 export class UserController extends BaseController implements IUserController {
@@ -16,16 +15,13 @@ export class UserController extends BaseController implements IUserController {
 		super();
 	}
 
-
-	async getUsers(): Promise<IUserM[]> {
-		return await this.main.dbController.getUsers()
+	async getUsers(): Promise<IUser[]> {
+		return this.main.dbController.getUsers()
 	}
 
-	async getUser(id: IUserM['_id']): Promise<IUserM> {
-		return await this.main.dbController.getUser(id)
+	async saveUser(user: IUser): Promise<any> {
+		return this.main.dbController.saveUser(user)
 	}
-u
-	async createUser(name: IUserM['name']): Promise<IUserM> {
-		return await this.main.dbController.createUser(name)
-	}
+
+
 }

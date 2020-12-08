@@ -1,51 +1,46 @@
 import {Request, Response} from "express";
 import {IMainController}   from "../controllers/main.controller";
 
+import * as dayjs from "dayjs";
+import {IPost}    from "../../shared/types/Entities/IPost";
+
 
 //get all posts
 export const getPostsHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-		const
-			posts           = (await this.postController.getPosts()).map(p => p.toObject()),
-			[likes]         = await Promise.all([
-				Promise.all(posts.map(this.likeController.getLikeFromPost)
-				)
-			]),
-			postTolikesDict = likes.flat().reduce((pre, like) => {
-				const postId = like.postLiked._id
+		const posts = this.postController.getPosts()
 
-				pre[postId] = like.toObject()
-				return pre
-			}, {}),
-			posts_response  = posts.map(post => ({...post, likes: postTolikesDict[post._id]}))
-
-
-		console.log(posts_response.map(async p => await p.likes))
-		return res.send(posts_response)
+		return res.send(posts)
 
 	} catch (err) {
 		return res.status(404).send({msg: 'get posts was unsuccessful ' + err})
 	}
 }
-//get specific post
-export const getPostHandler = async function (this: IMainController, req: Request, res: Response) {
-	try {
-		const post = await this.postController.getPost(req.params.id);
-		return res.json(post).end();
-	} catch (err) {
-		return res.status(404).json({msg: 'Post was not found ' + err}).end()
-	}
+/*//get specific post
+ export const getPostHandler = async function (this: IMainController, req: Request, res: Response) {
+ try {
+ const post = await this.postController.getPost(req.params.id);
+ return res.json(post).end();
+ } catch (err) {
+ return res.status(404).json({msg: 'Post was not found ' + err}).end()
+ }
 
 
-}
+ }*/
 
 //creat a new post
-export const createPostHandler = async function (this: IMainController, req: Request, res: Response) {
-	const content: string = req.body.content;
-	const user_id: string = req.body.user_id;
+export async function createPostHandler(this: IMainController, req: Request, res: Response) {
+	const post: IPost = {
+		content : req.body.content,
+		postedBy: req.body.user_id,
+		date    : dayjs().format('DD.MM.YY'),
+		time    : dayjs().format('mm:hh'),
+
+	}
+
 	try {
 		const
-			newPost = await this.postController.createPost(content, user_id);
+			newPost = await this.postController.savePost(post);
 
 		return res.json(newPost).end()
 
@@ -57,13 +52,13 @@ export const createPostHandler = async function (this: IMainController, req: Req
 }
 
 //delete post
-export const deletePostHandler = async function (this: IMainController, req: Request, res: Response) {
-	try {
-		const postToDelete = await this.postController.deletePost(req.params.id);
+/*export const deletePostHandler = async function (this: IMainController, req: Request, res: Response) {
+ try {
+ const postToDelete = await this.postController.deletePost(req.params.id);
 
-		return res.json(postToDelete).end();
-	} catch (e) {
-		return res.status(404).send({msg: 'post was not deleted ' + e})
-	}
+ return res.json(postToDelete).end();
+ } catch (e) {
+ return res.status(404).send({msg: 'post was not deleted ' + e})
+ }
 
-}
+ }*/

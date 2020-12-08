@@ -1,7 +1,5 @@
-import {Express, Request, Response}      from "express";
 import * as express                      from "express";
-import * as HTTP                         from "http";
-import * as HTTPS                        from "https";
+import {Express, Request, Response}      from "express";
 import * as events                       from 'events'
 import {BaseController, IBaseController} from "./base.controller";
 import {config}                          from "../config/config";
@@ -16,7 +14,7 @@ export interface IHttpController extends IBaseController {
 
 
 export class HttpController extends BaseController implements IHttpController {
-	http_server: HTTP.Server | HTTPS.Server
+
 	app: Express = express()
 	events: events.EventEmitter = new events.EventEmitter();
 
@@ -55,6 +53,7 @@ export class HttpController extends BaseController implements IHttpController {
 		})
 		//create new user
 		this.app.post('/api/users', (req: Request, res: Response) => {
+			console.log('Meow')
 			this.events.emit('create_user', req, res)
 		})
 		//get all posts

@@ -1,160 +1,99 @@
 import {BaseController, IBaseController} from "./base.controller";
-import * as mongoose                     from "mongoose";
-import * as dayjs                        from "dayjs";
-import UserModel, {IUserM}               from "../models/user.model";
-import PostModel, {IPostM}               from "../models/post.model";
-import LikeModel, {ILikeM}               from "../models/like.model";
-import {Db, Server}                      from "mongodb";
+import {ILike}                           from "../../shared/types/Entities/ILike";
+import {IPost}                           from "../../shared/types/Entities/IPost";
+import {IUser}                           from "../../shared/types/Entities/IUser";
 
+const MongoClinet = require('mongodb').MongoClient();
+import {Collection, Db, MongoClient}     from "mongodb";
+import {config}                          from "../config/config";
 
 export interface IDBController extends IBaseController {
-	run(): Promise<void>;
+	saveLike(like: ILike): Promise<any>
 
-	getUsers(): Promise<IUserM[]>;
+	savePost(post: IPost): Promise<any>
 
-	getUser(id: IUserM['_id']): Promise<IUserM>;
+	saveUser(user: IUser): Promise<any>
 
-	createUser(name: IUserM['name']): Promise<IUserM>;
+	getLikes(): Promise<ILike[]>
 
-	getPosts(): Promise<IPostM[]>;
+	getPosts(): Promise<IPost[]>
 
-	getPost(id: IPostM['_id']): Promise<IPostM>;
+	getUsers(): Promise<IUser[]>
 
-	createPost(content: string, user_id: IUserM['_id']): Promise<IPostM>;
-
-	deletePost(post_id: string): Promise<IPostM>;
-
-	getLikes(): Promise<ILikeM[]>;
-
-	getLike(id: ILikeM['_id']): Promise<ILikeM>;
-
-	createLike(user_id: IUserM['_id'], post_id: IPostM['_id']): Promise<ILikeM>;
-
-	unLike(like_id: ILikeM['_id']): Promise<ILikeM>;
-
-	getLikeFromPost(post_id: IPostM['_id']): Promise<ILikeM[]>
-
+	close(): Promise<any>;
 
 }
 
 export class DBController extends BaseController implements IDBController {
-	uri: string = 'mongodb://localhost:27017'
+	private client: MongoClient
+	private db: Db
+	likesCollection: Collection
+	postsCollection: Collection
+	usersCollection: Collection
+
 
 	constructor() {
 		super();
 	}
 
 	async init(): Promise<any> {
-		await this.run()
+		const This = this;
 
-
-	}
-
-	async run() {
-		try {
-			await mongoose
-				.connect(this.uri,
-					{useNewUrlParser: true, useUnifiedTopology: true})
-			console.log('successfully connected to mongoDB')
-		} catch (e) {
-			console.error(`no connection to mongoDB ${e} `)
-		}
-
-
-	}
-
-
-	async getUsers(): Promise<IUserM[]> {
-		return await UserModel
-			.find()
-			.exec()
-	}
-
-	async getUser(id: IUserM['_id']): Promise<IUserM> {
-		return await UserModel
-			.findById(id)
-			.exec()
-
-	}
-
-	async createUser(name: IUserM['name']): Promise<IUserM> {
-		return await UserModel.create<IUserM>({
-			name: name,
-		})
-	}
-
-	async getPosts(): Promise<IPostM[]> {
-		return await PostModel.find()
-			.populate('postedBy')
-			.exec()
-
-
-	}
-
-	async getPost(id: IPostM['_id']): Promise<IPostM> {
-		return await PostModel.findById(id)
-			.populate('postedBy')
-			.exec()
-	}
-
-	async createPost(content: string, user_id: IUserM['_id']): Promise<IPostM> {
-		return await PostModel.create(
-			{
-				content : content,
-				postedBy: user_id,
-				date    : dayjs().format('DD.MM.YY'),
-				time    : dayjs().format('HH:mm'),
-
+		return new Promise((resolve, reject) => {
+			this.client = new MongoClient(config.URL, {
+				useUnifiedTopology: true
 			})
 
+			this.client.connect(function (err) {
+				if (err) {
+					console.error('Mongo Err', err);
+					return reject()
+				}
+				console.log("Connected successfully to Mongo");
+				This.db = This.client.db(config.dbName);
 
-	}
+				This.likesCollection = This.db.collection('likes')
+				This.postsCollection = This.db.collection('posts')
+				This.usersCollection = This.db.collection('users')
 
-	async deletePost(post_id: string): Promise<IPostM> {
-
-		return await PostModel.findByIdAndDelete(post_id, {
-			useFindAndModify: true
-		}).exec();
-
-
-	}
-
-	async getLikes(): Promise<ILikeM[]> {
-		return await LikeModel.find()
-			.populate('userLiked')
-			.populate('postLiked')
-			.exec()
-
-	}
-
-	async getLike(id: ILikeM['_id']): Promise<ILikeM> {
-		return await LikeModel.findById(id)
-			.populate('userLiked')
-			.populate('postLiked')
-			.exec()
-	}
-
-	async createLike(user_id: IUserM['_id'], post_id: IPostM['_id']): Promise<ILikeM> {
-		return await LikeModel.create({
-			timestamp: dayjs().format('DD.MM.YY'),
-			userLiked: user_id,
-			postLiked: post_id
-
+				Promise.resolve()
+			});
 		})
 	}
 
-	async unLike(like_id: ILikeM['_id']): Promise<ILikeM> {
-		return await LikeModel.findByIdAndDelete(like_id, {
-			useFindAndModify: false
-		}).exec()
+	async getLikes(): Promise<ILike[]> {
+		return this.likesCollection.find({}).toArray()
 	}
 
-	async getLikeFromPost(post_id: IPostM['_id']): Promise<ILikeM[]> {
-		return LikeModel
-			.find({postLiked: post_id})
-			.populate('userLiked')
+	getPosts(): Promise<IPost[]> {
+		return this.postsCollection.find({}).toArray()
 	}
 
+	getUsers(): Promise<IUser[]> {
+		return this.usersCollection.find({}).toArray()
+	}
+
+	async saveLike(like: ILike): Promise<any> {
+		return this.likesCollection.insertOne(like);
+	}
+
+	savePost(post: IPost): Promise<any> {
+		return this.postsCollection.insertOne(post);
+	}
+
+	async saveUser(user: IUser): Promise<any> {
+		try {
+			return this.usersCollection.insertOne(user);
+		} catch (e) {
+			console.log(e)
+
+		}
+
+	}
+
+	close(): Promise<any> {
+		return this.client.close();
+	}
 
 }
 

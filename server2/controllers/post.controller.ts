@@ -1,16 +1,13 @@
-import {IPostM}                          from "../models/post.model";
-import {IUserM}                          from "../models/user.model";
+
 import {BaseController, IBaseController} from "./base.controller";
+import {IPost}                           from "../../shared/types/Entities/IPost";
 
 
 export interface IPostController extends IBaseController {
-	getPosts(): Promise<IPostM[]>;
+	savePost(post: IPost): Promise<any>
 
-	getPost(id: IPostM['_id']): Promise<IPostM>;
+	getPosts(): Promise<IPost[]>
 
-	createPost(content: string, user_id: IUserM['_id']): Promise<IPostM>;
-
-	deletePost(post_id: string): Promise<IPostM>;
 }
 
 export class PostController extends BaseController implements IPostController {
@@ -19,25 +16,14 @@ export class PostController extends BaseController implements IPostController {
 		super();
 	}
 
-	async getPosts(): Promise<IPostM[]> {
-		return await this.main.dbController.getPosts()
-
-
+	async savePost(post: IPost): Promise<any> {
+		return this.main.dbController.savePost(post)
 	}
 
-	async getPost(id: IPostM['_id']): Promise<IPostM> {
-		return await this.main.dbController.getPost(id);
+	async getPosts(): Promise<IPost[]> {
+		return this.main.dbController.getPosts()
 	}
 
-	async createPost(content: string, user_id: IUserM['_id']): Promise<IPostM> {
-
-		return await this.main.dbController.createPost(content, user_id)
-
-	}
-
-	async deletePost(post_id: string): Promise<IPostM> {
-		return await this.main.dbController.deletePost(post_id);
-
-	}
 
 }
+

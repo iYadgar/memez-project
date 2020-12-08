@@ -1,6 +1,6 @@
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller";
-import {IUserM}            from "../models/user.model";
+import {IUser}             from "../../shared/types/Entities/IUser";
 
 
 export const getUsersHandler = async function (this: IMainController, req: Request, res: Response) {
@@ -15,22 +15,22 @@ export const getUsersHandler = async function (this: IMainController, req: Reque
 	}
 }
 
-export const getUserHandler = async function (this: IMainController, req: Request, res: Response) {
-	try {
-		const user = await this.userController.getUser(req.params.id)
+/*export const getUserHandler = async function (this: IMainController, req: Request, res: Response) {
+ try {
+ const user = await this.userController.getUser(req.params.id)
 
-		return res.json(user).end()
-	} catch (e) {
-		return res.status(404).send({msg: 'user was not found' + e})
-	}
+ return res.json(user).end()
+ } catch (e) {
+ return res.status(404).send({msg: 'user was not found' + e})
+ }
 
-}
+ }*/
 
 export const createUserHandler = async function (this: IMainController, req: Request, res: Response) {
-	const user_name: IUserM['name'] = req.body.name
+	const user_name: IUser = req.body.name
 
 	try {
-		const newUser = await this.userController.createUser(user_name)
+		const newUser = await this.userController.saveUser(user_name)
 
 		return res.json(newUser).end()
 	} catch (e) {
