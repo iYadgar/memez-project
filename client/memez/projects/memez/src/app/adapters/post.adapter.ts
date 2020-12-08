@@ -30,4 +30,9 @@ export class PostAdapter extends BaseAjaxAdapter {
     return this.delete(`posts/${post_id}`)
   }
 
+  async getOnePost(post_id: string) {
+    return await this.request(`posts/${post_id} `)
+
+  }
+
 }

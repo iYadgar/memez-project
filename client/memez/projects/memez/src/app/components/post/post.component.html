@@ -36,20 +36,22 @@
   <div class="post-content">
     {{post.content}}
   </div>
-  <div class="like-dashboard"
-  >
-    <div class="like-btn">
-      <mat-icon (click)="onPostLiked(post)"
-                class="like-icon">favorite
-      </mat-icon>
+  <ng-container *mobxAutorun>
+    <div class="like-dashboard"
+    >
+      <div class="like-btn">
+        <mat-icon (click)="onPostLiked(post)"
+                  class="like-icon">favorite
+        </mat-icon>
 
+      </div>
+      <div class="likes-amount"
+           *ngIf="post.likesAmount"
+           (click)="onDashboardClicked(post)">
+        {{post.likesAmount}}
+      </div>
     </div>
-    <div class="likes-amount"
-         *ngIf="post.likes.length"
-         (click)="onDashboardClicked(post)">
-      {{post.likes.length}}
-    </div>
-  </div>
+  </ng-container>
 
 
 </div>

@@ -5,8 +5,10 @@ import {IMainController}   from "../controllers/main.controller";
 //get all posts
 export const getPostsHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-		const posts = await this.postController.getPosts()
-		return res.send(posts)
+		const
+			posts        = await this.postController.getPosts(),
+			likePromises = posts.map(post =>)
+		return res.send()
 
 	} catch (err) {
 		return res.status(404).send({msg: 'get posts was unsuccessful ' + err})

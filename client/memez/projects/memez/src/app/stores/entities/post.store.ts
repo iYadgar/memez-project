@@ -2,10 +2,8 @@ import {Injectable}                   from '@angular/core';
 import {action, computed, observable} from 'mobx-angular';
 import {RootStore}                    from '../root.store';
 import {IPost}                        from '../../../../../../../../shared/types/Entities/IPost';
-import * as dayjs                     from 'dayjs';
-import {autorun, reaction, toJS}      from 'mobx';
-/*import {MOCK_POSTS}              from '../../../../../../../../shared/mock/MOCK_POSTS';*/
-import {ILike}                        from '../../../../../../../../shared/types/Entities/ILike';
+import {autorun}                      from 'mobx';
+
 
 @Injectable({
   providedIn: 'root'
@@ -39,14 +37,33 @@ export class PostStore {
     return userPosts.reverse()
   }
 
+  @computed get userLikes() {
+    const currentUser = this.root.log.currentUser
+    return this.reversedPosts
+      .map(post => post.likes
+        .map(like => like.userLiked._id === currentUser._id ? like.currentUserLiked === true : like.currentUserLiked === false))
+  }
+
+
+
   @action
   async getPosts(): Promise<IPost[]> {
     /* if (this.useMock) {
      return this.posts = MOCK_POSTS;
      } */
-    return this.posts = await this.root
+
+    this.posts = await this.root
       .postAdapter
       .getPosts();
+
+   /* this.posts
+      .map(async post => {
+        await this.root
+          .likeStore
+          .getPostLikes(post)
+      })*/
+
+    return this.posts;
 
   }
 
@@ -57,11 +74,9 @@ export class PostStore {
       content: content,
     }
 
-    const newPost = await this.root.postAdapter.createPost(postInput)
-    //push post to posts array
+    await this.root.postAdapter.createPost(postInput)
 
     await this.getPosts()
-
 
 
   }
@@ -75,6 +90,11 @@ export class PostStore {
     } else {
       alert('This is not your post to DELETE ! ! ! ')
     }
+  }
+
+  @action
+  async getOnePost(post : IPost){
+    return await this.root.postAdapter.getOnePost()
   }
 
 

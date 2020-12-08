@@ -32,6 +32,9 @@ export class NavbarComponent implements OnInit {
   headerClicked() {
     this.headerClick.emit();
   }
+  logoutClicked(){
+    this.logoutClick.emit();
+  }
 
 
 

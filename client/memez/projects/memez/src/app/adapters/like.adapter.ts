@@ -17,8 +17,8 @@ export class LikeAdapter extends BaseAjaxAdapter {
     window['likeAdapter'] = this;
   }
 
-  async getLikes(): Promise<ILike[]> {
-    return this.request<ILike[]>('likes');
+  async getPostLikes(post_id: string): Promise<ILike[]> {
+    return this.request<ILike[]>(`posts/likes/${post_id} `);
   }
 
   async createLike(likeIds): Promise<ILike> {
@@ -27,6 +27,10 @@ export class LikeAdapter extends BaseAjaxAdapter {
 
   async unlike(likeId: string): Promise<ILike> {
     return this.delete(`likes/${likeId}`)
+  }
+
+  async getLikes() {
+    return await this.request('likes');
   }
 
 }

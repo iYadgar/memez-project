@@ -25,27 +25,20 @@ export class LikeStore {
 
   }
 
-  /*@action
-   async getLikes(): Promise<ILike[]> {
-   /!* if (this.USE_MOCK) {
-   return this.likes = MOCK_LIKES;
-   }*!/
-   return this.likes = await this.root.likeAdapter.getLikes();
-   }*/
+  @action
+  async getPostLikes(post: IPost) {
+    const postLikes: ILike[] = await this.root.likeAdapter.getPostLikes(post._id)
+    return post.likes = postLikes
+  }
 
   @action
   async createLike(post: IPost) {
-    let likeInput = {
+    const likeInput = {
       user_id: this.root.log.currentUser._id,
       post_id: post._id
-    };
-    const postAlreadyLiked = post
-      .likes
-      .some(like => like.userLiked._id === this.root.log.currentUser._id)
-    if (!postAlreadyLiked) {
-      return await this.root.likeAdapter.createLike(likeInput)
     }
-    return;
+    return await this.root.likeAdapter.createLike(likeInput)
+
 
   }
 
@@ -56,16 +49,20 @@ export class LikeStore {
 
   @action
   async handleLike(post: IPost) {
-    const newLike: ILike = await this.createLike(post);
 
-    if (!newLike) {
-      const likeToDelete: ILike = post
-        .likes
+    const
+      found = post.likes
         .find(like => like.userLiked._id === this.root.log.currentUser._id)
+    console.log(toJS(found), !!found)
+    if (!!found) {
+      await this.unlike(found._id)
+    } else {
 
-      await this.unlike(likeToDelete._id)
+      await this.createLike(post)
     }
     await this.root.ps.getPosts()
+
+
   }
 
 

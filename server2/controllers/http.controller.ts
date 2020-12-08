@@ -91,7 +91,7 @@ export class HttpController extends BaseController implements IHttpController {
 			this.events.emit('delete_like', req, res)
 		})
 		//get likes from post
-		this.app.get('/api/likes/:post_id', (req: Request, res: Response) => {
+		this.app.get('/api/posts/likes/:post_id', (req: Request, res: Response) => {
 			this.events.emit('post_likes', req, res)
 		})
 

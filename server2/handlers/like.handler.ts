@@ -52,9 +52,8 @@ export const createLikeHandler = async function (this: IMainController, req: Req
 export const unlikeHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
 		const
-			deletedLike = await this.likeController.unLike(req.params.id),
-			user        = await UserModel.findById(deletedLike.userLiked).exec();
-		await user.deleteLikeFromUser(req.params.id);
+			deletedLike = await this.likeController.unLike(req.params.id);
+
 
 		res.json(deletedLike).end()
 	} catch (e) {

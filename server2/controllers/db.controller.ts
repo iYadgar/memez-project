@@ -40,9 +40,6 @@ export interface IDBController extends IBaseController {
 export class DBController extends BaseController implements IDBController {
 	uri: string = 'mongodb://localhost:27017'
 
-	db = new Db('test', new Server('localhost', 27017))
-
-
 	constructor() {
 		super();
 	}
@@ -68,35 +65,27 @@ export class DBController extends BaseController implements IDBController {
 
 
 	async getUsers(): Promise<IUserM[]> {
-		return await UserModel.find()
+		return await UserModel
+			.find()
 			.exec()
 	}
 
 	async getUser(id: IUserM['_id']): Promise<IUserM> {
-		return await UserModel.findById(id)
+		return await UserModel
+			.findById(id)
 			.exec()
 
 	}
 
 	async createUser(name: IUserM['name']): Promise<IUserM> {
 		return await UserModel.create<IUserM>({
-			name : name,
-			posts: [],
-			likes: []
+			name: name,
 		})
 	}
 
 	async getPosts(): Promise<IPostM[]> {
 		return await PostModel.find()
-			.populate('postedBy').populate({
-					path    : 'likes',
-					model   : 'Like',
-					populate: {
-						path : 'userLiked',
-						model: 'User'
-					}
-				}
-			)
+			.populate('postedBy')
 			.exec()
 
 
@@ -109,18 +98,14 @@ export class DBController extends BaseController implements IDBController {
 	}
 
 	async createPost(content: string, user_id: IUserM['_id']): Promise<IPostM> {
-		const newPost      = await PostModel.create(
+		return await PostModel.create(
 			{
 				content : content,
 				postedBy: user_id,
 				date    : dayjs().format('DD.MM.YY'),
 				time    : dayjs().format('HH:mm'),
-				likes   : []
-			}),
-			  user: IUserM = await UserModel.findById(user_id).exec();
 
-		user.pushPostToUser(newPost._id)
-		return newPost
+			})
 
 
 	}
@@ -150,31 +135,24 @@ export class DBController extends BaseController implements IDBController {
 	}
 
 	async createLike(user_id: IUserM['_id'], post_id: IPostM['_id']): Promise<ILikeM> {
-		const
-			newLike = await LikeModel.create({
-				timestamp: dayjs().format('DD.MM.YY'),
-				userLiked: user_id,
-				postLiked: post_id
+		return await LikeModel.create({
+			timestamp: dayjs().format('DD.MM.YY'),
+			userLiked: user_id,
+			postLiked: post_id
 
-			}),
-			user    = await UserModel.findById(user_id),
-			post    = await PostModel.findById(post_id);
-		user.pushLikeToUser(newLike._id);
-		post.pushLikeToPost(newLike._id);
-		return newLike
-
+		})
 	}
 
 	async unLike(like_id: ILikeM['_id']): Promise<ILikeM> {
 		return await LikeModel.findByIdAndDelete(like_id, {
 			useFindAndModify: false
 		}).exec()
-
 	}
 
 	async getLikeFromPost(post_id: IPostM['_id']): Promise<ILikeM[]> {
-		return LikeModel.find({postLiked: post_id})
-
+		return LikeModel
+			.find({postLiked: post_id})
+			.populate('userLiked')
 	}
 
 

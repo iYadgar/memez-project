@@ -1,7 +1,7 @@
 import * as mongoose       from "mongoose";
 import {Schema, Document}  from "mongoose";
 import {IUserM}            from "./user.model";
-import PostModel, {IPostM} from "./post.model";
+import  {IPostM} from "./post.model";
 
 
 export interface ILikeM extends Document {

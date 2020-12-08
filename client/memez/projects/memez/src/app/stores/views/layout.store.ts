@@ -17,17 +17,18 @@ export class LayoutStore {
     })
   }
 
-  routeToFeed() {
-    this.router.navigateByUrl('feed').then()
+  async routeToFeed() {
+    await this.router.navigateByUrl('feed')
   }
 
-  routeToProfile() {
-    this.router.navigateByUrl('profile')
-      .then();
-
+  async routeToProfile() {
+    await this.router.navigateByUrl('profile')
   }
 
-   
+  async routeToLogin() {
+    await this.router.navigateByUrl('login')
+    window.location.reload();
+  }
 
 
 }
