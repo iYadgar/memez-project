@@ -1,13 +1,9 @@
-import {Injectable}              from '@angular/core';
-import {action, observable}      from 'mobx-angular';
-import {ILike}                   from '../../../../../../../../shared/types/Entities/ILike';
-import {RootStore}               from '../root.store';
-/*import {MOCK_LIKES}              from '../../../../../../../../shared/mock/MOCK_LIKES';*/
-import {IPost}                   from '../../../../../../../../shared/types/Entities/IPost';
-import * as dayjs                from 'dayjs';
-import {autorun, reaction, toJS} from 'mobx';
-import {MatDialog}               from '@angular/material/dialog';
-import {LikeDialogBoxComponent}  from '../../components/like-dialog-box/like-dialog-box.component';
+import {autorun, toJS}      from 'mobx';
+import {Injectable}         from '@angular/core';
+import {action, observable} from 'mobx-angular';
+import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
+import {RootStore}          from '../root.store';
+import {IPost}              from '../../../../../../../../shared/types/Entities/IPost';
 
 
 @Injectable({providedIn: 'root'})
@@ -29,13 +25,13 @@ export class LikeStore {
 
   }
 
-  @action
-  async getLikes(): Promise<ILike[]> {
-    /* if (this.USE_MOCK) {
-       return this.likes = MOCK_LIKES;
-     }*/
-    return this.likes = await this.root.likeAdapter.getLikes();
-  }
+  /*@action
+   async getLikes(): Promise<ILike[]> {
+   /!* if (this.USE_MOCK) {
+   return this.likes = MOCK_LIKES;
+   }*!/
+   return this.likes = await this.root.likeAdapter.getLikes();
+   }*/
 
   @action
   async createLike(post: IPost) {

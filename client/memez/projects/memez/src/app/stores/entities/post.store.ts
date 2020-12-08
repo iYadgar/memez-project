@@ -61,8 +61,7 @@ export class PostStore {
     //push post to posts array
 
     await this.getPosts()
-    //push post to current user posts array
-    /*this.root.log.currentUser.posts.push(newPost)*/
+
 
 
   }

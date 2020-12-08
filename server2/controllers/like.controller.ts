@@ -1,6 +1,6 @@
 import {BaseController, IBaseController} from "./base.controller";
 import {ILikeM}                          from "../models/like.model";
-import {IUserM}                          from "../models/user.model";
+import UserModel, {IUserM}               from "../models/user.model";
 import {IPostM}                          from "../models/post.model";
 
 
@@ -13,7 +13,8 @@ export interface ILikeController extends IBaseController {
 
 	unLike(like_id: ILikeM['_id']): Promise<ILikeM>;
 
-	getPostLikes(post_id: IPostM['_id']): Promise<ILikeM[]>
+	getLikeFromPost(post_id: IPostM['_id']): Promise<ILikeM[]>
+
 }
 
 export class LikeController extends BaseController implements ILikeController {
@@ -36,11 +37,14 @@ export class LikeController extends BaseController implements ILikeController {
 	}
 
 	async unLike(like_id: ILikeM['_id']): Promise<ILikeM> {
-		return this.main.dbController.unLike(like_id)
+		const
+			likeToDelete = await this.main.dbController.unLike(like_id);
+
+		return likeToDelete
 	}
 
-	async getPostLikes(post_id: IPostM['_id']): Promise<ILikeM[]> {
-		return await this.main.dbController.getPostLikes(post_id)
+	async getLikeFromPost(post_id: IPostM['_id']): Promise<ILikeM[]> {
+		return await this.main.dbController.getLikeFromPost(post_id)
 	}
 
 

@@ -1,6 +1,6 @@
 import dayjs     from 'dayjs';
-import postModel from '../models/post-model'
-import userModel from "../models/user-model";
+import postModel from './post-model'
+import userModel from "../users/user-model";
 import {IPost}   from "../../shared/types/Entities/IPost";
 
 // Get all posts

@@ -46,8 +46,7 @@ export const deletePostHandler = async function (this: IMainController, req: Req
 	try {
 		const postToDelete = await this.postController.deletePost(req.params.id);
 
-
-		return res.send(postToDelete)
+		return res.json(postToDelete).end();
 	} catch (e) {
 		return res.status(404).send({msg: 'post was not deleted ' + e})
 	}

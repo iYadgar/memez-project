@@ -30,7 +30,7 @@ export class LayoutComponent implements OnInit {
     (async () => {
         await this.us.getUsers();
         await this.ps.getPosts();
-        await this.likeStore.getLikes();
+        /*await this.likeStore.getLikes();*/
       }
     )();  //IIFE
 

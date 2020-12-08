@@ -1,6 +1,8 @@
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller";
 import {ILikeM}            from "../models/like.model";
+import UserModel           from "../models/user.model";
+import {IPostM}            from "../models/post.model";
 
 
 // Get all likes
@@ -49,7 +51,10 @@ export const createLikeHandler = async function (this: IMainController, req: Req
 // Unlike post
 export const unlikeHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-		const deletedLike = await this.likeController.unLike(req.params.id)
+		const
+			deletedLike = await this.likeController.unLike(req.params.id),
+			user        = await UserModel.findById(deletedLike.userLiked).exec();
+		await user.deleteLikeFromUser(req.params.id);
 
 		res.json(deletedLike).end()
 	} catch (e) {
@@ -58,14 +63,15 @@ export const unlikeHandler = async function (this: IMainController, req: Request
 
 }
 
-export const getPostLikesHandler = async function (this: IMainController, req: Request, res: Response) {
+
+export const getLikeFromPostHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-		const postLikes: ILikeM[] = await this.likeController.getPostLikes(req.params.post_id)
-		console.log(postLikes)
+		const
+			likesFromPost = await this.likeController.getLikeFromPost(req.params.post_id);
 
-
-		res.json(postLikes).end();
+		res.json(likesFromPost).end();
 	} catch (e) {
-		res.status(404).json({msg: `likes was not found ${e} `}).end()
+		res.status(404).json({msg: `didn't get likes` + e})
 	}
 }
+

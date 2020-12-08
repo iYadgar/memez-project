@@ -31,12 +31,12 @@ export class PostController extends BaseController implements IPostController {
 
 	async createPost(content: string, user_id: IUserM['_id']): Promise<IPostM> {
 
-		return this.main.dbController.createPost(content, user_id)
+		return await this.main.dbController.createPost(content, user_id)
 
 	}
 
 	async deletePost(post_id: string): Promise<IPostM> {
-		return this.main.dbController.deletePost(post_id);
+		return await this.main.dbController.deletePost(post_id);
 
 	}
 

@@ -70,11 +70,12 @@ export class HttpController extends BaseController implements IHttpController {
 			this.events.emit('upload_post', req, res)
 		})
 		//delete post
-		this.app.delete('api/posts/:id', (req: Request, res: Response) => {
+		this.app.delete('/api/posts/:id', (req: Request, res: Response) => {
 			this.events.emit('delete_post', req, res)
 		})
 		//get all likes
 		this.app.get('/api/likes', (req: Request, res: Response) => {
+
 			this.events.emit('all_likes', req, res)
 		})
 		//get specific like
@@ -89,10 +90,11 @@ export class HttpController extends BaseController implements IHttpController {
 		this.app.delete('/api/likes/:id', (req: Request, res: Response) => {
 			this.events.emit('delete_like', req, res)
 		})
-
-		//get post likes
+		//get likes from post
 		this.app.get('/api/likes/:post_id', (req: Request, res: Response) => {
 			this.events.emit('post_likes', req, res)
 		})
+
+
 	}
 }

@@ -13,50 +13,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="added HTTP Controller">
-      <change afterPath="$PROJECT_DIR$/server2/controllers/db.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/handlers/like.handler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/handlers/user.handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/likes/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/likes/like-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/like-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/likes/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/likes/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/posts/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/posts/post-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/post-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/posts/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/posts/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/users/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/users/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/users/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/users/user-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/user-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/base.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/base.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.old/posts/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.old/users/user-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/user-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/controllers/db.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/db.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/like.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/like.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/main.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/post.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/post.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/like.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/like.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/models/like.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/like.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/models/post.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/post.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-base.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-http.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-like.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-main.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-post.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/i-user.controller.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +68,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,7 +77,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Debugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server2/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -162,6 +137,10 @@
       <workItem from="1607184695857" duration="6342000" />
       <workItem from="1607192358245" duration="163000" />
       <workItem from="1607241543260" duration="16567000" />
+      <workItem from="1607277559106" duration="189000" />
+      <workItem from="1607331598156" duration="9491000" />
+      <workItem from="1607355154085" duration="267000" />
+      <workItem from="1607411974055" duration="6441000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -205,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607079884968</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added controllers and handlers architecture">
+      <created>1607277621409</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607277621409</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +217,18 @@
     <MESSAGE value="Added mongoDB for get and post requests" />
     <MESSAGE value="added server 2" />
     <MESSAGE value="added HTTP Controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added HTTP Controller" />
+    <MESSAGE value="added controllers and handlers architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="added controllers and handlers architecture" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/login.store.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
