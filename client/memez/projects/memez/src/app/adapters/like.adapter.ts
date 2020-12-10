@@ -33,4 +33,8 @@ export class LikeAdapter extends BaseAjaxAdapter {
     return await this.request('likes');
   }
 
+  async getUserLikes(user_id: string): Promise<ILike[]> {
+    return await this.request(`users/likes/${user_id} `)
+  }
+
 }

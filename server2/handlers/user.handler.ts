@@ -15,16 +15,16 @@ export const getUsersHandler = async function (this: IMainController, req: Reque
 	}
 }
 
-/*export const getUserHandler = async function (this: IMainController, req: Request, res: Response) {
+export const getUserHandler = async function (this: IMainController, req: Request, res: Response) {
  try {
- const user = await this.userController.getUser(req.params.id)
+ const user = await this.userController.getOneUser(req.params.id)
 
  return res.json(user).end()
  } catch (e) {
  return res.status(404).send({msg: 'user was not found' + e})
  }
 
- }*/
+ }
 
 export const createUserHandler = async function (this: IMainController, req: Request, res: Response) {
 	const user_name: IUser = {name: req.body.name}

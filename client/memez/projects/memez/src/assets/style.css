@@ -39,6 +39,8 @@ mem-feed {
   border-left: 1px solid #e0e0e0;
   overflow: scroll;
   background: #ffffffa3;
+  overflow: ;
+  overflow-x: hidden;
 }
 
 
@@ -522,8 +524,7 @@ mem-dialog-box.ng-star-inserted {
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 47vw;
-    overflow: auto;
+    width: 35vw;
 }
 
 ul.liked-user-list {
@@ -531,7 +532,6 @@ ul.liked-user-list {
     flex-direction: column;
     flex: 1;
     align-items: revert;
-    overflow: auto;
 }
 
 li.liked-user.ng-star-inserted {
@@ -549,5 +549,4 @@ li.liked-user.ng-star-inserted {
 }
 
 mat-dialog-container#mat-dialog-0 {
-    overflow: scroll;
 }

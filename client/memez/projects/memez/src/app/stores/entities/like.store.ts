@@ -18,18 +18,12 @@ export class LikeStore {
     window['likeStore'] = this;
     this.root.likeStore = this;
     autorun(() => {
-      let i = 0
-      console.log(`like store : ${toJS(this.likes.map(like => i++))}`)
+
     })
 
 
   }
 
-  @action
-  async getPostLikes(post: IPost) {
-    const postLikes: ILike[] = await this.root.likeAdapter.getPostLikes(post._id)
-    return post.likes = postLikes
-  }
 
   @action
   async createLike(post: IPost) {
@@ -49,20 +43,29 @@ export class LikeStore {
 
   @action
   async handleLike(post: IPost) {
-
     const
-      found = post.likes
-        .find(like => like.userLiked._id === this.root.log.currentUser._id)
-    console.log(toJS(found), !!found)
+      userLikes: ILike[] = await this.getUserLikes(),
+      found: ILike       = userLikes.find(like => like.postLiked === post._id);
+
     if (!!found) {
       await this.unlike(found._id)
     } else {
-
       await this.createLike(post)
     }
+
+
     await this.root.ps.getPosts()
+  }
 
+  @action
+  async getPostLikes(post_id: string) {
+    return this.root.likeAdapter.getPostLikes(post_id);
+  }
 
+  @action
+  async getUserLikes(): Promise<ILike[]> {
+    const user_id: string = this.root.log.currentUser._id
+    return this.root.likeAdapter.getUserLikes(user_id);
   }
 
 

@@ -2,10 +2,12 @@ import {BaseController, IBaseController} from "./base.controller";
 import {ILike}                           from "../../shared/types/Entities/ILike";
 import {IPost}                           from "../../shared/types/Entities/IPost";
 import {IUser}                           from "../../shared/types/Entities/IUser";
-
-const MongoClinet = require('mongodb').MongoClient();
 import {Collection, Db, MongoClient}     from "mongodb";
 import {config}                          from "../config/config";
+//MongoDB Constants
+const
+	MongoClinet = require('mongodb').MongoClient(),
+	ObjectID    = require('mongodb').ObjectID;
 
 export interface IDBController extends IBaseController {
 	saveLike(like: ILike): Promise<any>
@@ -20,7 +22,25 @@ export interface IDBController extends IBaseController {
 
 	getUsers(): Promise<IUser[]>
 
-	close(): Promise<any>;
+
+	deletePost(post_id: string): Promise<any>
+
+
+	unLike(like_id: string)
+
+	getPostLikesAmount(post_id: string): Promise<number>
+
+	getPostLikes(post_id: string): Promise<ILike[]>
+
+	getOneUser(user_id: string): Promise<IUser>
+
+
+	getUserLikes(user_id: string): Promise<ILike[]>
+
+	deletePostLikes(post_id): Promise<any>
+
+
+	close(): Promise<any>
 
 }
 
@@ -35,6 +55,7 @@ export class DBController extends BaseController implements IDBController {
 	constructor() {
 		super();
 	}
+
 
 	async init(): Promise<void> {
 		const This = this;
@@ -74,26 +95,73 @@ export class DBController extends BaseController implements IDBController {
 	}
 
 	async saveLike(like: ILike): Promise<any> {
-		return this.likesCollection.insertOne(like);
+		const newLike = await this.likesCollection.insertOne(like);
+		return newLike.ops
+
 	}
 
 	async savePost(post: IPost): Promise<any> {
-		return this.postsCollection.insertOne(post);
+		const newPost = await this.postsCollection.insertOne(post)
+		return newPost.ops
 	}
 
 	async saveUser(user: IUser): Promise<any> {
-		try {
-			return this.usersCollection.insertOne(user);
-		} catch (e) {
-			console.log(e)
+		const newUser = await this.usersCollection.insertOne(user);
 
-		}
+		return newUser.ops
+	}
 
+
+	async deletePost(post_id: string): Promise<any> {
+		const
+			postId       = new ObjectID(post_id),
+			postToDelete = await this.postsCollection.deleteOne({_id: postId})
+
+		return postToDelete.result
+
+	}
+
+	async unLike(like_id: string) {
+		const
+			likeId = new ObjectID(like_id),
+			like   = await this.likesCollection.deleteOne({_id: likeId});
+
+		return like.result
+	}
+
+	async getPostLikesAmount(post_id: string): Promise<number> {
+		return this.likesCollection.countDocuments({postLiked: post_id});
+	}
+
+	async getPostLikes(post_id: string): Promise<ILike[]> {
+		return this.likesCollection.find({postLiked: post_id}).toArray()
+	}
+
+	async getOneUser(user_id: string): Promise<IUser> {
+		const
+			userId = new ObjectID(user_id);
+
+		return this.usersCollection.findOne({_id: userId})
+
+	}
+
+	async getUserLikes(user_id: string): Promise<ILike[]> {
+		const
+			userId = new ObjectID(user_id);
+
+
+		return this.likesCollection.find({"userLiked._id": userId}).toArray();
+
+	}
+
+	async deletePostLikes(post_id): Promise<any> {
+
+		return this.likesCollection.deleteMany({'postLiked': post_id})
 	}
 
 	close(): Promise<any> {
-		return this.client.close();
+		return this.client.close()
 	}
 
-}
 
+}

@@ -37,12 +37,7 @@ export class PostStore {
     return userPosts.reverse()
   }
 
-  @computed get userLikes() {
-    const currentUser = this.root.log.currentUser
-    return this.reversedPosts
-      .map(post => post.likes
-        .map(like => like.userLiked._id === currentUser._id ? like.currentUserLiked === true : like.currentUserLiked === false))
-  }
+  
 
 
 

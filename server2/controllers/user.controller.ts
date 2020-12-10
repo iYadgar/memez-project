@@ -7,6 +7,10 @@ export interface IUserController extends IBaseController {
 
 	getUsers(): Promise<IUser[]>
 
+	getOneUser(user_id: string): Promise<IUser>
+
+	saveUser(user: IUser): Promise<any>
+
 }
 
 export class UserController extends BaseController implements IUserController {
@@ -17,6 +21,11 @@ export class UserController extends BaseController implements IUserController {
 
 	async getUsers(): Promise<IUser[]> {
 		return this.main.dbController.getUsers()
+	}
+
+	async getOneUser(user_id: string): Promise<IUser> {
+		return this.main.dbController.getOneUser(user_id)
+
 	}
 
 	async saveUser(user: IUser): Promise<any> {

@@ -1,8 +1,12 @@
+import {ILike} from "./ILike";
+import {IUser} from "./IUser";
+
 export interface IPost {
 	_id?: string
-	content: any
-	postedBy: any
+	content: string
+	postedBy: IUser
 	date: string
 	time: string
+	likes_amount: number
 
 }

@@ -5,10 +5,10 @@ import {IUser}                                    from '../../../../../../../../
 import {ILike}                                    from "../../../../../../../../shared/types/Entities/ILike";
 
 @Component({
-             selector   : 'mem-dialog-box',
-             templateUrl: './like-dialog-box.component.html',
-             styleUrls  : ['./like-dialog-box.component.css']
-           })
+  selector   : 'mem-dialog-box',
+  templateUrl: './like-dialog-box.component.html',
+  styleUrls  : ['./like-dialog-box.component.css']
+})
 export class LikeDialogBoxComponent implements OnInit {
 
 
@@ -19,7 +19,7 @@ export class LikeDialogBoxComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(toJS(this.data));
+
   }
 
 }
