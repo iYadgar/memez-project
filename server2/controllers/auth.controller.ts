@@ -10,6 +10,8 @@ export interface IAuthController extends IBaseController {
 
 	requireAuth(req: Request, res: Response, next: NextFunction)
 
+	checkUser(req: Request, res: Response, next: NextFunction)
+
 }
 
 export class AuthController extends BaseController implements IAuthController {
@@ -37,6 +39,29 @@ export class AuthController extends BaseController implements IAuthController {
 			})
 		} else {
 			res.redirect('/login')
+		}
+
+	}
+
+	async checkUser(req: Request, res: Response, next: NextFunction) {
+		const token = req.cookies.jwt;
+
+		// check jwt exist & valid
+		if (token) {
+			jwt.verify(token, `idan's secret string`, async (err, decodedToken) => {
+				if (err) {
+					console.log(err.message)
+					res.locals.user = null;
+					next()
+				} else {
+					const user = await this.main.userController.getOneUser(decodedToken.id)
+					res.locals.user = user
+					next()
+				}
+			})
+		} else {
+			res.locals.user = null;
+			next();
 		}
 
 	}

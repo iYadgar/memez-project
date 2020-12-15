@@ -40,14 +40,10 @@ export class LoginStore {
   @action
   async handleLogin(loginDetails: ILoginDetails) {
     try {
-      await this.verifyUser(loginDetails)
+      const response = await this.verifyUser(loginDetails)
       await this.router.navigateByUrl('feed')
-      this.currentUser = {
-        _id     : '5fd77869041ab30fca8c35ad',
-        email   : 'idan@google.com',
-        name    : 'Idan Yadgar',
-        password: '123456'
-      }
+      this.currentUser = response
+
     } catch (e) {
       this.loginError = e.error.msg
     }

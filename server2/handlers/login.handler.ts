@@ -13,7 +13,7 @@ export async function loginHandler(this: IMainController, req: Request, res: Res
 				const token = this.authController.createToken(found._id)
 				res
 					.cookie('jwt', token, {httpOnly: true, maxAge: this.authController.maxAge * 1000})
-				return res.status(200).send(found._id)
+				return res.status(200).send(found)
 			}
 			return res.status(404).send({msg: 'Password is incorrect'})
 		}

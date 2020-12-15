@@ -46,6 +46,7 @@ export class HttpController extends BaseController implements IHttpController {
 
 	registerEndpoints() {
 
+
 		//get all users
 		this.app.get('/api/users', (req: Request, res: Response) => {
 			this.events.emit('all_users', req, res);
