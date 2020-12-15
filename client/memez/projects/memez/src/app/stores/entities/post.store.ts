@@ -50,14 +50,12 @@ export class PostStore {
   async createPost(content: string) {
     const postInput = {
       user_id: this.root.log.currentUser._id,
-      content: content,
+      content,
     }
 
     await this.postAdapter.createPost(postInput)
 
     await this.getPosts()
-
-
   }
 
   @action

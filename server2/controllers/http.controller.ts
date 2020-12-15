@@ -1,3 +1,4 @@
+//region imports
 import * as express                      from "express";
 import {Express, Request, Response}      from "express";
 import * as events                       from 'events'
@@ -8,6 +9,13 @@ import * as cors                         from "cors";
 import {body, validationResult}          from "express-validator";
 import * as cookieParser                 from "cookie-parser";
 
+//socket.io
+import { Server as IOServer, Socket as SocketIO_Socket } from "socket.io";
+import * as socketio                                     from "socket.io";
+import * as http                                         from "http";
+
+//endregion
+
 
 export interface IHttpController extends IBaseController {
 	events: events.EventEmitter
@@ -16,8 +24,11 @@ export interface IHttpController extends IBaseController {
 
 
 export class HttpController extends BaseController implements IHttpController {
+	private sockets: SocketIO_Socket[] = [];
+	private io_server: IOServer;
+	private http_server: http.Server;
 
-	app: Express = express()
+	express_app: Express = express()
 	events: events.EventEmitter = new events.EventEmitter();
 
 
@@ -27,19 +38,57 @@ export class HttpController extends BaseController implements IHttpController {
 
 	async init() {
 		//middlewares
-		this.app.use(bodyParser.json())
-		this.app.use(cors({origin: true, credentials: true}))
-		this.app.use(cookieParser())
+		this.express_app.use(bodyParser.json())
+		this.express_app.use(cors({origin: true, credentials: true}))
+		this.express_app.use(cookieParser())
 		//**//
 
 		this.registerEndpoints()
 
 		//turn server on
 		this.runServer()
+		await this.initSocketIO()
 	}
 
+
+	async initSocketIO() {
+		const This = this;
+
+		this.http_server = http.createServer(this.express_app)
+		this.io_server = socketio(this.http_server);
+		this.io_server.origins("localhost:4200");
+
+
+		this.io_server.on("connection", function(socket: SocketIO_Socket) {
+			This.sockets.push(socket);
+			const idx = This.sockets.indexOf(socket);
+			console.log(`SOCKET CONNECTED to slot ${idx}. Total ${This.sockets.length} clients connected.`);
+
+			socket.on("disconnect", () => {
+					This.sockets.splice(idx, 1);
+				console.log(`SOCKET CLOSED in slot ${idx}. Total ${This.sockets.length} clients connected.`);
+				}
+			);
+
+			socket.on('ping', (socket)=>{
+			    socket.emit('pong!')
+			})
+
+			// This.registeredEvents.forEach(ev =>
+			// 	socket.on(ev.event_name, ev.fn.bind(This, socket))
+			// );
+		});
+
+
+
+
+
+
+	}
+
+
 	runServer() {
-		this.app.listen(config.port, () => {
+		this.express_app.listen(config.port, () => {
 			console.log(`server is up on port ${config.port} `)
 		})
 	}
@@ -48,11 +97,11 @@ export class HttpController extends BaseController implements IHttpController {
 
 
 		//get all users
-		this.app.get('/api/users', (req: Request, res: Response) => {
+		this.express_app.get('/api/users', (req: Request, res: Response) => {
 			this.events.emit('all_users', req, res);
 		})
 		//create new user
-		this.app.post('/api/users', [
+		this.express_app.post('/api/users', [
 				body('email').isEmail(),
 				body('name').isLength({min: 1}),
 				body('password').isLength({min: 6})
@@ -66,11 +115,11 @@ export class HttpController extends BaseController implements IHttpController {
 				this.events.emit('create_user', req, res)
 			})
 		//get all posts
-		this.app.get('/api/posts', (req: Request, res: Response) => {
+		this.express_app.get('/api/posts', (req: Request, res: Response) => {
 			this.events.emit('all_posts', req, res)
 		})
 		//upload new post
-		this.app.post('/api/posts', [body('content').isLength({min: 1})],
+		this.express_app.post('/api/posts', [body('content').isLength({min: 1})],
 			(req: Request, res: Response) => {
 
 				const errors = validationResult(req)
@@ -80,39 +129,39 @@ export class HttpController extends BaseController implements IHttpController {
 				this.events.emit('upload_post', req, res)
 			})
 		//delete post
-		this.app.delete('/api/posts/:id', (req: Request, res: Response) => {
+		this.express_app.delete('/api/posts/:id', (req: Request, res: Response) => {
 			this.events.emit('delete_post', req, res)
 		})
 		//get all likes
-		this.app.get('/api/likes', (req: Request, res: Response) => {
+		this.express_app.get('/api/likes', (req: Request, res: Response) => {
 
 			this.events.emit('all_likes', req, res)
 		})
 		//create new like
-		this.app.post('/api/likes', (req: Request, res: Response) => {
+		this.express_app.post('/api/likes', (req: Request, res: Response) => {
 			this.events.emit('create_like', req, res)
 		})
 		//unlike
-		this.app.delete('/api/likes/:id', (req: Request, res: Response) => {
+		this.express_app.delete('/api/likes/:id', (req: Request, res: Response) => {
 
 			this.events.emit('delete_like', req, res)
 		})
 		//get likes from post
-		this.app.get('/api/posts/likes/:post_id', (req: Request, res: Response) => {
+		this.express_app.get('/api/posts/likes/:post_id', (req: Request, res: Response) => {
 			this.events.emit('post_likes', req, res)
 		})
 		//get User Likes
-		this.app.get('/api/users/likes/:user_id', (req: Request, res: Response) => {
+		this.express_app.get('/api/users/likes/:user_id', (req: Request, res: Response) => {
 			this.events.emit('user_likes', req, res)
 		})
 
 		//handle Login 
-		this.app.post('/api/login', (req: Request, res: Response) => {
+		this.express_app.post('/api/login', (req: Request, res: Response) => {
 			this.events.emit('post_login', req, res)
 		})
 
 		//handle logout
-		this.app.get('/api/logout', (req: Request, res: Response) => {
+		this.express_app.get('/api/logout', (req: Request, res: Response) => {
 			this.events.emit('get_logout', req, res)
 		})
 

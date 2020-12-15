@@ -2,15 +2,14 @@ import {IPost} from "../../../shared/types/Entities/IPost";
 import {IUser} from "../../../shared/types/Entities/IUser";
 
 export class Post implements IPost {
-	content: string;
-	created: number;
-	likes_amount: number;
-	postedBy: IUser;
 
-	constructor(content, postedBy) {
-		this.content = content
+	created: number;
+	likes_amount: number = 0;
+
+	constructor(
+		public content:string,
+		public postedBy:IUser
+	) {
 		this.created = Date.now()
-		this.likes_amount = 0
-		this.postedBy = postedBy
 	}
 }
