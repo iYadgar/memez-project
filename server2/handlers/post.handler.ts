@@ -1,9 +1,8 @@
 import {Request, Response} from "express";
 import {IMainController}   from "../controllers/main.controller";
-
-import * as dayjs from "dayjs";
-import {IPost}    from "../../shared/types/Entities/IPost";
-import {IUser}    from "../../shared/types/Entities/IUser";
+import {IPost}             from "../../shared/types/Entities/IPost";
+import {IUser}             from "../../shared/types/Entities/IUser";
+import {Post}              from "../types/entities/Post.entity";
 
 
 //get all posts
@@ -21,41 +20,25 @@ export const getPostsHandler = async function (this: IMainController, req: Reque
 			]);
 
 
-		return res.send(posts_response.flat())
+		return res.send(posts_response.flat().slice().reverse())
 
 	} catch (err) {
-		return res.status(404).send({msg: 'get posts was unsuccessful ' + err})
+		return res.status(404).send({msg: 'Something went wrong' + err})
 	}
 }
-/*//get specific post
- export const getPostHandler = async function (this: IMainController, req: Request, res: Response) {
- try {
- const post = await this.postController.getPost(req.params.id);
- return res.json(post).end();
- } catch (err) {
- return res.status(404).json({msg: 'Post was not found ' + err}).end()
- }
 
 
- }*/
-
-//creat a new post
+//create a new post
 export async function createPostHandler(this: IMainController, req: Request, res: Response) {
 	const
 		userPosted: IUser = await this.userController.getOneUser(req.body.user_id),
-		post: IPost       = {
-			content     : req.body.content,
-			postedBy    : userPosted,
-			date        : dayjs().format('DD.MM.YY'),
-			time        : dayjs().format('HH:mm'),
-			likes_amount: 0
-		}
+		post: IPost       = new Post(req.body.content, userPosted);
 
 	try {
 
 		const
 			newPost = await this.postController.savePost(post);
-		return res.json(newPost).end()
+		return res.status(201).send(newPost);
 
 	} catch (err) {
 		return res.status(404).json({msg: 'No post added' + err})
@@ -69,8 +52,8 @@ export const deletePostHandler = async function (this: IMainController, req: Req
 	try {
 
 		const
-			likesToDelete = await this.likeController.deletePostLikes(req.params.id),
-			postToDelete  = await this.postController.deletePost(req.params.id);
+			[likesToDelete, postToDelete] = await Promise
+				.all([this.likeController.deletePostLikes(req.params.id), this.postController.deletePost(req.params.id)])
 
 
 		return res.json([postToDelete, `likes deleted ${likesToDelete} `]).end();

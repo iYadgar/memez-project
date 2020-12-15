@@ -5,8 +5,7 @@ export interface IPost {
 	_id?: string
 	content: string
 	postedBy: IUser
-	date: string
-	time: string
+	created : number
 	likes_amount: number
 
 }

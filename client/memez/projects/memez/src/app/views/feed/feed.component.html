@@ -2,11 +2,13 @@
   <mem-post-box (newPost)="fs.root.ps.createPost($event)"></mem-post-box>
   <div class="posts-container" *mobxAutorun>
     <mem-post
-      *ngFor="let post of fs.root.ps.reversedPosts"
+      *ngFor="let post of fs.root.ps.posts"
       [post]="post"
+      [currentUser]="fs.root.log.currentUser"
       (postDeleted)="fs.root.ps.deletePost($event)"
       (postLiked)="fs.root.likeStore.handleLike($event)"
       (dashboardClicked)="fs.handleDialog($event)"
+
     ></mem-post>
   </div>
 </div>

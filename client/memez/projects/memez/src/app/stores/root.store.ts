@@ -9,7 +9,7 @@ import {LikeAdapter} from '../adapters/like.adapter';
 import {toJS}        from 'mobx';
 import {FeedStore}   from './views/feed.store';
 import {LayoutStore} from "./views/layout.store";
-import {SignupStore} from "./views/signup-store.service";
+import {SignupStore} from "./views/signup.store";
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +24,7 @@ export class RootStore {
   sus: SignupStore;
 
 
-  constructor(
-    public postAdapter: PostAdapter,
-    public userAdapter: UserAdapter,
-    public likeAdapter: LikeAdapter
-  ) {
+  constructor() {
     window['root'] = this;
     window['js'] = data => toJS(data, {recurseEverything: true});
   }

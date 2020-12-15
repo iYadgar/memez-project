@@ -17,6 +17,8 @@ export interface ILikeController extends IBaseController {
 
 	deletePostLikes(post_id: string): Promise<any>
 
+	getOneLike(like_id: string): Promise<ILike>
+
 
 }
 
@@ -56,6 +58,10 @@ export class LikeController extends BaseController implements ILikeController {
 	async deletePostLikes(post_id: string): Promise<any> {
 		return this.main.dbController.deletePostLikes(post_id)
 	}
+	async getOneLike(like_id: string): Promise<ILike>{
+		return this.main.dbController.getOneLike(like_id)
+	}
+
 
 
 }

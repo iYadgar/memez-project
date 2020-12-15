@@ -4,6 +4,7 @@ import {UserController} from "./controllers/user.controller";
 import {PostController} from "./controllers/post.controller";
 import {HttpController} from "./controllers/http.controller";
 import {DBController}   from "./controllers/db.controller";
+import {AuthController} from "./controllers/auth.controller";
 
 (async () => {
 	const
@@ -12,12 +13,14 @@ import {DBController}   from "./controllers/db.controller";
 		userController = new UserController(),
 		httpController = new HttpController(),
 		dbController   = new DBController(),
+		authController = new AuthController(),
 		mainController = new MainController(
 			userController,
 			likeController,
 			postController,
 			httpController,
-			dbController
+			dbController,
+			authController
 		);
 	try {
 		await mainController.init()

@@ -15,8 +15,8 @@ import {MatButtonModule}         from '@angular/material/button';
 import {MatIconModule}           from '@angular/material/icon';
 import {LikeDialogBoxComponent}  from './components/like-dialog-box/like-dialog-box.component';
 import {MatDialogModule}         from '@angular/material/dialog';
-import { SignUpComponent }       from './views/sign-up/sign-up.component';
-import {FormsModule}             from "@angular/forms";
+import { SignUpComponent }                from './views/sign-up/sign-up.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -32,19 +32,20 @@ import {FormsModule}             from "@angular/forms";
     LikeDialogBoxComponent,
     SignUpComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MobxAngularModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDialogModule,
-    FormsModule
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
+		MobxAngularModule,
+		BrowserAnimationsModule,
+		MatButtonModule,
+		MatIconModule,
+		MatDialogModule,
+		FormsModule,
+		ReactiveFormsModule
 
 
-  ],
+	],
   providers   : [],
   bootstrap   : [LayoutComponent]
 })

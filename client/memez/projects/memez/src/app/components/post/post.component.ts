@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IPost}                                          from '../../../../../../../../shared/types/Entities/IPost';
 import {IUser}                                          from "../../../../../../../../shared/types/Entities/IUser";
+import * as dayjs                                       from "dayjs";
+
 
 @Component({
   selector   : 'mem-post',
@@ -10,14 +12,25 @@ import {IUser}                                          from "../../../../../../
 })
 export class PostComponent implements OnInit {
   @Input() post: IPost;
+  @Input() currentUser: IUser
   @Output() postDeleted = new EventEmitter();
   @Output() postLiked = new EventEmitter();
-  @Output() dashboardClicked = new EventEmitter()
+  @Output() dashboardClicked = new EventEmitter();
+
+  postDate: string
+  postTime: string
+
+
+  isUserPost: boolean;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    this.postDate = dayjs(this.post.created).format('DD.MM.YYYY');
+    this.postTime = dayjs(this.post.created).format('HH:mm')
+
+
   }
 
   //event handler function

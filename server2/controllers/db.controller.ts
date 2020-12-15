@@ -37,7 +37,11 @@ export interface IDBController extends IBaseController {
 
 	getUserLikes(user_id: string): Promise<ILike[]>
 
-	deletePostLikes(post_id): Promise<any>
+	deletePostLikes(post_id: string): Promise<any>
+
+	getOneLike(like_id: string): Promise<ILike>
+
+	checkForUserEmail(email: string): Promise<IUser>
 
 
 	close(): Promise<any>
@@ -64,7 +68,6 @@ export class DBController extends BaseController implements IDBController {
 			this.client = new MongoClient(config.URL, {
 				useUnifiedTopology: true
 			})
-
 			this.client.connect(function (err) {
 				if (err) {
 					console.error('Mongo Err', err);
@@ -77,9 +80,14 @@ export class DBController extends BaseController implements IDBController {
 				This.postsCollection = This.db.collection('posts')
 				This.usersCollection = This.db.collection('users')
 
+
+				This.usersCollection.createIndex({email: 1}, {unique: true})
 				resolve()
+
 			});
+
 		})
+
 	}
 
 	async getLikes(): Promise<ILike[]> {
@@ -95,6 +103,7 @@ export class DBController extends BaseController implements IDBController {
 	}
 
 	async saveLike(like: ILike): Promise<any> {
+
 		const newLike = await this.likesCollection.insertOne(like);
 		return newLike.ops
 
@@ -130,11 +139,11 @@ export class DBController extends BaseController implements IDBController {
 	}
 
 	async getPostLikesAmount(post_id: string): Promise<number> {
-		return this.likesCollection.countDocuments({postLiked: post_id});
+		return this.likesCollection.countDocuments({post_id: post_id});
 	}
 
 	async getPostLikes(post_id: string): Promise<ILike[]> {
-		return this.likesCollection.find({postLiked: post_id}).toArray()
+		return this.likesCollection.find({post_id: post_id}).toArray()
 	}
 
 	async getOneUser(user_id: string): Promise<IUser> {
@@ -150,13 +159,22 @@ export class DBController extends BaseController implements IDBController {
 			userId = new ObjectID(user_id);
 
 
-		return this.likesCollection.find({"userLiked._id": userId}).toArray();
+		return this.likesCollection.find({"user_id._id": userId}).toArray();
 
 	}
 
 	async deletePostLikes(post_id): Promise<any> {
 
 		return this.likesCollection.deleteMany({'postLiked': post_id})
+	}
+
+	async getOneLike(like_id: string): Promise<ILike> {
+		const likeId = new ObjectID(like_id)
+		return this.likesCollection.findOne({_id: likeId})
+	}
+
+	async checkForUserEmail(email: string): Promise<IUser> {
+		return this.usersCollection.findOne({email});
 	}
 
 	close(): Promise<any> {

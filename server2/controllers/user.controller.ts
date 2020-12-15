@@ -11,6 +11,9 @@ export interface IUserController extends IBaseController {
 
 	saveUser(user: IUser): Promise<any>
 
+	checkForUserEmail(email: string): Promise<IUser>
+
+
 }
 
 export class UserController extends BaseController implements IUserController {
@@ -32,5 +35,8 @@ export class UserController extends BaseController implements IUserController {
 		return this.main.dbController.saveUser(user)
 	}
 
+	async checkForUserEmail(email: string): Promise<IUser> {
+		return this.main.dbController.checkForUserEmail(email)
+	}
 
 }

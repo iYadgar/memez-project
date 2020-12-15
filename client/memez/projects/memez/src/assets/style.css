@@ -37,9 +37,8 @@ mem-feed {
   align-items: center;
   border-right: 1px solid #e0e0e0;
   border-left: 1px solid #e0e0e0;
-  overflow: scroll;
+  overflow: auto;
   background: #ffffffa3;
-  overflow: ;
   overflow-x: hidden;
 }
 
@@ -337,7 +336,7 @@ mem-login {
   display: flex;
   height: 70%;
   width: 70%;
-  border-radius: 220px;
+  /* border-radius: 13px; */
 }
 
 .login-landing {
@@ -345,8 +344,8 @@ mem-login {
   flex: 1;
   border-right: 1px solid #e0e0e0;
   background: #b86168;
-  border-bottom-left-radius: 210px;
-  border-top-left-radius: 210px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -369,7 +368,7 @@ mem-login {
   flex-direction: column;
   border: 1px solid #e0e0e0;
   width: 80%;
-  height: 50%;
+  height: 85%;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
@@ -473,80 +472,132 @@ mat-icon.mat-icon.notranslate.like-icon.material-icons.mat-icon-no-color {
 
 
 .login-form {
-   display: flex;
+  display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
   align-items: center;
-  border-bottom-right-radius: 210px;
-  border-top-right-radius: 210px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
   background: #ffffffa3;
 }
 
 .sign-up-button {
-    display: flex;
-    font-family: 'Montserrat';
+  display: flex;
+  font-family: 'Montserrat';
 }
 
-span {}
+span {
+}
 
 span.sign-up-route {
-    display: flex;
-    margin-left: 8px;
-    text-transform: capitalize;
-    font-family: 'PT Sans Caption';
-    cursor: pointer;
-    color: #5C9DF2;
-    text-decoration: underline;
+  display: flex;
+  margin-left: 8px;
+  text-transform: capitalize;
+  font-family: 'PT Sans Caption';
+  cursor: pointer;
+  color: #5C9DF2;
+  text-decoration: underline;
 }
 
 mem-sign-up {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
 
 .sign-up-form {
-    display: flex;
-    width: 70%;
-    height: 100%;
-    justify-content: center;
-    background: #ffffffa3;
-    align-items: center;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  justify-content: center;
+  background: #ffffffa3;
+  align-items: center;
 }
 
 .like-timestamp {
-    color:  #5c9df25c;
-    margin-left: 150px;
+  color: #5c9df25c;
+  margin-left: 150px;
 }
 
 mem-dialog-box.ng-star-inserted {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    width: 35vw;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 35vw;
 }
 
 ul.liked-user-list {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: revert;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: revert;
 }
 
 li.liked-user.ng-star-inserted {
-    display: flex;
-    /* margin: 5px; */
-    padding: 10px;
-    justify-content: space-between;
+  display: flex;
+  /* margin: 5px; */
+  padding: 10px;
+  justify-content: space-between;
 }
 
 .like-user-name {
-    display: flex;
-    color: #305473;
-    font-family: 'PT Sans Caption', sans-serif;
-    text-transform: capitalize;
+  display: flex;
+  color: #305473;
+  font-family: 'PT Sans Caption', sans-serif;
+  text-transform: capitalize;
 }
 
 mat-dialog-container#mat-dialog-0 {
+}
+
+label.form-label {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+
+.sign-up-form-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-validation {
+  display: flex;
+  text-transform: uppercase;
+  color: #b86168;
+  padding: 10px;
+}
+
+.valid {
+  border: 1px solid #3ac138;
+}
+
+.not-valid {
+  border: 1px solid #b86168;
+}
+
+
+.form-validation.submitted {
+    display: flex;
+    font-size: 1.4em;
+}
+
+.user-name-input:active {
+    border: 1px solid grey;
+}
+
+.user-name-input:focus {
+  border: 1px solid grey;
+}
+
+
+.input-hint {
+    display: flex;
+    font-size: 0.7em;
+    margin-top: 2px;
+    color: #8a8a8a;
 }

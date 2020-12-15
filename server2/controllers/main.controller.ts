@@ -6,13 +6,15 @@ import {createUserHandler, getUserHandler, getUsersHandler}    from "../handlers
 import {createPostHandler, deletePostHandler, getPostsHandler} from "../handlers/post.handler";
 import {
 	createLikeHandler,
-	getLikeFromPostHandler,
+	getPostLikesHandler,
 	getLikesHandler,
 	getUserLikesHandler,
 	unlikeHandler
 }                                                              from "../handlers/like.handler";
 import {IUserController}                                       from "./user.controller";
 import {IPostController}                                       from "./post.controller";
+import {IAuthController}                                       from "./auth.controller";
+import {loginHandler, logoutHandler}                           from "../handlers/login.handler";
 
 
 export interface IMainController extends IBaseController {
@@ -21,6 +23,7 @@ export interface IMainController extends IBaseController {
 	likeController: ILikeController
 	httpController: IHttpController
 	dbController: IDBController
+	authController: IAuthController
 
 }
 
@@ -32,7 +35,8 @@ export class MainController extends BaseController implements IMainController {
 		public likeController: ILikeController,
 		public postController: IPostController,
 		public httpController: IHttpController,
-		public dbController: IDBController
+		public dbController: IDBController,
+		public authController: IAuthController
 	) {
 		super();
 
@@ -41,13 +45,13 @@ export class MainController extends BaseController implements IMainController {
 		this.postController.main = this;
 		this.httpController.main = this;
 		this.dbController.main = this;
+		this.authController.main = this;
 
 	}
 
 	async init(): Promise<void> {
-		await this.httpController.init()
 		await this.dbController.init()
-
+		await this.httpController.init()
 
 		this.addEventListeners()
 
@@ -72,9 +76,13 @@ export class MainController extends BaseController implements IMainController {
 		// Delete like
 		this.httpController.events.addListener('delete_like', unlikeHandler.bind(this))
 		// Get likes from post
-		this.httpController.events.addListener('post_likes', getLikeFromPostHandler.bind(this))
+		this.httpController.events.addListener('post_likes', getPostLikesHandler.bind(this))
 		// Get user likes
 		this.httpController.events.addListener('user_likes', getUserLikesHandler.bind(this))
+		// Handle Login
+		this.httpController.events.addListener('post_login', loginHandler.bind(this))
+		// Handle logout
+		this.httpController.events.addListener('get_logout', logoutHandler.bind(this))
 	}
 
 }

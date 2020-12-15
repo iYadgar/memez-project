@@ -1,6 +1,8 @@
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller";
 import {IUser}             from "../../shared/types/Entities/IUser";
+import {User}              from "../types/entities/User.entity";
+import * as bcrypt         from "bcrypt";
 
 
 export const getUsersHandler = async function (this: IMainController, req: Request, res: Response) {
@@ -16,25 +18,37 @@ export const getUsersHandler = async function (this: IMainController, req: Reque
 }
 
 export const getUserHandler = async function (this: IMainController, req: Request, res: Response) {
- try {
- const user = await this.userController.getOneUser(req.params.id)
-
- return res.json(user).end()
- } catch (e) {
- return res.status(404).send({msg: 'user was not found' + e})
- }
-
- }
-
-export const createUserHandler = async function (this: IMainController, req: Request, res: Response) {
-	const user_name: IUser = {name: req.body.name}
-
 	try {
-		const newUser = await this.userController.saveUser(user_name)
+		const user = await this.userController.getOneUser(req.params.id)
 
-		return res.json(newUser).end()
+		return res.json(user).end()
 	} catch (e) {
-		return res.status(404).json({msg: 'no user was added' + e})
+		return res.status(404).send({msg: 'user was not found' + e})
+	}
+
+}
+
+export async function createUserHandler(this: IMainController, req: Request, res: Response) {
+	const salt                = await bcrypt.genSalt(),
+		  password            = await bcrypt.hash(req.body.password, salt),
+		  userToCreate: IUser = new User(req.body.email, req.body.name, password)
+	try {
+		const
+			newUser = await this.userController.saveUser(userToCreate),
+			token   = this.authController.createToken(newUser._id);
+		if (!newUser) {
+			return res.status(404).send({msg: `user does not exist `})
+		}
+
+		return res.status(201)
+			.cookie('jwt', token, {httpOnly: true, maxAge: this.authController.maxAge * 1000})
+			.json(newUser).end()
+
+	} catch (e) {
+		if (e.code === 11000) {
+			return res.status(409).json({msg: 'Email is already taken'})
+		}
+		return res.status(500).json({msg: 'Something went wrong' + e})
 
 	}
 

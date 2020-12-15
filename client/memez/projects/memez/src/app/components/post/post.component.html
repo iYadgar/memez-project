@@ -6,13 +6,16 @@
       avatar
     </div>
 
-    <div class="post-user-name">
+    <div
+      *mobxAutorun
+      class="post-user-name">
       {{post.postedBy.name}}
     </div>
 
     <div class="delete-and-date">
 
       <div class="delete-btn"
+           *ngIf="currentUser._id === post.postedBy._id"
            (click)="onPostDeleted(post)">
         <img class="delete-icon" src="./assets/svg's/delete.svg" alt="">
       </div>
@@ -20,10 +23,10 @@
 
       <div class="post-date-time">
         <div class="post-date">
-          {{post.date}}
+          {{postDate}}
         </div>
         <div class="post-time">
-          {{post.time}}
+          {{postTime}}
         </div>
       </div>
 
@@ -33,25 +36,28 @@
   </div>
 
 
-  <div class="post-content">
+  <div
+    *mobxAutorun
+    class="post-content">
     {{post.content}}
   </div>
-  <ng-container *mobxAutorun>
-    <div class="like-dashboard"
-    >
-      <div class="like-btn">
-        <mat-icon (click)="onPostLiked(post)"
-                  class="like-icon">favorite
-        </mat-icon>
 
-      </div>
+  <div class="like-dashboard"
+  >
+    <div class="like-btn">
+      <mat-icon (click)="onPostLiked(post)"
+                class="like-icon">favorite
+      </mat-icon>
+
+    </div>
+    <ng-container *mobxAutorun>
       <div class="likes-amount"
            *ngIf="post.likes_amount"
            (click)="onDashboardClicked(post)">
         {{post.likes_amount}}
       </div>
-    </div>
-  </ng-container>
+    </ng-container>
+  </div>
 
 
 </div>

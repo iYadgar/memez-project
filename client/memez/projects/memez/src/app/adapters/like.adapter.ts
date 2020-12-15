@@ -2,6 +2,7 @@ import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
 import {HttpClient}      from '@angular/common/http';
 import {ILike}           from '../../../../../../../shared/types/Entities/ILike';
+import {IlikeResponse}   from "../../../../../../../shared/types/Entities/IlikeResponse";
 
 
 @Injectable({
@@ -21,11 +22,11 @@ export class LikeAdapter extends BaseAjaxAdapter {
     return this.request<ILike[]>(`posts/likes/${post_id} `);
   }
 
-  async createLike(likeIds): Promise<ILike> {
+  async createLike(likeIds): Promise<IlikeResponse> {
     return this.post('likes', likeIds)
   }
 
-  async unlike(likeId: string): Promise<ILike> {
+  async unlike(likeId: string): Promise<IlikeResponse> {
     return this.delete(`likes/${likeId}`)
   }
 

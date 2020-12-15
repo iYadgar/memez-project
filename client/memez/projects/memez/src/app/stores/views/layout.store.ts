@@ -12,9 +12,7 @@ export class LayoutStore {
     public router: Router) {
     this.root.ls = this;
     window['layoutStore'] = this;
-    autorun(() => {
 
-    })
   }
 
   async routeToFeed() {
@@ -23,11 +21,6 @@ export class LayoutStore {
 
   async routeToProfile() {
     await this.router.navigateByUrl('profile')
-  }
-
-  async routeToLogin() {
-    await this.router.navigateByUrl('login')
-    window.location.reload();
   }
 
 

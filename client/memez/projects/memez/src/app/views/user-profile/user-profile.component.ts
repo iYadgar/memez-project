@@ -1,12 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {RootStore} from '../../stores/root.store';
-import {UserStore} from '../../stores/entities/user.store';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {UserStore}                                  from '../../stores/entities/user.store';
 
 
 @Component({
   selector   : 'mem-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls  : ['./user-profile.component.css']
+  styleUrls  : ['./user-profile.component.css'],
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class UserProfileComponent implements OnInit {
 

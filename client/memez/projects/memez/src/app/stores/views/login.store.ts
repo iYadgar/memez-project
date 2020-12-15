@@ -3,16 +3,24 @@ import {RootStore}          from '../root.store';
 import {action, observable} from 'mobx-angular';
 import {IUser}              from '../../../../../../../../shared/types/Entities/IUser';
 import {Router}             from '@angular/router';
+import {LoginAdapter}       from "../../adapters/login.adapter";
 
+export interface ILoginDetails {
+  email: string,
+  password: string
+}
 
 @Injectable({providedIn: 'root'})
 
+
 export class LoginStore {
   @observable currentUser: IUser;
+  @observable loginError: string = ''
 
   constructor(
     public root: RootStore,
-    private router: Router
+    private router: Router,
+    private loginAdapter: LoginAdapter
   ) {
     window['loginStore'] = this;
 
@@ -22,23 +30,36 @@ export class LoginStore {
   }
 
 
-  @action verifyUser(name: string) {
-    const foundUser = this.root.us
-      .users
-      .find(user => user.name.toLowerCase() === name.toLowerCase())
-    if (!foundUser) {
-      return alert('user does not exist...')
-    }
-    return this.currentUser = foundUser
+  @action
+  async verifyUser(loginDetails: ILoginDetails) {
+    return this.loginAdapter.login(loginDetails)
 
 
   }
 
-  @action handleLogin(name: string) {
-    this.verifyUser(name);
-    if (this.currentUser) {
-      this.router.navigateByUrl('feed').then();
+  @action
+  async handleLogin(loginDetails: ILoginDetails) {
+    try {
+      await this.verifyUser(loginDetails)
+      await this.router.navigateByUrl('feed')
+      this.currentUser = {
+        _id     : '5fd77869041ab30fca8c35ad',
+        email   : 'idan@google.com',
+        name    : 'Idan Yadgar',
+        password: '123456'
+      }
+    } catch (e) {
+      this.loginError = e.error.msg
     }
+
+
+  }
+
+  @action
+  async handleLogout() {
+    await this.loginAdapter.logout()
+    console.log('logged out')
+    await this.router.navigateByUrl('/login')
 
   }
 
