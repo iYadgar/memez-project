@@ -1,29 +1,32 @@
 import * as jwt                          from 'jsonwebtoken'
 import {BaseController, IBaseController} from "./base.controller";
 import {Request, Response, NextFunction} from "express";
+import {IUser}                           from "../../shared/types/Entities/IUser";
 
 
 export interface IAuthController extends IBaseController {
 	maxAge: number
 
-	createToken(_id: string)
+	createToken(payload: string)
 
-	requireAuth(req: Request, res: Response, next: NextFunction)
+	getCurrentUser(req: Request, res: Response)
 
-	checkUser(req: Request, res: Response, next: NextFunction)
+	checkUser(req: Request, res: Response)
+
 
 }
+
 
 export class AuthController extends BaseController implements IAuthController {
 	maxAge: number = 3 * 24 * 60 * 60
 
-	createToken(_id: string) {
-		return jwt.sign({_id}, `idan's secret string`, {
+	createToken(payload: string) {
+		return jwt.sign({payload}, `idan's secret string`, {
 			expiresIn: this.maxAge
 		})
 	}
 
-	requireAuth(req: Request, res: Response, next: NextFunction) {
+	getCurrentUser(req: Request, res: Response) {
 		const token = req.cookies.jwt;
 
 		// check jwt exist & valid
@@ -31,38 +34,37 @@ export class AuthController extends BaseController implements IAuthController {
 			jwt.verify(token, `idan's secret string`, (err, decodedToken) => {
 				if (err) {
 					console.log(err.message)
-					res.redirect('/login')
+					return null
 				} else {
+
 					console.log(decodedToken)
-					next()
+					return decodedToken
+
 				}
 			})
 		} else {
-			res.redirect('/login')
+			return null
 		}
 
 	}
 
-	async checkUser(req: Request, res: Response, next: NextFunction) {
-		const token = req.cookies.jwt;
+	checkUser(req: Request, res: Response): boolean {
+		try {
+			const token = req.cookies.jwt
 
-		// check jwt exist & valid
-		if (token) {
-			jwt.verify(token, `idan's secret string`, async (err, decodedToken) => {
-				if (err) {
-					console.log(err.message)
-					res.locals.user = null;
-					next()
-				} else {
-					const user = await this.main.userController.getOneUser(decodedToken.id)
-					res.locals.user = user
-					next()
-				}
-			})
-		} else {
-			res.locals.user = null;
-			next();
+			if (token) {
+				const verify = jwt.verify(token, `idan's secret string`)
+
+				return !!verify
+			}
+			return false
+		} catch (e) {
+			console.log(e)
+			return false
 		}
-
 	}
+
+
 }
+
+

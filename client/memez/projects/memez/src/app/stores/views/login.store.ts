@@ -23,14 +23,11 @@ export class LoginStore {
     private loginAdapter: LoginAdapter
   ) {
     window['loginStore'] = this;
-
-
     this.root.log = this;
 
   }
 
 
-  @action
   async verifyUser(loginDetails: ILoginDetails) {
     return this.loginAdapter.login(loginDetails)
 
@@ -40,9 +37,9 @@ export class LoginStore {
   @action
   async handleLogin(loginDetails: ILoginDetails) {
     try {
-      const response = await this.verifyUser(loginDetails)
+      this.root.log.currentUser = await this.verifyUser(loginDetails)
       await this.router.navigateByUrl('feed')
-      this.currentUser = response
+
 
     } catch (e) {
       this.loginError = e.error.msg
@@ -62,4 +59,6 @@ export class LoginStore {
   routeToSignUp() {
     this.router.navigateByUrl('signup').then()
   }
+
+
 }

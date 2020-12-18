@@ -1,0 +1,13 @@
+protect routes from unauthorized users
+Client :
+1. add isAuth to login adapter that return true/false
+2. add to login store isAuth fn that calls isAuth(loginAdapter)
+3. implement angular guard -
+  1. create AuthGuardService (implements CanActivate)
+  2. create canActivate function that check if can isAuthenticated returns true.
+  3. add to canActivate [AuthGuard(class)] to the relevant routes
+
+Server :
+1. add isAuthenticated route
+2. add method that returns true/false according to the jwt token
+

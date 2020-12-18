@@ -1,5 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FeedStore}                                  from '../../stores/views/feed.store';
+import {iif}                                        from "rxjs";
+import {toJS}                                       from "mobx";
 
 
 @Component({
@@ -14,9 +16,13 @@ export class FeedComponent implements OnInit {
   constructor(
     public fs: FeedStore
   ) {
+
+
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+
+
   }
 
 }

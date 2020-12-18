@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {Router}                                  from '@angular/router';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Router}                                         from '@angular/router';
+import {IUser}                                          from "../../../../../../../../../shared/types/Entities/IUser";
 
 @Component({
   selector   : 'mem-navbar',
@@ -7,6 +8,7 @@ import {Router}                                  from '@angular/router';
   styleUrls  : ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @Input() currentUser: IUser
   @Output() profileClick = new EventEmitter()
   @Output() feedClick = new EventEmitter()
   @Output() logoutClick = new EventEmitter()
@@ -32,10 +34,10 @@ export class NavbarComponent implements OnInit {
   headerClicked() {
     this.headerClick.emit();
   }
-  logoutClicked(){
+
+  logoutClicked() {
     this.logoutClick.emit();
   }
-
 
 
 }

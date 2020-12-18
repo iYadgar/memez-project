@@ -15,6 +15,7 @@ import {IUserController}                                       from "./user.cont
 import {IPostController}                                       from "./post.controller";
 import {IAuthController}                                       from "./auth.controller";
 import {loginHandler, logoutHandler}                           from "../handlers/login.handler";
+import {getCurrentUserHandler, isAuthenticatedHandler}         from "../handlers/auth.handler";
 
 
 export interface IMainController extends IBaseController {
@@ -83,6 +84,10 @@ export class MainController extends BaseController implements IMainController {
 		this.httpController.events.addListener('post_login', loginHandler.bind(this))
 		// Handle logout
 		this.httpController.events.addListener('get_logout', logoutHandler.bind(this))
+		// handle Auth
+		this.httpController.events.addListener('get_isAuthenticated', isAuthenticatedHandler.bind(this))
+		// Get current user
+		this.httpController.events.addListener('get_currentUser', getCurrentUserHandler.bind(this))
 	}
 
 }

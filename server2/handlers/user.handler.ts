@@ -34,14 +34,14 @@ export async function createUserHandler(this: IMainController, req: Request, res
 		  userToCreate: IUser = new User(req.body.email, req.body.name, password)
 	try {
 		const
-			newUser = await this.userController.saveUser(userToCreate),
-			token   = this.authController.createToken(newUser._id);
+			newUser = await this.userController.saveUser(userToCreate);
+
 		if (!newUser) {
 			return res.status(404).send({msg: `user does not exist `})
 		}
 
+
 		return res.status(201)
-			.cookie('jwt', token, {httpOnly: true, maxAge: this.authController.maxAge * 1000})
 			.json(newUser).end()
 
 	} catch (e) {
@@ -50,6 +50,19 @@ export async function createUserHandler(this: IMainController, req: Request, res
 		}
 		return res.status(500).json({msg: 'Something went wrong' + e})
 
+	}
+
+}
+
+export async function getUsersSocketHandler(this: IMainController) {
+	try {
+		const users = await this.userController.getUsers()
+
+		return users
+
+
+	} catch (e) {
+		return 'no Users';
 	}
 
 }

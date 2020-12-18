@@ -336,6 +336,7 @@ mem-login {
   display: flex;
   height: 70%;
   width: 70%;
+  min-width: 700px;
   /* border-radius: 13px; */
 }
 
@@ -395,6 +396,7 @@ mem-login {
 
 .login-img {
   display: flex;
+  max-width: 300px;
   height: 61%;
   margin: 30px;
 }
@@ -600,4 +602,13 @@ label.form-label {
     font-size: 0.7em;
     margin-top: 2px;
     color: #8a8a8a;
+}
+
+
+.navbar-welcome {
+    display: flex;
+    text-transform: capitalize;
+    margin-right: 60px;
+    font-family: 'PT Sans Caption';
+    font-size: 1.2em;
 }

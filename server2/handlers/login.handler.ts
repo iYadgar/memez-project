@@ -1,12 +1,13 @@
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller"
 import * as bcrypt         from 'bcrypt'
+import {IUser}             from "../../shared/types/Entities/IUser";
 
 export async function loginHandler(this: IMainController, req: Request, res: Response) {
 	try {
 		const
-			found    = await this.userController.checkForUserEmail(req.body.email),
-			password = req.body.password
+			found: IUser = await this.userController.checkForUserEmail(req.body.email),
+			password     = req.body.password
 		if (found) {
 			const auth = await bcrypt.compare(password, found.password)
 			if (auth) {

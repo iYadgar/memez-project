@@ -5,14 +5,15 @@ import {UserStore}                                  from '../../stores/entities/
 import {LoginStore}                                 from '../../stores/views/login.store';
 import {LikeStore}                                  from '../../stores/entities/like.store';
 import {FeedStore}                                  from '../../stores/views/feed.store';
-import {LayoutStore} from "../../stores/views/layout.store";
-import {SignupStore} from "../../stores/views/signup.store";
+import {LayoutStore}                                from "../../stores/views/layout.store";
+import {SignupStore}                                from "../../stores/views/signup.store";
+import {AuthStore}                                  from "../../stores/views/auth.store";
 
 @Component({
-  selector   : 'mem-layout',
-  templateUrl: './layout.component.html',
-  styleUrls  : ['./layout.component.css'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  selector       : 'mem-layout',
+  templateUrl    : './layout.component.html',
+  styleUrls      : ['./layout.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent implements OnInit {
 
@@ -24,7 +25,8 @@ export class LayoutComponent implements OnInit {
     public likeStore: LikeStore,
     public fs: FeedStore,
     public ls: LayoutStore,
-    public sus: SignupStore
+    public sus: SignupStore,
+    public as: AuthStore
   ) {
 
     (async () => {

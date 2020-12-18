@@ -10,7 +10,9 @@ import {toJS}        from 'mobx';
 import {FeedStore}   from './views/feed.store';
 import {LayoutStore} from "./views/layout.store";
 import {SignupStore} from "./views/signup.store";
-import {SocketAdapter} from "../adapters/socket-adapter";
+import {AuthStore}   from "./views/auth.store";
+
+/*import {SocketAdapter} from "../adapters/socket.adapter";*/
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +25,10 @@ export class RootStore {
   fs: FeedStore;
   ls: LayoutStore;
   sus: SignupStore;
+  as: AuthStore;
 
 
-  constructor(public socketAdapter:SocketAdapter) {
+  constructor() {
     console.log('ROOT CTOR!');
     window['root'] = this;
     window['js'] = data => toJS(data, {recurseEverything: true});

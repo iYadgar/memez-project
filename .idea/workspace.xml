@@ -13,12 +13,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="added login &amp; logout auth 2§">
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/auth.adapter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/services/auth-guard.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/auth.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2/handlers/auth.handler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/socket-adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/socket.adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/root.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/root.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/login.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/login.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/main.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/login.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/login.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/user.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/user.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +67,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -68,7 +95,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server2/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -149,7 +176,13 @@
       <workItem from="1607850871702" duration="7838000" />
       <workItem from="1607930195941" duration="22273000" />
       <workItem from="1608022652529" duration="6219000" />
-      <workItem from="1608044394724" duration="1444000" />
+      <workItem from="1608044394724" duration="6505000" />
+      <workItem from="1608056886723" duration="1407000" />
+      <workItem from="1608104411462" duration="4015000" />
+      <workItem from="1608111127064" duration="5186000" />
+      <workItem from="1608125998382" duration="3533000" />
+      <workItem from="1608203102836" duration="8809000" />
+      <workItem from="1608280866094" duration="4432000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -270,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608044698876</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added login &amp; logout auth 2">
+      <created>1608046145805</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1608046145805</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +347,8 @@
     <MESSAGE value="Working post-get 3" />
     <MESSAGE value="added likes-amount" />
     <MESSAGE value="added login &amp; logout auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login &amp; logout auth" />
+    <MESSAGE value="added login &amp; logout auth 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added login &amp; logout auth 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

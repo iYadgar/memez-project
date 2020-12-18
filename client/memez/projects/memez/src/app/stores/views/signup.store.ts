@@ -13,11 +13,6 @@ export class SignupStore {
   @observable emailError: string = ''
 
 
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
-
-
   constructor(
     public root: RootStore,
     private router: Router,
@@ -28,21 +23,19 @@ export class SignupStore {
 
   @action
   async routeToLogin() {
-    await this.router.navigateByUrl('feed')
+    await this.router.navigateByUrl('login')
 
   }
 
   @action
   async handleSignUp(user: IUser) {
+    user.email = user.email.toLowerCase()
+    user.name = user.name.toLowerCase()
     try {
-      user.email = user.email.toLowerCase()
-      user.name = user.name.toLowerCase()
-
-      const newUser = await this.userAdapter.createNewUser(user)
-
-      this.routeToLogin()
+      await this.userAdapter.createNewUser(user)
+      await this.routeToLogin()
       console.log('user has been created')
-      await this.root.us.getUsers()
+
     } catch (e) {
       if (e.status === 409) {
         this.emailError = e.error.msg
