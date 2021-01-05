@@ -1,26 +1,31 @@
 //region imports
-import {BaseController, IBaseController}                       from "./base.controller";
-import {ILikeController}                                       from "./like.controller";
-import {IHttpController}                                       from "./http.controller";
-import {IDBController}                                         from "./db.controller";
-import {createUserHandler, getUserHandler, getUsersHandler}    from "../handlers/user.handler";
-import {createPostHandler, deletePostHandler, getPostsHandler} from "../handlers/post.handler";
+import {BaseController, IBaseController}                                            from "./base.controller";
+import {ILikeController}                                                            from "./like.controller";
+import {IHttpController}                                                            from "./http.controller";
+import {IDBController}                                                              from "./db.controller";
+import {createUserHandler, getUserHandler, getUsersHandler, updateUserPhotoHandler} from "../handlers/user.handler";
+import {
+	createPostHandler,
+	deletePostHandler,
+	getPostsHandler,
+	updatePostContentHandler
+}                                                                                   from "../handlers/post.handler";
 import {
 	createLikeHandler,
 	getPostLikesHandler,
 	getLikesHandler,
 	getUserLikesHandler,
 	unlikeHandler
-}                                                              from "../handlers/like.handler";
-import {IUserController}                                       from "./user.controller";
-import {IPostController}                                       from "./post.controller";
-import {IAuthController}                                       from "./auth.controller";
-import {loginHandler, logoutHandler}                           from "../handlers/login.handler";
-import {getCurrentUserHandler, isAuthenticatedHandler}         from "../handlers/auth.handler";
-import {Google_storageController, IGoogleStorageController}    from "./google_storage.controller";
-import {format}                                                from "url";
+}                                                                                   from "../handlers/like.handler";
+import {IUserController}                                                            from "./user.controller";
+import {IPostController}                                                            from "./post.controller";
+import {IAuthController}                                                            from "./auth.controller";
+import {loginHandler, logoutHandler}                                                from "../handlers/login.handler";
+import {getCurrentUserHandler, isAuthenticatedHandler}                              from "../handlers/auth.handler";
+import {Google_storageController, IGoogleStorageController}                         from "./google_storage.controller";
+import {format}                                                                     from "url";
+
 //endregion
- 
 
 
 export interface IMainController extends IBaseController {
@@ -95,6 +100,10 @@ export class MainController extends BaseController implements IMainController {
 		this.httpController.events.addListener('get_isAuthenticated', isAuthenticatedHandler.bind(this))
 		// Get current user
 		this.httpController.events.addListener('get_currentUser', getCurrentUserHandler.bind(this))
+		// Update User Photo
+		this.httpController.events.addListener('put_updateUserPhoto', updateUserPhotoHandler.bind(this))
+		// Update Post Content
+		this.httpController.events.addListener('put_updatePostContent', updatePostContentHandler.bind(this))
 		// Upload photo
 		this.httpController.events.addListener('post_uploadPhoto', (req, res, next) => {
 			try {
@@ -114,7 +123,6 @@ export class MainController extends BaseController implements IMainController {
 				blobStream.on('finish', () => {
 					const publicUrl = format(
 						`https://storage.googleapis.com/${this.googleStorageController.bucket.name}/${blob.name}`
-
 					)
 					res.status(200).json(publicUrl).end()
 				})
@@ -123,6 +131,7 @@ export class MainController extends BaseController implements IMainController {
 				res.status(500).send('something went wrong...', e)
 			}
 		})
+
 
 	}
 

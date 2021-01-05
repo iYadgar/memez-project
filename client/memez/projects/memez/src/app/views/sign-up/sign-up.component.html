@@ -4,10 +4,15 @@
   <div class="form-wrapper">
     <h1 class="main-title">Sign up</h1>
     <ng-container *mobxAutorun>
-      <div class="signup-photo">
+      <div
+
+        class="signup-photo">
         <mem-profile-img
+          *ngIf="!sus.root.ups.loading"
           [url]="sus.root.us.avatarUrl">
         </mem-profile-img>
+        <mat-spinner *ngIf="sus.root.ups.loading">
+        </mat-spinner>
       </div>
     </ng-container>
 

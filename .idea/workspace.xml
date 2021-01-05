@@ -13,110 +13,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="added login &amp; logout auth 2§">
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/upload.adapter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-dialog-box/post-dialog-box.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-dialog-box/post-dialog-box.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-dialog-box/post-dialog-box.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-img-dialog/post-img-dialog.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-img-dialog/post-img-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-img-dialog/post-img-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/upload.store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/svg's/temp-profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/svg's/up-arrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/config/radiant-snow-300512-d6815b57c6ec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/controllers/google_storage.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/handlers/google_storage.handler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wrap-import-with-regions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-edit-dialog/post-edit-dialog.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-edit-dialog/post-edit-dialog.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-edit-dialog/post-edit-dialog.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/e2e/src/app.po.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/e2e/src/app.po.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/auth.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/auth.adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-ajax.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-ajax.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/login.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/login.adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/socket.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/socket.adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/user.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/user.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/like-dialog-box/like-dialog-box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/like-dialog-box/like-dialog-box.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-box/post-box.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-box/post-box.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-box/post-box.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post-box/post-box.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/post/post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/services/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/services/auth-guard.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/like.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/user.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/user.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/root.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/root.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/auth.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/auth.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/upload.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/upload.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/feed.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/feed.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/layout.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/login.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/login.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/types/interfaces/IBaseAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/types/interfaces/IBaseAdapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/likes/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/likes/like-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/like-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/likes/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/likes/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/likes/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/posts/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/posts/post-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/post-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/posts/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/posts/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/posts/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/users/controllers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/controllers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/users/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/users/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.old/users/user-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server.old/users/user-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/config/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/config/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/base.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/base.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/db.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/db.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/like.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/like.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/main.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/post.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/post.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/auth.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/auth.handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/handlers/like.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/like.handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/handlers/login.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/login.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/google_storage.handler.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/post.handler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/handlers/user.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/handlers/user.handler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/entities/Like.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/types/entities/Like.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/types/entities/Post.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/types/entities/Post.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/types/entities/User.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/types/entities/User.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/mock/MOCK_LIKES.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/mock/MOCK_LIKES.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/mock/MOCK_POSTS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/mock/MOCK_POSTS.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/mock/MOCK_USERS.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/mock/MOCK_USERS.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/ILike.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/ILike.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared/types/Entities/IPost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/IPost.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/IUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/IUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/types/Entities/IlikeResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/Entities/IlikeResponse.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +205,7 @@
       <workItem from="1609590059117" duration="13247000" />
       <workItem from="1609658919672" duration="4058000" />
       <workItem from="1609770932576" duration="11476000" />
-      <workItem from="1609831132016" duration="4776000" />
+      <workItem from="1609831132016" duration="13887000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -404,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608046145805</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added photos upload &amp; search feature">
+      <created>1609839154334</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609839154334</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +379,8 @@
     <MESSAGE value="added login &amp; logout auth" />
     <MESSAGE value="added login &amp; logout auth 2" />
     <MESSAGE value="added login &amp; logout auth 2§" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login &amp; logout auth 2§" />
+    <MESSAGE value="added photos upload &amp; search feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="added photos upload &amp; search feature" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

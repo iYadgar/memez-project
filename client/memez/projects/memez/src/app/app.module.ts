@@ -21,12 +21,14 @@ import {MatIconModule}                    from "@angular/material/icon";
 import {MatDialogModule}                  from "@angular/material/dialog";
 import {MatMenuModule}                    from "@angular/material/menu";
 import {MatFormFieldModule}               from "@angular/material/form-field";
-import { PostDialogBoxComponent }         from './components/post-dialog-box/post-dialog-box.component';
+import {PostDialogBoxComponent}           from './components/post-dialog-box/post-dialog-box.component';
 import {MatInputModule}                   from "@angular/material/input";
 import {PostImgDialogComponent}           from "./components/post-img-dialog/post-img-dialog.component";
+import {MatProgressSpinnerModule}         from "@angular/material/progress-spinner";
+import { PostEditDialogComponent } from './components/post-edit-dialog/post-edit-dialog.component';
+
 
 //endregion
-
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import {PostImgDialogComponent}           from "./components/post-img-dialog/pos
     SignUpComponent,
     ProfileImgComponent,
     PostDialogBoxComponent,
-    PostImgDialogComponent
+    PostImgDialogComponent,
+    PostEditDialogComponent
 
 
   ],
@@ -59,7 +62,8 @@ import {PostImgDialogComponent}           from "./components/post-img-dialog/pos
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
 
 
   ],

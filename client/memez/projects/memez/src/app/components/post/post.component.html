@@ -16,10 +16,23 @@
 
     <div class="delete-and-date">
 
-      <div class="delete-btn"
-           *ngIf="currentUser._id === post.postedBy._id"
-           (click)="onPostDeleted(post)">
-        <img class="delete-icon" src="./assets/svg's/delete.svg" alt="">
+      <div
+        class="post-update-dashboards"
+        *ngIf="currentUser._id === post.postedBy._id">
+
+        <div class="edit-btn"
+             (click)="onPostEdit(post)">
+          <mat-icon
+            class="edit-btn"
+          >edit
+          </mat-icon>
+
+        </div>
+        <div class="edit-btn"
+             (click)="onPostDeleted(post)">
+          <mat-icon class="edit-btn">delete</mat-icon>
+        </div>
+
       </div>
 
 

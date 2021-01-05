@@ -1,8 +1,9 @@
 //region imports
-import {BaseController, IBaseController} from "./base.controller";
-import {IUser}                           from "../../shared/types/Entities/IUser";
+import {BaseController, IBaseController}  from "./base.controller";
+import {IUser}                            from "../../shared/types/Entities/IUser";
+import {FindAndModifyWriteOpResultObject} from "mongodb";
+
 //endregion
- 
 
 
 export interface IUserController extends IBaseController {
@@ -15,6 +16,8 @@ export interface IUserController extends IBaseController {
 	saveUser(user: IUser): Promise<any>
 
 	checkForUserEmail(email: string): Promise<IUser>
+
+	updateUserPhoto(user_id: string, avatar: string): Promise<FindAndModifyWriteOpResultObject<IUser>>
 
 
 }
@@ -42,4 +45,7 @@ export class UserController extends BaseController implements IUserController {
 		return this.main.dbController.checkForUserEmail(email)
 	}
 
+	async updateUserPhoto(user_id: string, avatar: string): Promise<FindAndModifyWriteOpResultObject<IUser>> {
+		return this.main.dbController.updateUserPhoto(user_id, avatar)
+	}
 }

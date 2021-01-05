@@ -8,7 +8,7 @@ import {IMainController}   from "../controllers/main.controller";
 
 export function isAuthenticatedHandler(this: IMainController, req: Request, res: Response) {
 	const token = this.authController.checkUser(req)
-	console.log(token, 'token');
+
 
 
 	try {
@@ -38,7 +38,7 @@ export function getCurrentUserHandler(this: IMainController, req: Request, res: 
 		if (token) {
 			jwt.verify(token, `idan's secret string`, async (err, decodedToken) => {
 				if (err) {
-					console.log(err.message)
+
 					return res.status(200)
 						.send(err.message)
 				}

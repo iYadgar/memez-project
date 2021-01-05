@@ -8,8 +8,7 @@ import {IUser} from "../../../shared/types/Entities/IUser";
 export class Post implements IPost {
 
 	created: number = Date.now();
-	likes_amount: number = 0;
-	likedByCurrentUser: boolean = false
+
 
 	constructor(
 		public content: string,

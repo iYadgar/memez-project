@@ -8,50 +8,54 @@ import * as dayjs                                       from "dayjs";
 
 
 @Component({
-  selector   : 'mem-post',
-  templateUrl: './post.component.html',
-  styleUrls  : ['./post.component.css'],
+	selector   : 'mem-post',
+	templateUrl: './post.component.html',
+	styleUrls  : ['./post.component.css'],
 
 })
 export class PostComponent implements OnInit {
-  @Input() post: IPost;
-  @Input() currentUser: IUser
-  @Output() postDeleted = new EventEmitter();
-  @Output() postLiked = new EventEmitter();
-  @Output() dashboardClicked = new EventEmitter();
-  @Output() imgClicked = new EventEmitter()
+	@Input() post: IPost;
+	@Input() currentUser: IUser
+	@Output() postDeleted = new EventEmitter();
+	@Output() postLiked = new EventEmitter();
+	@Output() dashboardClicked = new EventEmitter();
+	@Output() imgClicked = new EventEmitter()
+	@Output() editClicked = new EventEmitter()
 
-  postDate: string
-  postTime: string
-
-
-  isUserPost: boolean;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-    this.postDate = dayjs(this.post.created).format('DD.MM.YYYY');
-    this.postTime = dayjs(this.post.created).format('HH:mm')
+	postDate: string
+	postTime: string
 
 
-  }
+	isUserPost: boolean;
 
-  //event handler function
-  onPostDeleted(val: IPost) {
-    this.postDeleted.emit(val);
-  }
+	constructor() {
+	}
 
-  onPostLiked(post: IPost) {
-    this.postLiked.emit(post);
-  }
+	ngOnInit(): void {
+		this.postDate = dayjs(this.post.created).format('DD.MM.YYYY');
+		this.postTime = dayjs(this.post.created).format('HH:mm')
 
-  onDashboardClicked(post: IPost) {
-    this.dashboardClicked.emit(post)
-  }
 
-  onImgClick(postMeme: string) {
-    this.imgClicked.emit(postMeme)
-  }
+	}
 
+	//event handler function
+	onPostDeleted(val: IPost) {
+		this.postDeleted.emit(val);
+	}
+
+	onPostLiked(post: IPost) {
+		this.postLiked.emit(post);
+	}
+
+	onDashboardClicked(post: IPost) {
+		this.dashboardClicked.emit(post)
+	}
+
+	onImgClick(postMeme: string) {
+		this.imgClicked.emit(postMeme)
+	}
+
+	onPostEdit(post: IPost) {
+		this.editClicked.emit(post)
+	}
 }

@@ -15,6 +15,7 @@ import {reaction}           from "mobx";
 
 export class LikeStore {
   @observable currentUserLikes: ILike[] = [];
+  likeposts
 
 
   /*USE_MOCK: boolean = false;*/
@@ -30,13 +31,19 @@ export class LikeStore {
         let currentUser = this.root.log.currentUser
         if (currentUser) {
           await this.getCurrentUserLikes(currentUser._id)
-          this.currentUserLikes.forEach(like => {
+          this.currentUserLikes.map(like => {
+            return this.root.ps.posts.map(post => {
+              post.likedByCurrentUser = post.postedBy._id === like.user_id._id
+              !post.likes_amount ? post.likedByCurrentUser = false : post.likedByCurrentUser = true
+
+              return post
+            })
           })
 
         } else {
           this.currentUserLikes = []
         }
-      }, {fireImmediately: true}
+      }, {fireImmediately: false}
     )
   }
 

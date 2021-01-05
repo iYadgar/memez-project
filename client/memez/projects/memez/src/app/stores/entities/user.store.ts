@@ -6,6 +6,7 @@ import {IUser}              from '../../../../../../../../shared/types/Entities/
 import {UserAdapter}        from "../../adapters/user.adapter";
 import {UploadAdapter}      from "../../adapters/upload.adapter";
 import {UploadStore}        from "../upload.store";
+import {NgIf}               from "@angular/common";
 
 /*import {MOCK_USERS}         from '../../../../../../../../shared/mock/MOCK_USERS';*/
 
@@ -42,8 +43,22 @@ export class UserStore {
 
   @action
   async onProfilePictureUpload(event) {
+    this.root.ups.loading = true
     this.avatarUrl = await this.root.ups.onFileUpload(event)
 
+    if (this.root.log.currentUser) {
+      console.log('working')
+      this.root.log.currentUser.avatar = this.avatarUrl
+      const res = await this.updateProfilePicture()
+      this.root.ups.loading = false
+      console.log(res)
+    }
+    this.root.ups.loading = false
+  }
+
+  @action
+  async updateProfilePicture() {
+    await this.userAdapter.updateUserPhoto(this.root.log.currentUser._id, this.avatarUrl)
   }
 
 

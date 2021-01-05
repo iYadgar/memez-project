@@ -1,0 +1,13 @@
+<mat-form-field floatLabel="auto">
+    <textarea matInput
+              placeholder="write something..."
+              id="dialog-input"
+              #post_input
+              class="post-input post-dialog-input" type="text">
+  {{post.content}}
+   </textarea>
+</mat-form-field>
+
+<div class="post-box-btn btn" (click)="close(post_input.value)">
+  POST
+</div>

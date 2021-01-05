@@ -9,7 +9,7 @@ export interface IPost {
 	content: string
 	postedBy: IUser
 	created: number
-	likes_amount: number
+	likes_amount?: number
 	likedByCurrentUser?: boolean
 	postMeme: string
 

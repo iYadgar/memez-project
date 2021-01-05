@@ -59,9 +59,6 @@ export class HttpController extends BaseController implements IHttpController {
 		this.initSocketIO()
 
 
-
-
-
 	}
 
 
@@ -191,11 +188,19 @@ export class HttpController extends BaseController implements IHttpController {
 		})
 
 		//upload photo
-		this.express_app.post('/api/uploadphoto', this.multer.single('file'),
+	 	this.express_app.post('/api/uploadphoto', this.multer.single('file'),
 			(req: Request, res: Response, next: NextFunction) => {
 				this.events.emit('post_uploadPhoto', req, res, next)
 
 			})
+		//update user photo
+		this.express_app.put('/api/users/updatephoto/:id', (req: Request, res: Response) => {
+			this.events.emit('put_updateUserPhoto', req, res)
+		})
+		//update post content
+		this.express_app.put(`/api/posts/updatepost/:id`, (req: Request, res: Response) => {
+			this.events.emit('put_updatePostContent', req, res)
+		})
 
 
 	}

@@ -30,5 +30,9 @@ export class UserAdapter extends BaseAjaxAdapter {
 
   }
 
+  async updateUserPhoto(user_id: string, avatarUrl: string) {
+    return this.update(`users/updatephoto/${user_id} `, {avatar: avatarUrl})
+  }
+
 
 }

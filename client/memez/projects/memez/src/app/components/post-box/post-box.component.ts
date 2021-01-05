@@ -12,6 +12,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class PostBoxComponent implements OnInit {
   @Output() newPost = new EventEmitter();
   @Output() imgUpload = new EventEmitter();
+
   @Input() currentUserPhoto: string;
   @Input() postImgUrl: string
 

@@ -68,3 +68,13 @@ export async function getUsersSocketHandler(this: IMainController) {
 	}
 
 }
+
+export async function updateUserPhotoHandler(this: IMainController, req: Request, res: Response) {
+	try {
+		const response = await this.userController.updateUserPhoto(req.params.id, req.body.avatar)
+		res.status(201).send({msg: 'user photo was updated ' + response})
+	} catch (e) {
+		res.status(500).send({msg: 'something went wrong...' + e})
+
+	}
+}

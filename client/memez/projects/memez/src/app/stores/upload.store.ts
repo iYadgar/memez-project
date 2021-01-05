@@ -10,6 +10,7 @@ import {RootStore}          from "./root.store";
 export class UploadStore {
   @observable uploadUrl
   @observable selectedFile: File;
+  @observable loading: boolean = false
   formData: FormData = new FormData()
 
   constructor(

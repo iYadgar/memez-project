@@ -3,8 +3,8 @@ import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
 import {IPost}           from '../../../../../../../shared/types/Entities/IPost';
 import {HttpClient}      from '@angular/common/http';
+
 //endregion
- 
 
 
 @Injectable({
@@ -34,7 +34,12 @@ export class PostAdapter extends BaseAjaxAdapter {
   }
 
   async getOnePost(post_id: string) {
-    return await this.request(`posts/${post_id} `)
+    return this.request(`posts/${post_id} `)
+
+  }
+
+  async updatePostContent(post_id: string, content: string) {
+    return this.update(`posts/updatepost/${post_id}`, {content})
 
   }
 

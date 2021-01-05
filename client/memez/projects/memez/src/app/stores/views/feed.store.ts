@@ -8,6 +8,7 @@ import {IPost}                        from '../../../../../../../../shared/types
 import {LikeDialogBoxComponent}       from '../../components/like-dialog-box/like-dialog-box.component';
 import {ILike}                        from "../../../../../../../../shared/types/Entities/ILike";
 import {autorun}                      from "mobx";
+import {PostEditDialogComponent}      from "../../components/post-edit-dialog/post-edit-dialog.component";
 
 //endregion
 
@@ -24,9 +25,6 @@ export class FeedStore {
     public dialog: MatDialog) {
     window['feedStore'] = this;
     this.root.fs = this;
-    autorun(() => {
-      console.log(this.searchTerm)
-    })
   }
 
   @computed get dateFormattedLikes() {
@@ -41,7 +39,7 @@ export class FeedStore {
   }
 
   @action
-  async handleDialog(post: IPost) {
+  async handLikesleDialog(post: IPost) {
     this.postLikes = await this.root.likeStore.getPostLikes(post._id)
 
     this.dialog.open(LikeDialogBoxComponent, {data: this.dateFormattedLikes});
@@ -53,6 +51,18 @@ export class FeedStore {
     setTimeout(() => {
       this.searchTerm = value
     }, 750)
+
+  }
+
+  @action
+  async handleEditPostDialog(post: IPost) {
+    const
+      dialogRef      = this.dialog.open(PostEditDialogComponent, {data: post}),
+      postNewContent = await dialogRef.afterClosed().toPromise();
+    this.root.ups.loading = true
+    await this.root.ps.updatePostContent(post._id, postNewContent)
+    post.content = postNewContent
+    this.root.ups.loading = false
 
   }
 

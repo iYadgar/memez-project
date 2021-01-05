@@ -19,10 +19,10 @@ export const getPostsHandler = async function (this: IMainController, req: Reque
 	if (token) {
 		jwt.verify(token, `idan's secret string`, (err, decodedToken) => {
 			if (err) {
-				console.log(err.message)
+
 				return null
 			}
-			console.log('auth ' + decodedToken.payload)
+
 			user_id = decodedToken.payload
 		})
 	}
@@ -62,7 +62,6 @@ export async function createPostHandler(this: IMainController, req: Request, res
 		userPosted: IUser = await this.userController.getOneUser(req.body.user_id),
 		post: IPost       = new Post(req.body.content, userPosted, req.body.postMeme);
 	try {
-
 		const
 			newPost = await this.postController.savePost(post);
 		return res.status(201).send(newPost);
@@ -77,28 +76,28 @@ export async function createPostHandler(this: IMainController, req: Request, res
 //delete post
 export const deletePostHandler = async function (this: IMainController, req: Request, res: Response) {
 	try {
-
 		const
 			[likesToDelete, postToDelete] = await Promise
-				.all([this.likeController.deletePostLikes(req.params.id), this.postController.deletePost(req.params.id)])
+				.all([
+					this.likeController.deletePostLikes(req.params.id),
+					this.postController.deletePost(req.params.id)])
 
 
-		return res.json([postToDelete, `likes deleted ${likesToDelete} `]).end();
+		return res.json([postToDelete, `likes deleted ${likesToDelete.deletedCount} `]).end();
 	} catch (e) {
 		return res.status(404).send({msg: 'post was not deleted ' + e})
 	}
 
 }
 
-/*
- export async function updatePostLikeHandler(this: IMainController, req: Request, res: Response) {
- try {
- const postLiked = await this.postController.updatePostLiked(req.params.id, req.body.isLiked)
+export async function updatePostContentHandler(this: IMainController, req: Request, res: Response) {
+	try {
+		const response = await this.postController.updatePostContent(req.params.id, req.body.content)
+		res.status(201).send({msg: 'post content was updated' + response})
+	} catch (e) {
+		res.status(500).send({msg: 'something went wrong...' + e})
 
- console.log(req.body.isLiked)
- res.status(201).send(postLiked)
- } catch (e) {
- res.status(500).send({msg: 'something went wrong...' + e})
- }
- }
- */
+	}
+}
+
+

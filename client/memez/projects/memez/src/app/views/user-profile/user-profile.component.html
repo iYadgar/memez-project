@@ -2,11 +2,28 @@
 
 
   <div class="user-card">
-    <div class="user-picture">
+    <div class="user-picture" *mobxAutorun>
       <mem-profile-img
+        *ngIf="!us.root.ups.loading"
         [url]="us.root.log.currentUser.avatar">
       </mem-profile-img>
+      <mat-spinner
+        *ngIf="us.root.ups.loading">
+      </mat-spinner>
     </div>
+    <label for="photo-input"
+           class="form-label btn">
+      Change Profile Picture</label>
+
+    <input
+      id="photo-input"
+      type="file"
+      name="file"
+      hidden
+      (change)="us.onProfilePictureUpload($event)"
+    >
+
+
     <div class="user-name">
       {{us.root.log.currentUser.name}}
     </div>
@@ -24,7 +41,7 @@
       [currentUser]="us.root.log.currentUser"
       (postDeleted)="us.root.ps.deletePost($event)"
       (postLiked)="us.root.likeStore.handleLike($event)"
-      (dashboardClicked)="us.root.fs.handleDialog($event)"
+      (dashboardClicked)="us.root.fs.handLikesleDialog($event)"
     ></mem-post>
   </div>
 

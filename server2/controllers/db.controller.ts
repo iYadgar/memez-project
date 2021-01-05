@@ -1,12 +1,12 @@
 //region imports
-import {BaseController, IBaseController} from "./base.controller";
-import {ILike}                           from "../../shared/types/Entities/ILike";
-import {IPost}                           from "../../shared/types/Entities/IPost";
-import {IUser}                           from "../../shared/types/Entities/IUser";
-import {Collection, Db, MongoClient}     from "mongodb";
-import {config}                          from "../config/config";
+import {BaseController, IBaseController}                               from "./base.controller";
+import {ILike}                                                         from "../../shared/types/Entities/ILike";
+import {IPost}                                                         from "../../shared/types/Entities/IPost";
+import {IUser}                                                         from "../../shared/types/Entities/IUser";
+import {Collection, Db, FindAndModifyWriteOpResultObject, MongoClient} from "mongodb";
+import {config}                                                        from "../config/config";
 //endregion
- 
+
 //MongoDB Constants
 const
 	MongoClinet = require('mongodb').MongoClient(),
@@ -45,6 +45,10 @@ export interface IDBController extends IBaseController {
 	getOneLike(like_id: string): Promise<ILike>
 
 	checkForUserEmail(email: string): Promise<IUser>
+
+	updateUserPhoto(user_id: string, avatar: string): Promise<FindAndModifyWriteOpResultObject<IUser>>
+
+	updatePostContent(post_id: string, content: string): Promise<FindAndModifyWriteOpResultObject<IPost>>
 
 
 	close(): Promise<any>
@@ -168,7 +172,7 @@ export class DBController extends BaseController implements IDBController {
 
 	async deletePostLikes(post_id): Promise<any> {
 
-		return this.likesCollection.deleteMany({'postLiked': post_id})
+		return this.likesCollection.deleteMany({'post_id': post_id})
 	}
 
 	async getOneLike(like_id: string): Promise<ILike> {
@@ -182,6 +186,20 @@ export class DBController extends BaseController implements IDBController {
 
 	close(): Promise<any> {
 		return this.client.close()
+	}
+
+	async updateUserPhoto(user_id: string, avatar: string): Promise<FindAndModifyWriteOpResultObject<IUser>> {
+		const userId = new ObjectID(user_id)
+		return this.usersCollection.findOneAndUpdate({_id: userId}, {
+			$set: {avatar: avatar}
+		}, {upsert: true})
+	}
+
+	async updatePostContent(post_id: string, content: string): Promise<FindAndModifyWriteOpResultObject<IPost>> {
+		const postId = new ObjectID(post_id)
+		return this.postsCollection.findOneAndUpdate({_id: postId}, {
+			$set: {content: content}
+		}, {upsert: true})
 	}
 
 

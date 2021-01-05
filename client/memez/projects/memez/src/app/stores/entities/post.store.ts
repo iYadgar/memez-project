@@ -6,7 +6,7 @@ import {IPost}                        from '../../../../../../../../shared/types
 import {PostAdapter}                  from "../../adapters/post.adapter";
 import {MatDialog}                    from "@angular/material/dialog";
 import {PostDialogBoxComponent}       from "../../components/post-dialog-box/post-dialog-box.component";
-import {autorun, reaction, toJS}      from "mobx";
+import {reaction}                     from "mobx";
 import {PostImgDialogComponent}       from "../../components/post-img-dialog/post-img-dialog.component";
 
 
@@ -21,8 +21,6 @@ export class PostStore {
   @observable postImgUrl: string
   @observable uploadEvent;
   @observable postContent: string
-  @observable dialogClosed: boolean = false
-  loading: boolean = false
 
 
   constructor(
@@ -65,14 +63,14 @@ export class PostStore {
 
   @action
   async createPost(content: string) {
-    this.loading = true
+    this.root.ups.loading = true
     const postInput = {
       user_id : this.root.log.currentUser._id,
       content,
       postMeme: this.postImgUrl
     }
     await this.postAdapter.createPost(postInput)
-    this.loading = false
+    this.root.ups.loading = false
     await this.getPosts()
 
   }
@@ -93,8 +91,10 @@ export class PostStore {
 
   @action
   async onImgPost(event) {
+    this.root.ups.loading = true
     this.uploadEvent = event
     this.postImgUrl = await this.root.ups.onFileUpload(this.uploadEvent)
+    this.root.ups.loading = false
     await this.handleDialog()
 
 
@@ -110,6 +110,11 @@ export class PostStore {
 
   openImgDialog(memeUrl: string) {
     this.dialog.open(PostImgDialogComponent, {data: memeUrl})
+  }
+
+  @action
+  async updatePostContent(post_id: string, content: string) {
+    await this.postAdapter.updatePostContent(post_id, content)
   }
 
 }

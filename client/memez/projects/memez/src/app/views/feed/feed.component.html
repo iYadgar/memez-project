@@ -9,6 +9,13 @@
   >
 
   </mem-post-box>
+
+  <ng-container *mobxAutorun>
+    <div *ngIf="fs.root.ups.loading">
+      <mat-spinner></mat-spinner>
+    </div>
+  </ng-container>
+
   <div class="posts-container" *mobxAutorun>
     <mem-post
       *ngFor="let post of fs.root.ps.filteredPosts"
@@ -16,8 +23,9 @@
       [currentUser]="fs.root.log.currentUser"
       (postDeleted)="fs.root.ps.deletePost($event)"
       (postLiked)="fs.root.likeStore.handleLike($event)"
-      (dashboardClicked)="fs.handleDialog($event)"
+      (dashboardClicked)="fs.handLikesleDialog($event)"
       (imgClicked)="ps.openImgDialog($event)"
+      (editClicked)="fs.handleEditPostDialog($event)"
 
 
     ></mem-post>
