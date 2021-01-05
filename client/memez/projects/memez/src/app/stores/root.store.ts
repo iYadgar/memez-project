@@ -9,7 +9,7 @@ import {FeedStore}     from './views/feed.store';
 import {LayoutStore}   from "./views/layout.store";
 import {SignupStore}   from "./views/signup.store";
 import {AuthStore}     from "./views/auth.store";
-import {SocketAdapter} from "../adapters/socket.adapter";
+import {BaseSocketAdapter} from "../adapters/base-socket-adapter.service";
 import {UploadStore}   from "./upload.store";
 //endregion
 
@@ -29,8 +29,7 @@ export class RootStore {
   ups: UploadStore;
 
 
-  constructor(public socketAdapter: SocketAdapter) {
-    console.log('ROOT CTOR!');
+  constructor(public socketAdapter: BaseSocketAdapter) {
     window['root'] = this;
     window['js'] = data => toJS(data, {recurseEverything: true});
   }

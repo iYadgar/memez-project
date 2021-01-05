@@ -1,16 +1,17 @@
 //region imports
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {APIEvent} from "../../../../../../../shared/types/api/api-event";
 
 
 //endregion
 export interface IBaseAdapter {
-  request<T>(path: string): Promise<T>;
+  request<T>(event: APIEvent, data:any): Promise<T>;
 
-  post<T>(path: string, body: string): Promise<T>
+  // post<T>(path: string, body: string): Promise<T>
 
-  delete<T>(path: string): Promise<any>
+  // delete<T>(path: string): Promise<any>
 
-  update<T>(path: string, body): Promise<T>
+  // update<T>(path: string, body): Promise<T>
 }
 
 export abstract class BaseAjaxAdapter implements IBaseAdapter {
