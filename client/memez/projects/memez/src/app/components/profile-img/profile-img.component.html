@@ -1,4 +1,6 @@
-<div class="avatar">
+<div class="avatar"
+     (click)="onImgClick(url)"
+>
   <img
     *ngIf="!url"
     class="avatar-img"
@@ -6,7 +8,9 @@
   <img
     *ngIf="url"
     class="avatar-img"
-    [src]=url>
+    [src]=url
+
+  >
 </div>
 
 

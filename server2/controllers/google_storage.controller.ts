@@ -15,7 +15,7 @@ export interface IGoogleStorageController extends IBaseController {
 
 export class Google_storageController extends BaseController implements IGoogleStorageController {
 	googleCloud: Storage = new Storage({
-		keyFilename: path.join(__dirname, '../config/radiant-snow-300512-d6815b57c6ec.json'),
+		keyFilename: path.join(__dirname, '../config/radiant-snow-300512-17ed24f6afa0.json'),
 		projectId  : 'radiant-snow-300512'
 	})
 	bucket: Bucket = this.googleCloud.bucket(config.GCLOUD_STORAGE_BUCKET)

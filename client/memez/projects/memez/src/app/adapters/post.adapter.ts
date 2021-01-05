@@ -1,8 +1,8 @@
 //region imports
-import {Injectable} from '@angular/core';
-import {BaseAjaxAdapter} from './base-ajax.adapter';
-import {IPost} from '../../../../../../../shared/types/Entities/IPost';
-import {HttpClient} from '@angular/common/http';
+import {Injectable}        from '@angular/core';
+import {BaseAjaxAdapter}   from './base-ajax.adapter';
+import {IPost}             from '../../../../../../../shared/types/Entities/IPost';
+import {HttpClient}        from '@angular/common/http';
 import {BaseSocketAdapter} from "./base-socket-adapter.service";
 
 //endregion
@@ -23,8 +23,15 @@ export class PostAdapter extends BaseSocketAdapter {
     return this.request<IPost[]>('getPosts');
   }
 
-  async createPost(postContent): Promise<IPost> {
-    return this.request('createPost', postContent)
+  async createPost(user_id: string, content: string, postMeme: string): Promise<IPost> {
+    console.log('postAdapter');
+    console.log(content, 'content');
+    return this.request('createPost',
+      {
+        user_id  : user_id
+        , content: content,
+        postMeme : postMeme
+      })
 
   }
 
@@ -38,7 +45,8 @@ export class PostAdapter extends BaseSocketAdapter {
   }
 
   async updatePostContent(post_id: string, content: string) {
-    return this.request<IPost>("updatePost", {content})
+
+    return this.request<IPost>("updatePost", {id: post_id, content})
   }
 
 }

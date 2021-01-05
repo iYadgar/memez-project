@@ -1,7 +1,8 @@
 //region imports
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 //endregion
- 
+
 
 @Component({
   selector   : 'mem-profile-img',
@@ -10,7 +11,7 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 })
 export class ProfileImgComponent implements OnInit {
   @Input() url: string
-
+  @Output() imgClicked = new EventEmitter()
 
   constructor() {
   }
@@ -18,5 +19,8 @@ export class ProfileImgComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onImgClick(imgUrl: string) {
+    this.imgClicked.emit(imgUrl)
+  }
 
 }

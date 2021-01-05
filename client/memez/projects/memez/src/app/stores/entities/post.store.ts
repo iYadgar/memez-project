@@ -64,13 +64,10 @@ export class PostStore {
   @action
   async createPost(content: string) {
     this.root.ups.loading = true
-    const postInput = {
-      user_id : this.root.log.currentUser._id,
-      content,
-      postMeme: this.postImgUrl
-    }
-    await this.postAdapter.createPost(postInput)
+    const newPost = await this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl)
+    console.log(newPost, 'newPost');
     this.root.ups.loading = false
+
     await this.getPosts()
 
   }

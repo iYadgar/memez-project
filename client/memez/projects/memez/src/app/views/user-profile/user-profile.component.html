@@ -5,7 +5,9 @@
     <div class="user-picture" *mobxAutorun>
       <mem-profile-img
         *ngIf="!us.root.ups.loading"
-        [url]="us.root.log.currentUser.avatar">
+        [url]="us.root.log.currentUser.avatar"
+        (imgClicked)="us.root.ps.openImgDialog($event)"
+      >
       </mem-profile-img>
       <mat-spinner
         *ngIf="us.root.ups.loading">
@@ -42,6 +44,8 @@
       (postDeleted)="us.root.ps.deletePost($event)"
       (postLiked)="us.root.likeStore.handleLike($event)"
       (dashboardClicked)="us.root.fs.handLikesleDialog($event)"
+      (imgClicked)="us.root.ps.openImgDialog($event)"
+      (editClicked)="us.root.fs.handleEditPostDialog($event)"
     ></mem-post>
   </div>
 
