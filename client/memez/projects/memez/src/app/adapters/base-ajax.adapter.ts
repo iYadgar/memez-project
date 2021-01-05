@@ -1,5 +1,8 @@
+//region imports
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {IBaseAdapter}            from '../types/interfaces/IBaseAdapter';
+//endregion
+ 
 
 
 export abstract class BaseAjaxAdapter implements IBaseAdapter {

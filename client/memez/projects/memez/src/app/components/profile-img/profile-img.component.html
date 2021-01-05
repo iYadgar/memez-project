@@ -1,0 +1,12 @@
+<div class="avatar">
+  <img
+    *ngIf="!url"
+    class="avatar-img"
+    src="https://storage.googleapis.com/memez-photos/temp-profile.svg">
+  <img
+    *ngIf="url"
+    class="avatar-img"
+    [src]=url>
+</div>
+
+

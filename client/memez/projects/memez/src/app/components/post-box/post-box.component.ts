@@ -1,4 +1,8 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+//region imports
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
+//endregion
+
 
 @Component({
   selector   : 'mem-post-box',
@@ -7,6 +11,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class PostBoxComponent implements OnInit {
   @Output() newPost = new EventEmitter();
+  @Output() imgUpload = new EventEmitter();
+  @Input() currentUserPhoto: string;
+  @Input() postImgUrl: string
 
   constructor() {
   }
@@ -16,6 +23,10 @@ export class PostBoxComponent implements OnInit {
 
   postToFeed(val) {
     this.newPost.emit(val);
+  }
+
+  onImgUpload(uploadEvent) {
+    this.imgUpload.emit(uploadEvent)
   }
 
 }

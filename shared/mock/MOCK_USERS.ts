@@ -1,6 +1,9 @@
+//region imports
 import {IUser}      from '../types/Entities/IUser';
 import {MOCK_POSTS} from './MOCK_POSTS';
 import {MOCK_LIKES} from './MOCK_LIKES';
+//endregion
+ 
 
 export const MOCK_USERS: IUser[] = [
 	{

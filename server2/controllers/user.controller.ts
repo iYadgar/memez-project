@@ -1,5 +1,8 @@
+//region imports
 import {BaseController, IBaseController} from "./base.controller";
 import {IUser}                           from "../../shared/types/Entities/IUser";
+//endregion
+ 
 
 
 export interface IUserController extends IBaseController {

@@ -1,0 +1,17 @@
+<div class="post-dialog-box-wrapper">
+  <mat-form-field floatLabel="auto">
+    <textarea matInput
+              placeholder="write something..."
+              id="dialog-input"
+              #post_input
+              class="post-input post-dialog-input" type="text">
+   </textarea>
+  </mat-form-field>
+
+  <div *mobxAutorun class="post-img-wrapper">
+    <img class="post-img" [src]="url">
+  </div>
+  <div class="post-box-btn btn" (click)="close(post_input.value)">
+    POST
+  </div>
+</div>

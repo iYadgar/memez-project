@@ -1,7 +1,10 @@
+//region imports
 import {Injectable}    from "@angular/core";
 import {RootStore}     from "../root.store";
 
 import {Router}        from "@angular/router";
+//endregion
+ 
 
 @Injectable({providedIn: "root"})
 export class LayoutStore {

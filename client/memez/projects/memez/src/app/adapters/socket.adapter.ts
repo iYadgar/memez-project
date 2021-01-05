@@ -1,8 +1,10 @@
-/*
+//region imports
 import * as io                    from 'socket.io-client';
 import {Injectable}               from "@angular/core";
 import {Socket as SocketIOClient} from 'socket.io-client'
 import {IUser}                    from "../../../../../../../shared/types/Entities/IUser";
+//endregion
+ 
 
 export type APIEvent = 'ping' | 'getUsers' | 'getLikes';
 
@@ -14,6 +16,7 @@ const URL = 'http://localhost:4000';
   providedIn: "root"
 })
 export class SocketAdapter {
+  // @ts-ignore
   socket: SocketIOClient
   user;
 
@@ -28,41 +31,37 @@ export class SocketAdapter {
       }
     );
     this.socket.on('getUsers', async (users: IUser[]) => {
-      this.user = users
-      console.log(this.user)
+      console.log('received getUsers reply', users);
     })
     this.socket.on('getPosts', (post) => {
       alert(`post content : ${post.content}, posted by : ${post.postedBy.name}  `)
     })
 
 
-    this.socket.on("reconnect", (sock) => {
+    this.socket.on("reconnect", () => {
         console.log("SOCKET RECONNECTED!!");
       }
     );
+    this.socket.on('pong', () => {
+      console.log('pong')
 
+    })
 
     this.socket.on("disconnect", () => {
         console.log("SOCKET DISCONNECTED :(");
-        // this.socket = null
       }
     );
 
 
   }
 
-  protected async request(event_name: APIEvent) {
+  protected async request(event_name: APIEvent, data) {
     if (this.socket && this.socket.connected) {
-      console.log(`client: sendMessage emitting event_name ${event_name} with data`);
-      console.log(this.user)
-      console.log(`_______________`)
-      await this.socket.emit(`get${event_name}`);
-      console.log(this.user)
+      console.log(`client: sendMessage emitting event_name ${event_name} with data`, data);
+      this.socket.emit(event_name);
     } else {
       console.log("SocketAPI: no sockets connected...");
     }
   }
 
-
 }
-*/

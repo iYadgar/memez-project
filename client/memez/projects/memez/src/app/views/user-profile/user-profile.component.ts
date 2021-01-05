@@ -1,5 +1,8 @@
+//region imports
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {UserStore}                                  from '../../stores/entities/user.store';
+//endregion
+
 
 
 @Component({
@@ -11,6 +14,10 @@ import {UserStore}                                  from '../../stores/entities/
 export class UserProfileComponent implements OnInit {
 
   constructor(public us: UserStore) {
+    (async ()=>{
+        await this.us.root.ps.getPosts()
+    })()
+
   }
 
   async ngOnInit(): Promise<void> {

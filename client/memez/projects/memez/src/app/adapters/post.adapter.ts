@@ -1,7 +1,10 @@
+//region imports
 import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
 import {IPost}           from '../../../../../../../shared/types/Entities/IPost';
 import {HttpClient}      from '@angular/common/http';
+//endregion
+ 
 
 
 @Injectable({

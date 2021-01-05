@@ -2,12 +2,16 @@
 
 
   <div class="user-card">
-    <div class="user-picture">picture</div>
+    <div class="user-picture">
+      <mem-profile-img
+        [url]="us.root.log.currentUser.avatar">
+      </mem-profile-img>
+    </div>
     <div class="user-name">
       {{us.root.log.currentUser.name}}
     </div>
     <div class="user-details">
-      Email :  {{us.root.log.currentUser.email}}
+      {{us.root.log.currentUser.email}}
     </div>
 
   </div>

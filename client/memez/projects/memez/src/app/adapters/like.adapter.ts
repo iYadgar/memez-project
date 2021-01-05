@@ -1,8 +1,11 @@
+//region imports
 import {Injectable}      from '@angular/core';
 import {BaseAjaxAdapter} from './base-ajax.adapter';
 import {ILike}           from '../../../../../../../shared/types/Entities/ILike';
 import {IlikeResponse}   from "../../../../../../../shared/types/Entities/IlikeResponse";
 import {HttpClient}      from "@angular/common/http";
+//endregion
+ 
 
 
 @Injectable({

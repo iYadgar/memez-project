@@ -1,7 +1,11 @@
+//region imports
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {FeedStore}                                  from '../../stores/views/feed.store';
 import {iif}                                        from "rxjs";
 import {toJS}                                       from "mobx";
+import {PostStore}                                  from "../../stores/entities/post.store";
+
+//endregion
 
 
 @Component({
@@ -14,8 +18,20 @@ import {toJS}                                       from "mobx";
 export class FeedComponent implements OnInit {
 
   constructor(
-    public fs: FeedStore
+    public fs: FeedStore,
+    public ps: PostStore
   ) {
+    (async () => {
+
+        try {
+          await this.fs.root.ps.getPosts()
+        } catch (e) {
+          console.log('there was problem getting', e);
+        }
+
+
+      }
+    )();
 
 
   }

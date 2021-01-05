@@ -1,7 +1,10 @@
+//region imports
 import dayjs     from 'dayjs';
 import postModel from './post-model'
 import userModel from "../users/user-model";
 import {IPost}   from "../../shared/types/Entities/IPost";
+//endregion
+ 
 
 // Get all posts
 export const getPostsService = async () => {

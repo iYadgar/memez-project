@@ -1,5 +1,8 @@
+//region imports
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+//endregion
+ 
 
 describe('workspace-project App', () => {
   let page: AppPage;

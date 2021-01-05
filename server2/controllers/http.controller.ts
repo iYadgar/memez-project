@@ -1,18 +1,20 @@
 //region imports
-import * as express                      from "express";
-import {Express, Request, Response}      from "express";
-import * as events                       from 'events'
-import {BaseController, IBaseController} from "./base.controller";
-import {config}                          from "../config/config";
-import * as bodyParser                   from "body-parser";
-import * as cors                         from "cors";
-import {body, validationResult}          from "express-validator";
-import * as cookieParser                 from "cookie-parser";
+import * as express                               from "express";
+import {Express, NextFunction, Request, Response} from "express";
+import * as events                                from 'events'
+import {BaseController, IBaseController}          from "./base.controller";
+import {config}                                   from "../config/config";
+import * as bodyParser                            from "body-parser";
+import * as cors                                  from "cors";
+import {body, validationResult}                   from "express-validator";
+import * as cookieParser                          from "cookie-parser";
+import * as Multer                                from 'multer'
 
 //socket.io
+import * as socketio                                   from "socket.io";
 import {Server as IOServer, Socket as SocketIO_Socket} from "socket.io";
 import * as http                                       from "http";
-import * as socketio                                   from "socket.io";
+import {getUsersSocketHandler}                         from "../handlers/user.handler";
 
 
 //endregion
@@ -28,9 +30,14 @@ export class HttpController extends BaseController implements IHttpController {
 	private sockets: SocketIO_Socket[] = [];
 	private io_server: IOServer;
 	private http_server: http.Server;
-
 	express_app: Express = express()
 	events: events.EventEmitter = new events.EventEmitter();
+	multer = Multer({
+		storage: Multer.memoryStorage(),
+		limits : {
+			fileSize: 5 * 1024 * 1024, // no larger than 5mb, you can change as needed.
+		}
+	})
 
 
 	constructor() {
@@ -49,49 +56,48 @@ export class HttpController extends BaseController implements IHttpController {
 
 		//turn server on
 		this.http_server = this.runServer();
-		/*this.initSocketIO()*/
+		this.initSocketIO()
+
+
+
+
+
 	}
 
 
-	/*
-	 initSocketIO() {
-	 const This = this;
-	 // @ts-ignore
-	 this.io_server = socketio(this.http_server);
+	initSocketIO() {
+		const This = this;
+		// @ts-ignore
+		this.io_server = socketio(this.http_server);
 
-	 this.io_server.on('connection', function (socket: SocketIO_Socket) {
-	 This.sockets.push(socket);
-	 const idx = This.sockets.indexOf(socket)
-	 socket.send('hello world')
-	 console.log(`SOCKET CONNECTED to slot ${idx}. Total ${This.sockets.length} clients connected.  `);
+		this.io_server.on('connection', function (socket: SocketIO_Socket) {
+			This.sockets.push(socket);
+			const idx = This.sockets.indexOf(socket)
+			socket.send('hello world')
+			console.log(`SOCKET CONNECTED to slot ${idx}. Total ${This.sockets.length} clients connected.  `);
 
-	 console.log(socket.connected, 'socket.connected');
-
-
-	 socket.on('disconnected', () => {
-	 This.sockets.splice(idx, 1)
-	 console.log(`SOCKET CLOSED in slot ${idx}. Total ${This.sockets.length} clients connected `)
-	 })
-
-	 socket.on('getUsers', async () => {
-	 const response = await getUsersSocketHandler.bind(This.main)
-	 socket.emit('getUsers', response, (data) => {
-	 console.log(data)
-	 })
-	 })
-	 socket.on('getPosts', () => {
-	 console.log(' GET USERS !!!!');
-	 socket.emit('getPosts', This.testPost, (data) => {
-	 console.log(data)
-	 })
-	 })
+			console.log(socket.connected, 'socket.connected');
 
 
-	 })
+			socket.on('disconnected', () => {
+				This.sockets.splice(idx, 1)
+				console.log(`SOCKET CLOSED in slot ${idx}. Total ${This.sockets.length} clients connected `)
+			})
+			socket.on('ping', async () => {
+				socket.emit('pong', 'pong')
+			})
+
+			socket.on('getUsers', async () => {
+				console.log('getUsers');
+				const response = await getUsersSocketHandler.call(This.main)
+				socket.emit('getUsers', response)
+			})
 
 
-	 }
-	 */
+		})
+
+
+	}
 
 
 	runServer(): http.Server {
@@ -99,6 +105,7 @@ export class HttpController extends BaseController implements IHttpController {
 			console.log(`server is up on port ${config.port} `)
 		})
 	}
+
 
 	registerEndpoints() {
 
@@ -182,6 +189,14 @@ export class HttpController extends BaseController implements IHttpController {
 		this.express_app.get('/api/currentuser', (req: Request, res: Response) => {
 			this.events.emit('get_currentUser', req, res)
 		})
+
+		//upload photo
+		this.express_app.post('/api/uploadphoto', this.multer.single('file'),
+			(req: Request, res: Response, next: NextFunction) => {
+				this.events.emit('post_uploadPhoto', req, res, next)
+
+			})
+
 
 	}
 

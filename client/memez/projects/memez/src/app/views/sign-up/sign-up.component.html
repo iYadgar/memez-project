@@ -3,16 +3,38 @@
 
   <div class="form-wrapper">
     <h1 class="main-title">Sign up</h1>
+    <ng-container *mobxAutorun>
+      <div class="signup-photo">
+        <mem-profile-img
+          [url]="sus.root.us.avatarUrl">
+        </mem-profile-img>
+      </div>
+    </ng-container>
 
     <form class="sign-up-form-form"
           [formGroup]="signupForm" (ngSubmit)="sus.handleSignUp(signupForm.value)">
+
+      <label for="photo-input"
+             class="form-label btn">
+        Upload Photo</label>
+
+      <input
+
+        id="photo-input"
+        type="file"
+        name="file"
+        hidden
+
+        (change)="sus.root.us.onProfilePictureUpload($event)"
+      >
+
       <label for="email-input"
              class="form-label">Email
       </label>
       <input formControlName="email"
              id="email-input"
              [ngClass]="{'valid' : email.valid && email.dirty}"
-             type="email" placeholder="enter your email" class="user-name-input">
+             type="email" placeholder="enter your email" class="signup-form-input">
       <div class="form-validation"
            *ngIf="!email.valid && (email.dirty || email.touched)">
         email is not valid
@@ -24,7 +46,7 @@
       <input formControlName="name"
              id="name-input"
              [ngClass]="{'valid' : name.valid && name.dirty}"
-             type="text" placeholder="enter your name" class="user-name-input">
+             type="text" placeholder="enter your name" class="signup-form-input">
       <div class="form-validation"
            *ngIf="!name.valid && (name.dirty || name.touched)">
         name is not valid
@@ -35,7 +57,7 @@
       <input formControlName="password"
              id="password-input"
              [ngClass]="{'valid' : password.valid && password.dirty}"
-             type="password" placeholder="create password" class="user-name-input">
+             type="password" placeholder="create password" class="signup-form-input">
       <div class="input-hint">
         *minimum 6 characters
       </div>

@@ -1,5 +1,8 @@
+//region imports
 import {BaseController, IBaseController} from "./base.controller";
 import {IPost}                           from "../../shared/types/Entities/IPost";
+//endregion
+ 
 
 
 
@@ -32,6 +35,7 @@ export class PostController extends BaseController implements IPostController {
 	async deletePost(post_id: string): Promise<any> {
 		return this.main.dbController.deletePost(post_id)
 	}
+	/*async updatePostLiked()*/
 
 
 }

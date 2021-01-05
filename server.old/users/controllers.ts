@@ -1,6 +1,9 @@
+//region imports
 import {Request, Response} from "express"
 
 import {createUserService, getUserService, getUsersService} from "./services";
+//endregion
+ 
 
 export const getUsersController = async (req: Request, res: Response) => {
 	try {

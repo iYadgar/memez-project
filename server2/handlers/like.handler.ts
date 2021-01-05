@@ -1,7 +1,10 @@
+//region imports
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller";
 import {IUser}             from "../../shared/types/Entities/IUser";
 import {Like}              from "../types/entities/Like.entity";
+//endregion
+ 
 
 
 // Get all likes
@@ -25,7 +28,7 @@ export async function createLikeHandler(this: IMainController, req: Request, res
 			newLike   = await this.likeController.saveLike(like),
 			postLikes = await this.likeController.getPostLikesAmount(req.body.post_id);
 		//
-		return res.json({newLike, postLikeCount: postLikes}).end()
+		return res.json({like: newLike, postLikeCount: postLikes}).end()
 	} catch (e) {
 		return res.status(404).json({msg: 'No like added'})
 	}
@@ -41,7 +44,7 @@ export const unlikeHandler = async function (this: IMainController, req: Request
 			deletedLike = await this.likeController.unLike(req.params.id),
 			postLikes   = await this.likeController.getPostLikesAmount(likeToDelete.post_id);
 
-		
+
 		res.json({deletedLike, postLikeCount: postLikes}).end()
 	} catch (e) {
 		res.status(404).json({msg: 'like was not deleted ' + e})

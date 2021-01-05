@@ -1,8 +1,11 @@
+//region imports
 import {Injectable}  from "@angular/core";
 import {RootStore}   from "../root.store";
 import {AuthAdapter} from "../../adapters/auth.adapter";
 import {action}      from "mobx-angular";
 import {IUser}       from "../../../../../../../../shared/types/Entities/IUser";
+//endregion
+ 
 
 @Injectable({
   providedIn: "root"
@@ -25,8 +28,9 @@ export class AuthStore {
   }
 
   async isAuthenticated(): Promise<boolean> {
-    const response = await this.authAdapter.isAuthenticated()
-    return response
+
+
+    return this.authAdapter.isAuthenticated()
 
   }
 

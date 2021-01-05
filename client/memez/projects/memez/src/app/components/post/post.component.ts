@@ -1,7 +1,10 @@
+//region imports
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {IPost}                                          from '../../../../../../../../shared/types/Entities/IPost';
 import {IUser}                                          from "../../../../../../../../shared/types/Entities/IUser";
 import * as dayjs                                       from "dayjs";
+
+//endregion
 
 
 @Component({
@@ -16,6 +19,7 @@ export class PostComponent implements OnInit {
   @Output() postDeleted = new EventEmitter();
   @Output() postLiked = new EventEmitter();
   @Output() dashboardClicked = new EventEmitter();
+  @Output() imgClicked = new EventEmitter()
 
   postDate: string
   postTime: string
@@ -44,6 +48,10 @@ export class PostComponent implements OnInit {
 
   onDashboardClicked(post: IPost) {
     this.dashboardClicked.emit(post)
+  }
+
+  onImgClick(postMeme: string) {
+    this.imgClicked.emit(postMeme)
   }
 
 }

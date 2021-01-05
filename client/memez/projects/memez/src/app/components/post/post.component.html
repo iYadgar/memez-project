@@ -3,7 +3,9 @@
   <div class="post-profile">
 
     <div class="post-avatar">
-      avatar
+      <mem-profile-img
+        [url]="post.postedBy.avatar">
+      </mem-profile-img>
     </div>
 
     <div
@@ -42,14 +44,26 @@
     {{post.content}}
   </div>
 
+  <div class="post-img-wrapper"
+       *mobxAutorun
+       (click)="onImgClick(post.postMeme)"
+  >
+    <img *ngIf="post.postMeme"
+         [src]="post.postMeme"
+         class="post-img">
+  </div>
+
   <div class="like-dashboard"
   >
-    <div class="like-btn">
-      <mat-icon (click)="onPostLiked(post)"
-                class="like-icon">favorite
-      </mat-icon>
+    <ng-container *mobxAutorun>
+      <div class="like-btn">
+        <mat-icon (click)="onPostLiked(post)"
+                  [class.current-user-liked]=" post.likedByCurrentUser"
+                  class="like-icon">favorite
+        </mat-icon>
 
-    </div>
+      </div>
+    </ng-container>
     <ng-container *mobxAutorun>
       <div class="likes-amount"
            *ngIf="post.likes_amount"

@@ -1,12 +1,33 @@
+//region imports
 import {Request, Response} from "express";
+import * as jwt            from 'jsonwebtoken'
 import {IMainController}   from "../controllers/main.controller";
 import {IPost}             from "../../shared/types/Entities/IPost";
 import {IUser}             from "../../shared/types/Entities/IUser";
 import {Post}              from "../types/entities/Post.entity";
+//endregion
 
 
 //get all posts
 export const getPostsHandler = async function (this: IMainController, req: Request, res: Response) {
+	const
+		token = req.cookies.jwt;
+
+	let user_id;
+
+	// check jwt exist & valid
+	if (token) {
+		jwt.verify(token, `idan's secret string`, (err, decodedToken) => {
+			if (err) {
+				console.log(err.message)
+				return null
+			}
+			console.log('auth ' + decodedToken.payload)
+			user_id = decodedToken.payload
+		})
+	}
+
+
 	try {
 		const
 			posts          = await this.postController.getPosts(),
@@ -14,12 +35,19 @@ export const getPostsHandler = async function (this: IMainController, req: Reque
 				await Promise.all(
 					posts.map(async post => {
 						post.likes_amount = await this.likeController.getPostLikesAmount(post._id.toString())
+						const userLikes = await this.likeController.getUserLikes(user_id)
+						/*userLikes.forEach(like => {
+						 like.post_id === post._id ? post.currentUserLike = true : post.currentUserLike = false
+
+						 })*/
+
 						return post
 					})
 				)
 			]);
 
 
+		// @ts-ignore
 		return res.send(posts_response.flat().slice().reverse())
 
 	} catch (err) {
@@ -32,8 +60,7 @@ export const getPostsHandler = async function (this: IMainController, req: Reque
 export async function createPostHandler(this: IMainController, req: Request, res: Response) {
 	const
 		userPosted: IUser = await this.userController.getOneUser(req.body.user_id),
-		post: IPost       = new Post(req.body.content, userPosted);
-
+		post: IPost       = new Post(req.body.content, userPosted, req.body.postMeme);
 	try {
 
 		const
@@ -62,3 +89,16 @@ export const deletePostHandler = async function (this: IMainController, req: Req
 	}
 
 }
+
+/*
+ export async function updatePostLikeHandler(this: IMainController, req: Request, res: Response) {
+ try {
+ const postLiked = await this.postController.updatePostLiked(req.params.id, req.body.isLiked)
+
+ console.log(req.body.isLiked)
+ res.status(201).send(postLiked)
+ } catch (e) {
+ res.status(500).send({msg: 'something went wrong...' + e})
+ }
+ }
+ */

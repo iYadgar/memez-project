@@ -1,9 +1,13 @@
+//region imports
 import {Injectable}         from '@angular/core';
 import {RootStore}          from '../root.store';
 import {action, observable} from 'mobx-angular';
 import {IUser}              from '../../../../../../../../shared/types/Entities/IUser';
 import {Router}             from '@angular/router';
 import {LoginAdapter}       from "../../adapters/login.adapter";
+//endregion
+ 
+
 
 export interface ILoginDetails {
   email: string,
@@ -36,8 +40,13 @@ export class LoginStore {
 
   @action
   async handleLogin(loginDetails: ILoginDetails) {
+    const details = {
+      email   : loginDetails.email.toLowerCase(),
+      password: loginDetails.password
+    }
     try {
-      this.root.log.currentUser = await this.verifyUser(loginDetails)
+      this.currentUser = await this.verifyUser(details)
+
       await this.router.navigateByUrl('feed')
 
 
@@ -51,6 +60,7 @@ export class LoginStore {
   @action
   async handleLogout() {
     await this.loginAdapter.logout()
+    this.currentUser = undefined
     console.log('logged out')
     await this.router.navigateByUrl('/login')
 

@@ -1,3 +1,4 @@
+//region imports
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {RootStore}                                  from '../../stores/root.store';
 import {PostStore}                                  from '../../stores/entities/post.store';
@@ -8,6 +9,8 @@ import {FeedStore}                                  from '../../stores/views/fee
 import {LayoutStore}                                from "../../stores/views/layout.store";
 import {SignupStore}                                from "../../stores/views/signup.store";
 import {AuthStore}                                  from "../../stores/views/auth.store";
+//endregion
+ 
 
 @Component({
   selector       : 'mem-layout',
@@ -29,17 +32,7 @@ export class LayoutComponent implements OnInit {
     public as: AuthStore
   ) {
 
-    (async () => {
-
-        try {
-          await Promise.all([this.us.getUsers(), this.ps.getPosts()])
-        } catch (e) {
-          console.error('there was problem getting', e);
-        }
-
-
-      }
-    )();  //IIFE
+  //IIFE
 
   }
 

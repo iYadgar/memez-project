@@ -1,7 +1,10 @@
+//region imports
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller"
 import * as bcrypt         from 'bcrypt'
 import {IUser}             from "../../shared/types/Entities/IUser";
+//endregion
+ 
 
 export async function loginHandler(this: IMainController, req: Request, res: Response) {
 	try {
@@ -12,8 +15,8 @@ export async function loginHandler(this: IMainController, req: Request, res: Res
 			const auth = await bcrypt.compare(password, found.password)
 			if (auth) {
 				const token = this.authController.createToken(found._id)
-				res
-					.cookie('jwt', token, {httpOnly: true, maxAge: this.authController.maxAge * 1000})
+				 res
+				 .cookie('jwt', token, {httpOnly: true, maxAge: this.authController.maxAge * 1000})
 				return res.status(200).send(found)
 			}
 			return res.status(404).send({msg: 'Password is incorrect'})
@@ -26,6 +29,8 @@ export async function loginHandler(this: IMainController, req: Request, res: Res
 
 export async function logoutHandler(this: IMainController, req: Request, res: Response) {
 
-	res.status(200).cookie('jwt', '', {maxAge: 1}).send({msg: 'cookie has replaced'})
+	res.cookie('jwt', '', {maxAge: 1})
+		.status(200)
+		.send({msg: 'cookie has replaced'})
 
 }

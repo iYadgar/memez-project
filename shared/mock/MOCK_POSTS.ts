@@ -1,5 +1,8 @@
+//region imports
 import {IPost}      from '../types/Entities/IPost';
 import {MOCK_LIKES} from './MOCK_LIKES';
+//endregion
+ 
 
 export const MOCK_POSTS: IPost[] = [
     {

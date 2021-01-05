@@ -1,3 +1,4 @@
+//region imports
 import {Injectable}         from '@angular/core';
 import {action, observable} from 'mobx-angular';
 import {ILike}              from '../../../../../../../../shared/types/Entities/ILike';
@@ -5,20 +6,45 @@ import {RootStore}          from '../root.store';
 import {IPost}              from '../../../../../../../../shared/types/Entities/IPost';
 import {IlikeResponse}      from "../../../../../../../../shared/types/Entities/IlikeResponse";
 import {LikeAdapter}        from "../../adapters/like.adapter";
+import {reaction}           from "mobx";
+
+//endregion
 
 
 @Injectable({providedIn: 'root'})
 
 export class LikeStore {
-  @observable likes: ILike[] = [];
+  @observable currentUserLikes: ILike[] = [];
+
 
   /*USE_MOCK: boolean = false;*/
 
   constructor(
     public root: RootStore,
-    private likeAdapter : LikeAdapter) {
+    private likeAdapter: LikeAdapter) {
     window['likeStore'] = this;
     this.root.likeStore = this;
+
+    reaction(() => this.root.ps.posts,
+      async () => {
+        let currentUser = this.root.log.currentUser
+        if (currentUser) {
+          await this.getCurrentUserLikes(currentUser._id)
+          this.currentUserLikes.forEach(like => {
+          })
+
+        } else {
+          this.currentUserLikes = []
+        }
+      }, {fireImmediately: true}
+    )
+  }
+
+  @action
+  async getCurrentUserLikes(user_id: string) {
+    this.currentUserLikes = await this.likeAdapter.getUserLikes(user_id)
+
+
   }
 
 
@@ -44,17 +70,27 @@ export class LikeStore {
   @action
   async handleLike(post: IPost) {
     const
-      userLikes: ILike[] = await this.getUserLikes(),
-      found: ILike       = userLikes.find(like => like.post_id === post._id);
+      postLikes: ILike[] = await this.root.likeStore.getPostLikes(post._id),
+      found: ILike       = postLikes.find(like => like.user_id._id === this.root.log.currentUser._id)
+    try {
+      if (found) {
+        const
+          likeToDelete: IlikeResponse = await this.unlike(found._id),
+          index: number               = this.currentUserLikes.indexOf(found);
+        this.currentUserLikes.splice(index, 1)
+        post.likes_amount = likeToDelete.postLikeCount
+        post.likedByCurrentUser = false
 
-    if (!!found) {
-      const unlikeRes: IlikeResponse = await this.unlike(found._id)
-      post.likes_amount = unlikeRes.postLikeCount
+      } else {
+        const newLike: IlikeResponse = await this.createLike(post)
+        this.currentUserLikes.push(newLike.like)
+        post.likes_amount = newLike.postLikeCount
+        post.likedByCurrentUser = true
 
-    } else {
-      const likeRes = await this.createLike(post)
-      post.likes_amount = likeRes.postLikeCount
+      }
 
+    } catch (e) {
+      console.log(e)
     }
 
 
@@ -65,12 +101,20 @@ export class LikeStore {
     return this.likeAdapter.getPostLikes(post_id);
   }
 
-  @action
-  async getUserLikes(): Promise<ILike[]> {
-    const user_id: string = this.root.log.currentUser._id
-    return this.likeAdapter.getUserLikes(user_id);
-  }
 
+  @action
+  async checkedLikedPosts() {
+
+
+    this.root.ps.posts.forEach(post => {
+      this.currentUserLikes.forEach(like => {
+        if (post._id === like.post_id) {
+
+          post.likedByCurrentUser = true
+        }
+      })
+    })
+  }
 
 }
 

@@ -1,6 +1,10 @@
+//region imports
 import {ChangeDetectionStrategy, Component, OnInit}      from '@angular/core';
 import {SignupStore}                                     from "../../stores/views/signup.store";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+
+//endregion
+
 
 @Component({
   selector       : 'mem-sign-up',

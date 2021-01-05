@@ -1,5 +1,8 @@
+//region imports
 import {Express}                                                                           from "express";
 import {createPostController, deletePostController, getPostController, getPostsController} from "./controllers";
+//endregion
+ 
 
 
 export function postRoutes(app: Express) {

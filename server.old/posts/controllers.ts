@@ -1,5 +1,8 @@
+//region imports
 import {Request, Response}                                                                           from "express";
 import {addPostToUserService, createPostService, deletePostService, getPostService, getPostsService} from "./services";
+//endregion
+ 
 
 
 //get all posts

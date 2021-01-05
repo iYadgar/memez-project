@@ -1,4 +1,7 @@
+//region imports
 import {ILike} from '../types/Entities/ILike';
+//endregion
+ 
 
 
 export const MOCK_LIKES: ILike[] = [

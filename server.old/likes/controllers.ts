@@ -1,3 +1,4 @@
+//region imports
 import {Request, Response} from "express"
 
 import {
@@ -8,6 +9,8 @@ import {
 	pushLikeToUserService, unlikeService
 }              from "./services";
 import {ILike} from "../../shared/types/Entities/ILike";
+//endregion
+ 
 
 // Get all likes
 export const getLikesController = async (req: Request, res: Response) => {

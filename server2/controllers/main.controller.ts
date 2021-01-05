@@ -1,3 +1,4 @@
+//region imports
 import {BaseController, IBaseController}                       from "./base.controller";
 import {ILikeController}                                       from "./like.controller";
 import {IHttpController}                                       from "./http.controller";
@@ -16,6 +17,10 @@ import {IPostController}                                       from "./post.cont
 import {IAuthController}                                       from "./auth.controller";
 import {loginHandler, logoutHandler}                           from "../handlers/login.handler";
 import {getCurrentUserHandler, isAuthenticatedHandler}         from "../handlers/auth.handler";
+import {Google_storageController, IGoogleStorageController}    from "./google_storage.controller";
+import {format}                                                from "url";
+//endregion
+ 
 
 
 export interface IMainController extends IBaseController {
@@ -25,6 +30,7 @@ export interface IMainController extends IBaseController {
 	httpController: IHttpController
 	dbController: IDBController
 	authController: IAuthController
+	googleStorageController: IGoogleStorageController
 
 }
 
@@ -37,7 +43,8 @@ export class MainController extends BaseController implements IMainController {
 		public postController: IPostController,
 		public httpController: IHttpController,
 		public dbController: IDBController,
-		public authController: IAuthController
+		public authController: IAuthController,
+		public googleStorageController: IGoogleStorageController
 	) {
 		super();
 
@@ -88,6 +95,35 @@ export class MainController extends BaseController implements IMainController {
 		this.httpController.events.addListener('get_isAuthenticated', isAuthenticatedHandler.bind(this))
 		// Get current user
 		this.httpController.events.addListener('get_currentUser', getCurrentUserHandler.bind(this))
+		// Upload photo
+		this.httpController.events.addListener('post_uploadPhoto', (req, res, next) => {
+			try {
+				if (!req.file) {
+					res.status(400).send('No file uploaded.');
+					return
+				}
+
+				const
+					blob       = this.googleStorageController.bucket.file(req.file.originalname),
+					blobStream = blob.createWriteStream();
+
+				blobStream.on('error', err => {
+					next(err)
+				})
+
+				blobStream.on('finish', () => {
+					const publicUrl = format(
+						`https://storage.googleapis.com/${this.googleStorageController.bucket.name}/${blob.name}`
+
+					)
+					res.status(200).json(publicUrl).end()
+				})
+				blobStream.end(req.file.buffer)
+			} catch (e) {
+				res.status(500).send('something went wrong...', e)
+			}
+		})
+
 	}
 
 }

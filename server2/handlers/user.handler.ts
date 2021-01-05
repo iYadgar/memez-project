@@ -1,8 +1,10 @@
+//region imports
 import {Request, Response} from "express"
 import {IMainController}   from "../controllers/main.controller";
 import {IUser}             from "../../shared/types/Entities/IUser";
 import {User}              from "../types/entities/User.entity";
 import * as bcrypt         from "bcrypt";
+//endregion
 
 
 export const getUsersHandler = async function (this: IMainController, req: Request, res: Response) {
@@ -31,7 +33,7 @@ export const getUserHandler = async function (this: IMainController, req: Reques
 export async function createUserHandler(this: IMainController, req: Request, res: Response) {
 	const salt                = await bcrypt.genSalt(),
 		  password            = await bcrypt.hash(req.body.password, salt),
-		  userToCreate: IUser = new User(req.body.email, req.body.name, password)
+		  userToCreate: IUser = new User(req.body.email, req.body.name, password, req.body.avatar)
 	try {
 		const
 			newUser = await this.userController.saveUser(userToCreate);

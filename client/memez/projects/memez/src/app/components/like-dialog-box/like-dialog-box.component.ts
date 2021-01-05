@@ -1,7 +1,10 @@
-import * as dayjs                  from "dayjs";
+//region imports
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA}           from '@angular/material/dialog';
 import {ILike}                     from "../../../../../../../../shared/types/Entities/ILike";
+
+//endregion
+
 
 @Component({
   selector   : 'mem-dialog-box',

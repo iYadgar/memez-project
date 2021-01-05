@@ -1,15 +1,24 @@
 <div class="feed-wrapper">
 
 
-  <mem-post-box (newPost)="fs.root.ps.createPost($event)"></mem-post-box>
+  <mem-post-box
+    [currentUserPhoto]="fs.root.log.currentUser.avatar"
+    (newPost)="fs.root.ps.createPost($event)"
+    (imgUpload)="fs.root.ps.onImgPost($event)"
+    [postImgUrl]="fs.root.ps.postImgUrl"
+  >
+
+  </mem-post-box>
   <div class="posts-container" *mobxAutorun>
     <mem-post
-      *ngFor="let post of fs.root.ps.posts"
+      *ngFor="let post of fs.root.ps.filteredPosts"
       [post]="post"
       [currentUser]="fs.root.log.currentUser"
       (postDeleted)="fs.root.ps.deletePost($event)"
       (postLiked)="fs.root.likeStore.handleLike($event)"
       (dashboardClicked)="fs.handleDialog($event)"
+      (imgClicked)="ps.openImgDialog($event)"
+
 
     ></mem-post>
   </div>

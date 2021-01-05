@@ -1,6 +1,10 @@
+//region imports
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router}                                         from '@angular/router';
 import {IUser}                                          from "../../../../../../../../../shared/types/Entities/IUser";
+
+//endregion
+
 
 @Component({
   selector   : 'mem-navbar',
@@ -13,6 +17,7 @@ export class NavbarComponent implements OnInit {
   @Output() feedClick = new EventEmitter()
   @Output() logoutClick = new EventEmitter()
   @Output() headerClick = new EventEmitter()
+  @Output() onSearch = new EventEmitter()
 
   constructor(
     private router: Router
@@ -39,5 +44,8 @@ export class NavbarComponent implements OnInit {
     this.logoutClick.emit();
   }
 
+  searched(value) {
+    this.onSearch.emit(value)
+  }
 
 }

@@ -1,7 +1,9 @@
+//region imports
 import * as jwt                          from 'jsonwebtoken'
 import {BaseController, IBaseController} from "./base.controller";
-import {Request, Response, NextFunction} from "express";
-import {IUser}                           from "../../shared/types/Entities/IUser";
+import {Request, Response}               from "express";
+//endregion
+ 
 
 
 export interface IAuthController extends IBaseController {
@@ -11,7 +13,7 @@ export interface IAuthController extends IBaseController {
 
 	getCurrentUser(req: Request, res: Response)
 
-	checkUser(req: Request, res: Response)
+	checkUser(req: Request)
 
 
 }
@@ -48,7 +50,7 @@ export class AuthController extends BaseController implements IAuthController {
 
 	}
 
-	checkUser(req: Request, res: Response): boolean {
+	checkUser(req: Request): boolean {
 		try {
 			const token = req.cookies.jwt
 
