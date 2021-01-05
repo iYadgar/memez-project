@@ -26,7 +26,7 @@ const event_mapper: { [event_name in APIEvent]: (socket: SocketIO_Socket, data: 
     getPosts: async function (this: HttpController, socket, data, req_id) {
         console.log('getPosts Request id ' + req_id);
         let posts = await this.main.postController.getPosts();
-        socket.emit('getPosts', {posts}, req_id)
+        socket.emit('getPosts', posts, req_id)
     },
     getPost: async function (this: HttpController,socket, data, req_id) {
     },
@@ -93,10 +93,11 @@ export class HttpController extends BaseController implements IHttpController {
             console.log(socket.connected, 'socket.connected');
 
 
-            socket.on('disconnected', () => {
+            socket.on('disconnect', () => {
                 This.sockets.splice(idx, 1)
                 console.log(`SOCKET CLOSED in slot ${idx}. Total ${This.sockets.length} clients connected `)
             })
+
             socket.on('ping', async () => {
                 socket.emit('pong', 'pong')
             })

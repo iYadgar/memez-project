@@ -29,7 +29,7 @@ export class RootStore {
   ups: UploadStore;
 
 
-  constructor(public socketAdapter: BaseSocketAdapter) {
+  constructor() {
     window['root'] = this;
     window['js'] = data => toJS(data, {recurseEverything: true});
   }
