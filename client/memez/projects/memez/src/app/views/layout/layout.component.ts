@@ -9,8 +9,10 @@ import {FeedStore}                                  from '../../stores/views/fee
 import {LayoutStore}                                from "../../stores/views/layout.store";
 import {SignupStore}                                from "../../stores/views/signup.store";
 import {AuthStore}                                  from "../../stores/views/auth.store";
+import {iif}                                        from "rxjs";
+
 //endregion
- 
+
 
 @Component({
   selector       : 'mem-layout',
@@ -32,7 +34,12 @@ export class LayoutComponent implements OnInit {
     public as: AuthStore
   ) {
 
-  //IIFE
+    //IIFE
+    (async () => {
+      if (this.log.currentUser) {
+        await this.ps.getPosts()
+      }
+    })()
 
   }
 

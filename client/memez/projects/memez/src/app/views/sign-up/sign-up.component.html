@@ -79,8 +79,8 @@
       </button>
       <ng-container *mobxAutorun>
         <div class="form-validation submitted"
-             *ngIf="!!sus.emailError">
-          {{sus.emailError}}
+             *ngIf="!!sus.errorMessage">
+          {{sus.errorMessage}}
         </div>
       </ng-container>
 

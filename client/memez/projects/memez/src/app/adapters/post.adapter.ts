@@ -11,22 +11,22 @@ import {BaseSocketAdapter} from "./base-socket-adapter.service";
 @Injectable({
   providedIn: 'root'
 })
-export class PostAdapter extends BaseSocketAdapter {
+export class PostAdapter {
 
 
-  constructor() {
-    super()
+  constructor(public socketAdapter: BaseSocketAdapter) {
+
     window['PostAdapter'] = this;
   }
 
   async getPosts(): Promise<IPost[]> {
-    return this.request<IPost[]>('getPosts');
+    return this.socketAdapter.request<IPost[]>('getPosts');
   }
 
   async createPost(user_id: string, content: string, postMeme: string): Promise<IPost> {
     console.log('postAdapter');
     console.log(content, 'content');
-    return this.request('createPost',
+    return this.socketAdapter.request('createPost',
       {
         user_id  : user_id
         , content: content,
@@ -36,17 +36,13 @@ export class PostAdapter extends BaseSocketAdapter {
   }
 
   async deletePost(post_id: string): Promise<IPost> {
-    return this.request('deletePost', {id: post_id})
+    return this.socketAdapter.request('deletePost', {id: post_id})
   }
 
-  async getOnePost(post_id: string) {
-    return this.request('getPost', {id: post_id})
-
-  }
 
   async updatePostContent(post_id: string, content: string) {
 
-    return this.request<IPost>("updatePost", {id: post_id, content})
+    return this.socketAdapter.request<IPost>("updatePost", {id: post_id, content})
   }
 
 }

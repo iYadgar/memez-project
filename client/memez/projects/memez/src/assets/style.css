@@ -628,7 +628,6 @@ label.form-label {
   display: flex;
   text-transform: capitalize;
   margin-right: 60px;
-  font-family: 'PT Sans Caption', serif;
   font-size: 1.2em;
 }
 

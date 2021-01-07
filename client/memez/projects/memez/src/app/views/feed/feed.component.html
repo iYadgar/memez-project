@@ -24,10 +24,8 @@
       (postDeleted)="fs.root.ps.deletePost($event)"
       (postLiked)="fs.root.likeStore.handleLike($event)"
       (dashboardClicked)="fs.handLikesleDialog($event)"
-      (imgClicked)="ps.openImgDialog($event)"
+      (imgClicked)="fs.root.ps.openImgDialog($event)"
       (editClicked)="fs.handleEditPostDialog($event)"
-
-
     ></mem-post>
   </div>
 </div>

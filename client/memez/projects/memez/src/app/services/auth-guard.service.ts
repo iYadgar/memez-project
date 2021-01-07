@@ -2,6 +2,7 @@
 import {Injectable}          from '@angular/core';
 import {AuthStore}           from "../stores/views/auth.store";
 import {CanActivate, Router} from "@angular/router";
+import {IAuthResponse}       from "../../../../../../../shared/types/IAuthResponse";
 
 //endregion
 

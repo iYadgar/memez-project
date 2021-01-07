@@ -35,6 +35,8 @@ export class PostStore {
       async () => {
         await this.createPost(this.postContent)
       })
+    this.getPosts().then(data => console.log('get posts'))
+
 
   }
 
@@ -81,10 +83,6 @@ export class PostStore {
 
   }
 
-  @action
-  async getOnePost(post: IPost) {
-    return this.postAdapter.getOnePost(post._id)
-  }
 
   @action
   async onImgPost(event) {

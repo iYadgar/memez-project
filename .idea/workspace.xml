@@ -14,16 +14,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server2/ajax-handlers/user.handler.old.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2/socket-handlers/event-mapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2/socket-handlers/handlers/like.socket-handler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2/socket-handlers/handlers/post.socket-handler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2/socket-handlers/handlers/user.socket-handler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/types/Entities/IUserResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/types/IAuthResponse.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/auth.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/auth.adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/like.adapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/post.adapter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/components/profile-img/profile-img.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/user.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/user.adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/services/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/services/auth-guard.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/entities/post.store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/user-profile/user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/auth.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/auth.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/stores/views/signup.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/feed/feed.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/layout/layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/views/sign-up/sign-up.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/config/radiant-snow-300512-d6815b57c6ec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/google_storage.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/google_storage.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/main.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/auth.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/ajax-handlers/auth.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/like.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/ajax-handlers/like.handler.old.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/login.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/ajax-handlers/login.handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/post.handler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/ajax-handlers/post.handler.old.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/handlers/user.handler.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/types/api/api-event.ts" beforeDir="false" afterPath="$PROJECT_DIR$/shared/types/api/api-event.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +97,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.10" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server2/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server2/socket-handlers/handlers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,12 +105,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server2/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server2/socket-handlers/handlers" />
       <recent name="$PROJECT_DIR$/server2/config" />
       <recent name="$PROJECT_DIR$/client/memez/projects/memez/src/assets/svg's" />
     </key>
@@ -101,7 +123,7 @@
       <recent name="$PROJECT_DIR$/server2" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="Node.js.server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -183,7 +205,9 @@
       <workItem from="1609590059117" duration="13247000" />
       <workItem from="1609658919672" duration="4058000" />
       <workItem from="1609770932576" duration="11476000" />
-      <workItem from="1609831132016" duration="19682000" />
+      <workItem from="1609831132016" duration="20032000" />
+      <workItem from="1609937895202" duration="7021000" />
+      <workItem from="1610007793288" duration="4383000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -325,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609849094467</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="all post endpoints works with socket">
+      <created>1609872754820</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1609872754820</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +397,8 @@
     <MESSAGE value="added login &amp; logout auth 2§" />
     <MESSAGE value="added photos upload &amp; search feature" />
     <MESSAGE value="added update post feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="added update post feature" />
+    <MESSAGE value="all post endpoints works with socket" />
+    <option name="LAST_COMMIT_MESSAGE" value="all post endpoints works with socket" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

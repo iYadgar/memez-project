@@ -6,6 +6,8 @@ import {Router}                  from "@angular/router";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {UserAdapter}             from "../../adapters/user.adapter";
 import {IUser}                   from "../../../../../../../../shared/types/Entities/IUser";
+import {IUserResponse}           from "../../../../../../../../shared/types/Entities/IUserResponse";
+import {logoutHandler}           from "../../../../../../../../server2/ajax-handlers/login.handler";
 
 //endregion
 
@@ -14,7 +16,7 @@ import {IUser}                   from "../../../../../../../../shared/types/Enti
 
 
 export class SignupStore {
-  @observable emailError: string = ''
+  @observable errorMessage: string = ''
 
 
   constructor(
@@ -40,23 +42,21 @@ export class SignupStore {
     if (this.root.us.avatarUrl) {
       user.avatar = this.root.us.avatarUrl
     }
-    try {
-      await this.userAdapter.createNewUser(user)
-      await this.routeToLogin()
-      console.log('user has been created')
 
-    } catch (e) {
-      if (e.status === 409) {
-        this.emailError = e.error.msg
-      } else {
-        this.emailError = 'something went wrong...'
+    try {
+      const userResponse: IUserResponse = await this.userAdapter.createNewUser(user)
+      console.log(userResponse.isCreated, 'userResponse.isCreated');
+      if (!userResponse.isCreated) {
+        this.errorMessage = userResponse.msg
+        return
       }
+      console.log(userResponse.msg)
+      await this.routeToLogin()
+    } catch (e) {
+      console.log(e)
     }
 
 
   }
-
-
 }
-
 

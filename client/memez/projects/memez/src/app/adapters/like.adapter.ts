@@ -1,47 +1,41 @@
 //region imports
-import {Injectable}      from '@angular/core';
-import {BaseAjaxAdapter} from './base-ajax.adapter';
-import {ILike}           from '../../../../../../../shared/types/Entities/ILike';
-import {IlikeResponse}   from "../../../../../../../shared/types/Entities/IlikeResponse";
-import {HttpClient}      from "@angular/common/http";
+import {Injectable}        from '@angular/core';
+import {ILike}             from '../../../../../../../shared/types/Entities/ILike';
+import {IlikeResponse}     from "../../../../../../../shared/types/Entities/IlikeResponse";
+import {BaseSocketAdapter} from "./base-socket-adapter.service";
+
 //endregion
- 
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class LikeAdapter extends BaseAjaxAdapter {
+export class LikeAdapter  {
 
-  constructor(
-    http: HttpClient
-  ) {
-    super(http);
+  constructor(private socketAdapter : BaseSocketAdapter) {
+
     window['likeAdapter'] = this;
   }
 
   async getPostLikes(post_id: string): Promise<ILike[]> {
-    return this.request<ILike[]>(`posts/likes/${post_id} `);
+    return this.socketAdapter.request<ILike[]>(`getPostLikes`, {post_id});
   }
 
-  async createLike(likeIds): Promise<IlikeResponse> {
-    return this.post('likes', likeIds)
+  async createLike(likeData): Promise<IlikeResponse> {
+    return this.socketAdapter.request('createLike', likeData)
   }
 
   async unlike(likeId: string): Promise<IlikeResponse> {
-    return this.delete(`likes/${likeId}`)
+    return this.socketAdapter.request(`unlike`, {id: likeId})
   }
 
   async getLikes() {
-    return await this.request('likes');
+    return await this.socketAdapter.request('getLikes');
   }
 
   async getUserLikes(user_id: string): Promise<ILike[]> {
-    return await this.request(`users/likes/${user_id} `)
+    return await this.socketAdapter.request(`getUserLikes`, {user_id})
   }
 
-  /* async socketEmit() {
-   await this.socketAdapter.emit()
-   }*/
 
 }

@@ -18,13 +18,13 @@ import {PostStore}                                  from "../../stores/entities/
 export class FeedComponent implements OnInit {
 
   constructor(
-    public fs: FeedStore,
-    public ps: PostStore
+    public fs: FeedStore
   ) {
     (async () => {
 
         try {
           await this.fs.root.ps.getPosts()
+          console.log('got posts')
         } catch (e) {
           console.log('there was problem getting', e);
         }
