@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "content": "Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "Date": "28.11.2019",
+    "Time": "11:13"
+  },
+  {
+    "id": 2,
+    "user_id": 1,
+    "content": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
+    "Date": "13.04.2020",
+    "Time": "1:02"
+  },
+  {
+    "id": 3,
+    "user_id": 1,
+    "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "Date": "07.07.2020",
+    "Time": "12:24"
+  },
+  {
+    "id": 4,
+    "user_id": 4,
+    "content": "Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    "Date": "19.05.2020",
+    "Time": "18:18"
+  },
+  {
+    "id": 5,
+    "user_id": 4,
+    "content": "Aliquam erat volutpat. In congue.",
+    "Date": "17.10.2020",
+    "Time": "9:39"
+  },
+  {
+    "id": 6,
+    "user_id": 6,
+    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio.",
+    "Date": "23.11.2020",
+    "Time": "18:33"
+  },
+  {
+    "id": 7,
+    "user_id": 7,
+    "content": "Integer ac neque. Duis bibendum.",
+    "Date": "24.10.2020",
+    "Time": "13:35"
+  },
+  {
+    "id": 8,
+    "user_id": 7,
+    "content": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "Date": "14.12.2019",
+    "Time": "11:47"
+  },
+  {
+    "id": 9,
+    "user_id": 7,
+    "content": "Duis at velit eu est congue elementum.",
+    "Date": "26.02.2020",
+    "Time": "19:28"
+  },
+  {
+    "id": 10,
+    "user_id": 10,
+    "content": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
+    "Date": "27.01.2020",
+    "Time": "20:20"
+  }
+]
