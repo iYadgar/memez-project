@@ -1,11 +1,15 @@
 //region imports
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {APIEvent} from "../../../../../../../shared/types/api/api-event";
+import {HttpClient} from '@angular/common/http';
+import {APIEvent}   from "../../../../../../../shared/types/api/api-event";
 
 
 //endregion
 export interface IBaseAdapter {
-  request<T>(event: APIEvent, data:any): Promise<T>;
+  request<T>(event: APIEvent, data: any): Promise<T>;
+
+  listenToEvent<T = any>(event_name: APIEvent, fn: Function): Promise<void>;
+
+  stopListeningToEvent<T = any>(event_name: APIEvent): Promise<void>;
 
   // post<T>(path: string, body: string): Promise<T>
 
@@ -45,5 +49,13 @@ export abstract class BaseAjaxAdapter implements IBaseAdapter {
     return this.http
       .put(`${this.BASE_URL}/${path}`, body)
       .toPromise()
+  }
+
+  listenToEvent<T = any>(event_name: APIEvent, fn: Function): Promise<void> {
+    return;
+  }
+
+  stopListeningToEvent<T = any>(event_name: APIEvent): Promise<void> {
+    return;
   }
 }

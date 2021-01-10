@@ -20,6 +20,7 @@ export class FeedComponent implements OnInit {
   constructor(
     public fs: FeedStore
   ) {
+    window['feedComp'] = this;
     (async () => {
 
         try {
@@ -37,8 +38,8 @@ export class FeedComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-
-
+    console.log('init')
+    await this.fs.root.ps.getPosts()
   }
 
 }

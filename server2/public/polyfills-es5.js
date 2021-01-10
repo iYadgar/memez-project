@@ -13,9 +13,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills-es5"], {
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js":
-  /*!***********************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js ***!
-    \***********************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/date/index.js ***!
+    \******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -51,9 +51,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js":
-  /*!***********************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js ***!
-    \***********************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/math/index.js ***!
+    \******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -141,9 +141,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js":
-  /*!*************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js ***!
-    \*************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/number/index.js ***!
+    \********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -207,9 +207,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/es/symbol/index.js":
-  /*!*************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/symbol/index.js ***!
-    \*************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/es/symbol/index.js ***!
+    \********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -301,9 +301,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-function.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -322,9 +322,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-possible-prototype.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-possible-prototype.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/a-possible-prototype.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -347,9 +347,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/add-to-unscopables.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -388,9 +388,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/advance-string-index.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -413,9 +413,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-instance.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -434,9 +434,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/an-object.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -459,9 +459,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-copy-within.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -517,9 +517,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-fill.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -563,9 +563,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-for-each.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -599,9 +599,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-from.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -680,9 +680,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-includes.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -733,9 +733,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-iteration.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-iteration.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-iteration.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -840,9 +840,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-last-index-of.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -904,9 +904,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js":
-  /*!****************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js ***!
-    \****************************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-has-species-support.js ***!
+    \***********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -949,9 +949,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-is-strict.js":
-  /*!******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-is-strict.js ***!
-    \******************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-is-strict.js ***!
+    \*************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -978,9 +978,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-uses-to-length.js":
-  /*!***********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-uses-to-length.js ***!
-    \***********************************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-method-uses-to-length.js ***!
+    \******************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1030,9 +1030,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-reduce.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1100,9 +1100,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/array-species-create.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1143,9 +1143,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js":
-  /*!****************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
-    \****************************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/call-with-safe-iteration-closing.js ***!
+    \***********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1171,9 +1171,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js":
-  /*!**************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
-    \**************************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+    \*********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1241,9 +1241,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof-raw.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1260,9 +1260,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js":
-  /*!***************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js ***!
-    \***************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/classof.js ***!
+    \**********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1307,9 +1307,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-strong.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1559,9 +1559,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection-weak.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1714,9 +1714,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/collection.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1868,9 +1868,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js":
-  /*!***********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js ***!
-    \***********************************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/copy-constructor-properties.js ***!
+    \******************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1908,9 +1908,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-is-regexp-logic.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1944,9 +1944,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/correct-prototype-getter.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1969,9 +1969,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-html.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -1996,9 +1996,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js":
-  /*!***********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js ***!
-    \***********************************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-iterator-constructor.js ***!
+    \******************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2045,9 +2045,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-non-enumerable-property.js":
-  /*!**************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-non-enumerable-property.js ***!
-    \**************************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-non-enumerable-property.js ***!
+    \*********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2076,9 +2076,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js":
-  /*!**********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js ***!
-    \**********************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property-descriptor.js ***!
+    \*****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2098,9 +2098,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/create-property.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2130,9 +2130,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-iso-string.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2172,9 +2172,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/date-to-primitive.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2203,9 +2203,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-iterator.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2364,9 +2364,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/define-well-known-symbol.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2400,9 +2400,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/descriptors.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2425,9 +2425,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/document-create-element.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2454,9 +2454,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/dom-iterables.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2502,9 +2502,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-is-ios.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-is-ios.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-is-ios.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2520,9 +2520,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-user-agent.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-user-agent.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-user-agent.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2538,9 +2538,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-v8-version.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-v8-version.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/engine-v8-version.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2577,9 +2577,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/enum-bug-keys.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2592,9 +2592,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js":
-  /*!**************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js ***!
-    \**************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/export.js ***!
+    \*********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2687,9 +2687,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js":
-  /*!*************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js ***!
-    \*************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fails.js ***!
+    \********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2708,9 +2708,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js":
-  /*!******************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
-    \******************************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js ***!
+    \*************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2881,9 +2881,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js":
-  /*!****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js ***!
-    \****************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/freezing.js ***!
+    \***********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2901,9 +2901,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind-context.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind-context.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind-context.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -2952,9 +2952,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/function-bind.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3010,9 +3010,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-built-in.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3039,9 +3039,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/get-iterator-method.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3070,9 +3070,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js":
-  /*!**************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js ***!
-    \**************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/global.js ***!
+    \*********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3091,9 +3091,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js":
-  /*!***********************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js ***!
-    \***********************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/has.js ***!
+    \******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3110,9 +3110,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/hidden-keys.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3124,9 +3124,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/host-report-errors.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3149,9 +3149,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js":
-  /*!************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
-    \************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
+    \*******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3167,9 +3167,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/ie8-dom-define.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3200,9 +3200,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/indexed-object.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3230,9 +3230,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inherit-if-required.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3260,9 +3260,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inspect-source.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inspect-source.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/inspect-source.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3286,9 +3286,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-metadata.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3383,9 +3383,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/internal-state.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3486,9 +3486,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array-iterator-method.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3514,9 +3514,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js":
-  /*!****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js ***!
-    \****************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-array.js ***!
+    \***********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3537,9 +3537,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-forced.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3569,9 +3569,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-integer.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3593,9 +3593,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-object.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3610,9 +3610,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js":
-  /*!***************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js ***!
-    \***************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-pure.js ***!
+    \**********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3624,9 +3624,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/is-regexp.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3657,9 +3657,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js":
-  /*!***************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js ***!
-    \***************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterate.js ***!
+    \**********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3735,9 +3735,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators-core.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3800,9 +3800,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/iterators.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3814,9 +3814,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-expm1.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3836,9 +3836,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-fround.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3878,9 +3878,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-log1p.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3898,9 +3898,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/math-sign.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -3918,9 +3918,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/microtask.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4035,9 +4035,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-promise-constructor.js":
-  /*!**********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-promise-constructor.js ***!
-    \**********************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-promise-constructor.js ***!
+    \*****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4053,9 +4053,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-symbol.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4075,9 +4075,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/native-weak-map.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4098,9 +4098,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js":
-  /*!******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js ***!
-    \******************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/new-promise-capability.js ***!
+    \*************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4133,9 +4133,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/not-a-regexp.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/not-a-regexp.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/not-a-regexp.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4158,9 +4158,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-is-finite.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4182,9 +4182,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-float.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-float.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-float.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4216,9 +4216,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-int.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-int.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/number-parse-int.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4250,9 +4250,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-assign.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4346,9 +4346,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-create.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4470,9 +4470,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-properties.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4514,9 +4514,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js":
-  /*!******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js ***!
-    \******************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-define-property.js ***!
+    \*************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4559,9 +4559,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js":
-  /*!******************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
-    \******************************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+    \*************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4613,9 +4613,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js":
-  /*!**********************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
-    \**********************************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names-external.js ***!
+    \*****************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4650,9 +4650,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js":
-  /*!*************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js ***!
-    \*************************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-names.js ***!
+    \********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4678,9 +4678,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js":
-  /*!***************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
-    \***************************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+    \**********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4692,9 +4692,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-get-prototype-of.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4735,9 +4735,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys-internal.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4784,9 +4784,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-keys.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4811,9 +4811,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js":
-  /*!*************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js ***!
-    \*************************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-property-is-enumerable.js ***!
+    \********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4838,9 +4838,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-set-prototype-of.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4884,9 +4884,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/object-to-string.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4912,9 +4912,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js":
-  /*!****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js ***!
-    \****************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/own-keys.js ***!
+    \***********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4948,9 +4948,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js":
-  /*!************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js ***!
-    \************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/path.js ***!
+    \*******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4966,9 +4966,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js":
-  /*!***************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js ***!
-    \***************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/perform.js ***!
+    \**********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -4993,9 +4993,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/promise-resolve.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5027,9 +5027,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine-all.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5052,9 +5052,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js":
-  /*!****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js ***!
-    \****************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/redefine.js ***!
+    \***********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5115,9 +5115,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec-abstract.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5158,9 +5158,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-exec.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5264,9 +5264,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-flags.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5297,9 +5297,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-sticky-helpers.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-sticky-helpers.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/regexp-sticky-helpers.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5334,9 +5334,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/require-object-coercible.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5354,9 +5354,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/same-value.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5374,9 +5374,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-global.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5405,9 +5405,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-species.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5452,9 +5452,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/set-to-string-tag.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5488,9 +5488,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-key.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5515,9 +5515,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-store.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-store.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared-store.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5539,9 +5539,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js":
-  /*!**************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js ***!
-    \**************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/shared.js ***!
+    \*********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5567,9 +5567,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/species-constructor.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5601,9 +5601,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-html-forced.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-html-forced.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-html-forced.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5627,9 +5627,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-multibyte.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-multibyte.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-multibyte.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5669,9 +5669,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-pad.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-pad.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-pad.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5720,9 +5720,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-repeat.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5758,9 +5758,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim-forced.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim-forced.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim-forced.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5788,9 +5788,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/string-trim.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5833,9 +5833,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js":
-  /*!************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js ***!
-    \************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/task.js ***!
+    \*******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5972,9 +5972,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/this-number-value.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -5999,9 +5999,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-absolute-index.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6026,9 +6026,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-indexed-object.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6052,9 +6052,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-integer.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6073,9 +6073,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-length.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6097,9 +6097,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-object.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6120,9 +6120,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-primitive.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6150,9 +6150,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-string-tag-support.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-string-tag-support.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/to-string-tag-support.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6171,9 +6171,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js":
-  /*!***********************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js ***!
-    \***********************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/uid.js ***!
+    \******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6191,9 +6191,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/use-symbol-as-uid.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/use-symbol-as-uid.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/use-symbol-as-uid.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6211,9 +6211,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol-wrapped.js":
-  /*!*********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
-    \*********************************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol-wrapped.js ***!
+    \****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6229,9 +6229,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/well-known-symbol.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6278,9 +6278,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/whitespaces.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6294,9 +6294,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.concat.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.concat.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.concat.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6408,9 +6408,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.copy-within.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6443,9 +6443,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.every.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6489,9 +6489,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.fill.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6524,9 +6524,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.filter.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6572,9 +6572,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find-index.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6625,9 +6625,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.find.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6678,9 +6678,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.for-each.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6710,9 +6710,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.from.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6747,9 +6747,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.index-of.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6799,9 +6799,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.is-array.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6828,9 +6828,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.iterator.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6922,9 +6922,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.join.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6967,9 +6967,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.last-index-of.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -6997,9 +6997,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.map.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7045,9 +7045,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.of.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7102,9 +7102,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce-right.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7151,9 +7151,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.reduce.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7199,9 +7199,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.slice.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7304,9 +7304,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.some.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7350,9 +7350,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.sort.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7409,9 +7409,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.splice.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.splice.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.array.splice.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7536,9 +7536,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.now.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7563,9 +7563,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-iso-string.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7594,9 +7594,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-json.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7646,9 +7646,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-primitive.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7679,9 +7679,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.date.to-string.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7711,9 +7711,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.bind.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7740,9 +7740,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js":
-  /*!******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js ***!
-    \******************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.has-instance.js ***!
+    \*************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7790,9 +7790,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.function.name.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7830,9 +7830,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.json.to-string-tag.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.json.to-string-tag.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.json.to-string-tag.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7854,9 +7854,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js":
-  /*!************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js ***!
-    \************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.map.js ***!
+    \*******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7884,9 +7884,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.acosh.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7923,9 +7923,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.asinh.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7958,9 +7958,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.atanh.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -7989,9 +7989,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cbrt.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8022,9 +8022,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.clz32.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8052,9 +8052,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.cosh.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8088,9 +8088,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.expm1.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8118,9 +8118,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.fround.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8147,9 +8147,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.hypot.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8201,9 +8201,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.imul.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8243,9 +8243,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log10.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8272,9 +8272,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log1p.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8301,9 +8301,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.log2.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8330,9 +8330,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sign.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8359,9 +8359,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.sinh.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8402,9 +8402,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.tanh.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8436,9 +8436,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.to-string-tag.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8456,9 +8456,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.math.trunc.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8485,9 +8485,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.constructor.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8636,9 +8636,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.epsilon.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8661,9 +8661,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-finite.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8690,9 +8690,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js":
-  /*!**************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js ***!
-    \**************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-integer.js ***!
+    \*********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8719,9 +8719,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-nan.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8747,9 +8747,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.is-safe-integer.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8779,9 +8779,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.max-safe-integer.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8804,9 +8804,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.min-safe-integer.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8829,9 +8829,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-float.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8859,9 +8859,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.parse-int.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -8889,9 +8889,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-fixed.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9058,9 +9058,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.number.to-precision.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9104,9 +9104,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.assign.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9134,9 +9134,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.create.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9168,9 +9168,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js":
-  /*!*********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js ***!
-    \*********************************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-properties.js ***!
+    \****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9203,9 +9203,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.define-property.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9238,9 +9238,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.freeze.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9287,9 +9287,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js":
-  /*!*******************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
-    \*******************************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-descriptor.js ***!
+    \**************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9336,9 +9336,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js":
-  /*!**************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
-    \**************************************************************************************************************************************************************************/
+  /*!*********************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-own-property-names.js ***!
+    \*********************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9373,9 +9373,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.get-prototype-of.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9421,9 +9421,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-extensible.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9461,9 +9461,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-frozen.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9501,9 +9501,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is-sealed.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9541,9 +9541,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.is.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9570,9 +9570,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.keys.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9613,9 +9613,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js":
-  /*!**********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
-    \**********************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.prevent-extensions.js ***!
+    \*****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9662,9 +9662,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.seal.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9711,9 +9711,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js":
-  /*!********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
-    \********************************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.set-prototype-of.js ***!
+    \***************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9740,9 +9740,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.object.to-string.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9773,9 +9773,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-float.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9802,9 +9802,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js":
-  /*!******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js ***!
-    \******************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.parse-int.js ***!
+    \*************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -9831,9 +9831,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js":
-  /*!****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js ***!
-    \****************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.promise.js ***!
+    \***********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10345,9 +10345,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.constructor.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10485,9 +10485,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.exec.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10515,9 +10515,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.flags.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10553,9 +10553,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.regexp.to-string.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10609,9 +10609,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js":
-  /*!************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js ***!
-    \************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.set.js ***!
+    \*******************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10639,9 +10639,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.anchor.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10677,9 +10677,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.big.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10715,9 +10715,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.blink.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10753,9 +10753,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.bold.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10791,9 +10791,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.code-point-at.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10824,9 +10824,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.ends-with.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10894,9 +10894,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fixed.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10932,9 +10932,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontcolor.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -10970,9 +10970,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.fontsize.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11008,9 +11008,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js":
-  /*!*******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js ***!
-    \*******************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.from-code-point.js ***!
+    \**************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11056,9 +11056,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.includes.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11100,9 +11100,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.italics.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11138,9 +11138,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.iterator.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11193,9 +11193,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.link.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11231,9 +11231,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.match.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11302,9 +11302,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.raw.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11348,9 +11348,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.repeat.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11377,9 +11377,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.replace.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11560,9 +11560,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.search.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11617,9 +11617,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.small.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11655,9 +11655,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.split.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11820,9 +11820,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.starts-with.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11888,9 +11888,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.strike.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11926,9 +11926,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sub.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -11964,9 +11964,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.sup.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12002,9 +12002,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js":
-  /*!********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js ***!
-    \********************************************************************************************************************************************************/
+  /*!***************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.string.trim.js ***!
+    \***************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12040,9 +12040,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.async-iterator.js":
-  /*!******************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.async-iterator.js ***!
-    \******************************************************************************************************************************************************************/
+  /*!*************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.async-iterator.js ***!
+    \*************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12060,9 +12060,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.description.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.description.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.description.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12144,9 +12144,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.has-instance.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.has-instance.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.has-instance.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12164,9 +12164,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.is-concat-spreadable.js":
-  /*!************************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.is-concat-spreadable.js ***!
-    \************************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.is-concat-spreadable.js ***!
+    \*******************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12184,9 +12184,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js":
-  /*!************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js ***!
-    \************************************************************************************************************************************************************/
+  /*!*******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.iterator.js ***!
+    \*******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12204,9 +12204,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js":
-  /*!***************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js ***!
-    \***************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.js ***!
+    \**********************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12685,9 +12685,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match-all.js":
-  /*!*************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match-all.js ***!
-    \*************************************************************************************************************************************************************/
+  /*!********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match-all.js ***!
+    \********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12704,9 +12704,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.match.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12724,9 +12724,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.replace.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.replace.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.replace.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12744,9 +12744,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.search.js":
-  /*!**********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.search.js ***!
-    \**********************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.search.js ***!
+    \*****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12764,9 +12764,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.species.js":
-  /*!***********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.species.js ***!
-    \***********************************************************************************************************************************************************/
+  /*!******************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.species.js ***!
+    \******************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12784,9 +12784,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.split.js":
-  /*!*********************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.split.js ***!
-    \*********************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.split.js ***!
+    \****************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12804,9 +12804,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-primitive.js":
-  /*!****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-primitive.js ***!
-    \****************************************************************************************************************************************************************/
+  /*!***********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-primitive.js ***!
+    \***********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12824,9 +12824,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-string-tag.js":
-  /*!*****************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-string-tag.js ***!
-    \*****************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.to-string-tag.js ***!
+    \************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12844,9 +12844,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.unscopables.js":
-  /*!***************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.unscopables.js ***!
-    \***************************************************************************************************************************************************************/
+  /*!**********************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.symbol.unscopables.js ***!
+    \**********************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12864,9 +12864,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js":
-  /*!*****************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js ***!
-    \*****************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/es.weak-map.js ***!
+    \************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -12975,9 +12975,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.for-each.js":
-  /*!**********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.for-each.js ***!
-    \**********************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.for-each.js ***!
+    \*****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -13015,9 +13015,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js":
-  /*!**********************************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
-    \**********************************************************************************************************************************************************************/
+  /*!*****************************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/node_modules/core-js/modules/web.dom-collections.iterator.js ***!
+    \*****************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -13079,9 +13079,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js":
-  /*!*******************************************************************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
-    \*******************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js ***!
+    \**************************************************************************************************************************************************************/
 
   /*! no exports provided */
 
@@ -13959,9 +13959,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/regenerator-runtime/runtime.js":
-  /*!**********************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/regenerator-runtime/runtime.js ***!
-    \**********************************************************************************************************/
+  /*!*****************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/regenerator-runtime/runtime.js ***!
+    \*****************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -14678,9 +14678,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/zone.js/dist/zone-evergreen.js":
-  /*!**********************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/zone.js/dist/zone-evergreen.js ***!
-    \**********************************************************************************************************/
+  /*!*****************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/zone.js/dist/zone-evergreen.js ***!
+    \*****************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -18235,9 +18235,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   "../../node_modules/zone.js/dist/zone-legacy.js":
-  /*!*******************************************************************************************************!*\
-    !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/zone.js/dist/zone-legacy.js ***!
-    \*******************************************************************************************************/
+  /*!**************************************************************************************************************!*\
+    !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/zone.js/dist/zone-legacy.js ***!
+    \**************************************************************************************************************/
 
   /*! no static exports found */
 
@@ -18889,16 +18889,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
   /***/
   1:
-  /*!*********************************************************************************************************************************************************************************************************!*\
-    !*** multi /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js zone.js/dist/zone-legacy ./src/polyfills.ts ***!
-    \*********************************************************************************************************************************************************************************************************/
+  /*!****************************************************************************************************************************************************************************************************************!*\
+    !*** multi /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js zone.js/dist/zone-legacy ./src/polyfills.ts ***!
+    \****************************************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+    /*! /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
     "../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -18906,7 +18906,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "../../node_modules/zone.js/dist/zone-legacy.js");
 
     module.exports = __webpack_require__(
-    /*! /Users/rotemx/Web/Netcraft/memez-project2/client/memez/projects/memez/src/polyfills.ts */
+    /*! /Users/idanyadgar/Documents/class-projects/memez/client/memez/projects/memez/src/polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }

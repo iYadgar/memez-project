@@ -15,10 +15,7 @@ import {reaction}           from "mobx";
 
 export class LikeStore {
   @observable currentUserLikes: ILike[] = [];
-  likeposts
 
-
-  /*USE_MOCK: boolean = false;*/
 
   constructor(
     public root: RootStore,
@@ -90,7 +87,7 @@ export class LikeStore {
 
       } else {
         const newLike: IlikeResponse = await this.createLike(post)
-        this.currentUserLikes.push(newLike.like)
+        console.log(newLike, 'newLike');
         post.likes_amount = newLike.postLikeCount
         post.likedByCurrentUser = true
 

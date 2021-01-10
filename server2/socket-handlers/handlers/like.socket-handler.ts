@@ -2,6 +2,7 @@
 import {IHttpController} from "../../controllers/http.controller";
 import {IUser}           from "../../../shared/types/Entities/IUser";
 import {Like}            from "../../types/entities/Like.entity";
+import {IlikeResponse}   from "../../../shared/types/Entities/IlikeResponse";
 //endregion
 
 
@@ -24,10 +25,11 @@ export async function createLikeHandler(this: IHttpController, socket, data, req
 		like             = new Like(userLiked, parsedData.post_id)
 	try {
 		const
-			newLike   = await this.main.likeController.saveLike(like),
-			postLikes = await this.main.likeController.getPostLikesAmount(parsedData.post_id);
-		//
-		socket.emit('creatLike', {like: newLike, postLikeCount: postLikes}, req_id)
+			newLike                     = await this.main.likeController.saveLike(like),
+			postLikes                   = await this.main.likeController.getPostLikesAmount(parsedData.post_id),
+			likeResponse: IlikeResponse = {like: newLike, postLikeCount: postLikes};
+
+		socket.emit('createLike', likeResponse, req_id)
 	} catch (e) {
 		socket.emit('createLike', {msg: `Something went wrong` + e}, req_id)
 	}

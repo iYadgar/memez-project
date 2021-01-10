@@ -12,4 +12,5 @@ export type APIEvent =
 	| 'unlike'
 	| 'getUserLikes'
 	| 'getPostLikes'
+	| 'postsUpdate'
 

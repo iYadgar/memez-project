@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills"],{
 
 /***/ "../../node_modules/zone.js/dist/zone-evergreen.js":
-/*!**********************************************************************************************************!*\
-  !*** /Users/rotemx/Web/Netcraft/memez-project2/client/memez/node_modules/zone.js/dist/zone-evergreen.js ***!
-  \**********************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** /Users/idanyadgar/Documents/class-projects/memez/client/memez/node_modules/zone.js/dist/zone-evergreen.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3033,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/rotemx/Web/Netcraft/memez-project2/client/memez/projects/memez/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /Users/idanyadgar/Documents/class-projects/memez/client/memez/projects/memez/src/polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

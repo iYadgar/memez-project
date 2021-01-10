@@ -45,4 +45,6 @@ export class PostAdapter {
     return this.socketAdapter.request<IPost>("updatePost", {id: post_id, content})
   }
 
+
+
 }

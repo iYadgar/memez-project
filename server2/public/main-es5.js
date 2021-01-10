@@ -284,6 +284,16 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
             }, _callee6, this);
           }));
         }
+      }, {
+        key: "listenToEvent",
+        value: function listenToEvent(event_name, fn) {
+          return;
+        }
+      }, {
+        key: "stopListeningToEvent",
+        value: function stopListeningToEvent(event_name) {
+          return;
+        }
       }]);
 
       return BaseAjaxAdapter;
@@ -346,8 +356,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var BaseSocketAdapter = /*#__PURE__*/function () {
       function BaseSocketAdapter() {
-        var _this = this;
-
         _classCallCheck(this, BaseSocketAdapter);
 
         // @ts-ignore
@@ -358,30 +366,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.socket.on("connect", function () {
           console.log("SOCKET CONNECTED!!");
         });
-        this.socket.on('getUsers', function (users) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
-            return regeneratorRuntime.wrap(function _callee7$(_context7) {
-              while (1) {
-                switch (_context7.prev = _context7.next) {
-                  case 0:
-                    console.log('received getUsers reply', users);
-
-                  case 1:
-                  case "end":
-                    return _context7.stop();
-                }
-              }
-            }, _callee7);
-          }));
-        });
-        this.socket.on('getPosts', function (posts) {
-          console.log(posts, 'posts');
-        });
         this.socket.on("reconnect", function () {
           console.log("SOCKET RECONNECTED!!");
-        });
-        this.socket.on('pong', function () {
-          console.log('pong');
         });
         this.socket.on("disconnect", function () {
           console.log("SOCKET DISCONNECTED :(");
@@ -391,20 +377,20 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(BaseSocketAdapter, [{
         key: "request",
         value: function request(event_name, data) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-            var _this2 = this;
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+            var _this = this;
 
-            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
               while (1) {
-                switch (_context8.prev = _context8.next) {
+                switch (_context7.prev = _context7.next) {
                   case 0:
-                    return _context8.abrupt("return", new Promise(function (resolve, reject) {
+                    return _context7.abrupt("return", new Promise(function (resolve, reject) {
                       var req_id = Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])();
 
-                      if (_this2.socket && _this2.socket.connected) {
+                      if (_this.socket && _this.socket.connected) {
                         console.log("client: sendMessage emitting event_name ".concat(event_name, " with id ").concat(req_id, " with data"), data);
 
-                        _this2.socket.emit(event_name, JSON.stringify(data), req_id);
+                        _this.socket.emit(event_name, JSON.stringify(data), req_id);
 
                         var emitter;
 
@@ -417,7 +403,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                           emitter.off(event_name, fn);
                         };
 
-                        emitter = _this2.socket.on(event_name, fn);
+                        emitter = _this.socket.on(event_name, fn);
                       } else {
                         console.log("SocketAPI: no sockets connected...");
                       }
@@ -425,10 +411,46 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
                   case 1:
                   case "end":
+                    return _context7.stop();
+                }
+              }
+            }, _callee7);
+          }));
+        }
+      }, {
+        key: "listenToEvent",
+        value: function listenToEvent(event_name, fn) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+            return regeneratorRuntime.wrap(function _callee8$(_context8) {
+              while (1) {
+                switch (_context8.prev = _context8.next) {
+                  case 0:
+                    this.socket && this.socket.on(event_name, fn);
+
+                  case 1:
+                  case "end":
                     return _context8.stop();
                 }
               }
-            }, _callee8);
+            }, _callee8, this);
+          }));
+        }
+      }, {
+        key: "stopListeningToEvent",
+        value: function stopListeningToEvent(event_name) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+            return regeneratorRuntime.wrap(function _callee9$(_context9) {
+              while (1) {
+                switch (_context9.prev = _context9.next) {
+                  case 0:
+                    this.socket && this.socket.off(event_name);
+
+                  case 1:
+                  case "end":
+                    return _context9.stop();
+                }
+              }
+            }, _callee9, this);
           }));
         }
       }]);
@@ -512,32 +534,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(LikeAdapter, [{
         key: "getPostLikes",
         value: function getPostLikes(post_id) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-            return regeneratorRuntime.wrap(function _callee9$(_context9) {
-              while (1) {
-                switch (_context9.prev = _context9.next) {
-                  case 0:
-                    return _context9.abrupt("return", this.socketAdapter.request("getPostLikes", {
-                      post_id: post_id
-                    }));
-
-                  case 1:
-                  case "end":
-                    return _context9.stop();
-                }
-              }
-            }, _callee9, this);
-          }));
-        }
-      }, {
-        key: "createLike",
-        value: function createLike(likeData) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
             return regeneratorRuntime.wrap(function _callee10$(_context10) {
               while (1) {
                 switch (_context10.prev = _context10.next) {
                   case 0:
-                    return _context10.abrupt("return", this.socketAdapter.request('createLike', likeData));
+                    return _context10.abrupt("return", this.socketAdapter.request("getPostLikes", {
+                      post_id: post_id
+                    }));
 
                   case 1:
                   case "end":
@@ -548,16 +552,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "unlike",
-        value: function unlike(likeId) {
+        key: "createLike",
+        value: function createLike(likeData) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
             return regeneratorRuntime.wrap(function _callee11$(_context11) {
               while (1) {
                 switch (_context11.prev = _context11.next) {
                   case 0:
-                    return _context11.abrupt("return", this.socketAdapter.request("unlike", {
-                      id: likeId
-                    }));
+                    return _context11.abrupt("return", this.socketAdapter.request('createLike', likeData));
 
                   case 1:
                   case "end":
@@ -568,20 +570,18 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "getLikes",
-        value: function getLikes() {
+        key: "unlike",
+        value: function unlike(likeId) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
             return regeneratorRuntime.wrap(function _callee12$(_context12) {
               while (1) {
                 switch (_context12.prev = _context12.next) {
                   case 0:
-                    _context12.next = 2;
-                    return this.socketAdapter.request('getLikes');
+                    return _context12.abrupt("return", this.socketAdapter.request("unlike", {
+                      id: likeId
+                    }));
 
-                  case 2:
-                    return _context12.abrupt("return", _context12.sent);
-
-                  case 3:
+                  case 1:
                   case "end":
                     return _context12.stop();
                 }
@@ -590,17 +590,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "getUserLikes",
-        value: function getUserLikes(user_id) {
+        key: "getLikes",
+        value: function getLikes() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
             return regeneratorRuntime.wrap(function _callee13$(_context13) {
               while (1) {
                 switch (_context13.prev = _context13.next) {
                   case 0:
                     _context13.next = 2;
-                    return this.socketAdapter.request("getUserLikes", {
-                      user_id: user_id
-                    });
+                    return this.socketAdapter.request('getLikes');
 
                   case 2:
                     return _context13.abrupt("return", _context13.sent);
@@ -611,6 +609,30 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                 }
               }
             }, _callee13, this);
+          }));
+        }
+      }, {
+        key: "getUserLikes",
+        value: function getUserLikes(user_id) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+            return regeneratorRuntime.wrap(function _callee14$(_context14) {
+              while (1) {
+                switch (_context14.prev = _context14.next) {
+                  case 0:
+                    _context14.next = 2;
+                    return this.socketAdapter.request("getUserLikes", {
+                      user_id: user_id
+                    });
+
+                  case 2:
+                    return _context14.abrupt("return", _context14.sent);
+
+                  case 3:
+                  case "end":
+                    return _context14.stop();
+                }
+              }
+            }, _callee14, this);
           }));
         }
       }]);
@@ -697,42 +719,24 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       var _super2 = _createSuper(LoginAdapter);
 
       function LoginAdapter(http) {
-        var _this3;
+        var _this2;
 
         _classCallCheck(this, LoginAdapter);
 
-        _this3 = _super2.call(this, http);
-        window['loginAdapter'] = _assertThisInitialized(_this3);
-        return _this3;
+        _this2 = _super2.call(this, http);
+        window['loginAdapter'] = _assertThisInitialized(_this2);
+        return _this2;
       }
 
       _createClass(LoginAdapter, [{
         key: "login",
         value: function login(loginDetails) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
-            return regeneratorRuntime.wrap(function _callee14$(_context14) {
-              while (1) {
-                switch (_context14.prev = _context14.next) {
-                  case 0:
-                    return _context14.abrupt("return", this.post('login', loginDetails));
-
-                  case 1:
-                  case "end":
-                    return _context14.stop();
-                }
-              }
-            }, _callee14, this);
-          }));
-        }
-      }, {
-        key: "logout",
-        value: function logout() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
             return regeneratorRuntime.wrap(function _callee15$(_context15) {
               while (1) {
                 switch (_context15.prev = _context15.next) {
                   case 0:
-                    return _context15.abrupt("return", this.request('logout'));
+                    return _context15.abrupt("return", this.post('login', loginDetails));
 
                   case 1:
                   case "end":
@@ -740,6 +744,24 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                 }
               }
             }, _callee15, this);
+          }));
+        }
+      }, {
+        key: "logout",
+        value: function logout() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
+            return regeneratorRuntime.wrap(function _callee16$(_context16) {
+              while (1) {
+                switch (_context16.prev = _context16.next) {
+                  case 0:
+                    return _context16.abrupt("return", this.request('logout'));
+
+                  case 1:
+                  case "end":
+                    return _context16.stop();
+                }
+              }
+            }, _callee16, this);
           }));
         }
       }]);
@@ -825,38 +847,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(PostAdapter, [{
         key: "getPosts",
         value: function getPosts() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
-            return regeneratorRuntime.wrap(function _callee16$(_context16) {
-              while (1) {
-                switch (_context16.prev = _context16.next) {
-                  case 0:
-                    return _context16.abrupt("return", this.socketAdapter.request('getPosts'));
-
-                  case 1:
-                  case "end":
-                    return _context16.stop();
-                }
-              }
-            }, _callee16, this);
-          }));
-        }
-      }, {
-        key: "createPost",
-        value: function createPost(user_id, content, postMeme) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
             return regeneratorRuntime.wrap(function _callee17$(_context17) {
               while (1) {
                 switch (_context17.prev = _context17.next) {
                   case 0:
-                    console.log('postAdapter');
-                    console.log(content, 'content');
-                    return _context17.abrupt("return", this.socketAdapter.request('createPost', {
-                      user_id: user_id,
-                      content: content,
-                      postMeme: postMeme
-                    }));
+                    return _context17.abrupt("return", this.socketAdapter.request('getPosts'));
 
-                  case 3:
+                  case 1:
                   case "end":
                     return _context17.stop();
                 }
@@ -865,18 +863,22 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "deletePost",
-        value: function deletePost(post_id) {
+        key: "createPost",
+        value: function createPost(user_id, content, postMeme) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
             return regeneratorRuntime.wrap(function _callee18$(_context18) {
               while (1) {
                 switch (_context18.prev = _context18.next) {
                   case 0:
-                    return _context18.abrupt("return", this.socketAdapter.request('deletePost', {
-                      id: post_id
+                    console.log('postAdapter');
+                    console.log(content, 'content');
+                    return _context18.abrupt("return", this.socketAdapter.request('createPost', {
+                      user_id: user_id,
+                      content: content,
+                      postMeme: postMeme
                     }));
 
-                  case 1:
+                  case 3:
                   case "end":
                     return _context18.stop();
                 }
@@ -885,16 +887,15 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "updatePostContent",
-        value: function updatePostContent(post_id, content) {
+        key: "deletePost",
+        value: function deletePost(post_id) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
             return regeneratorRuntime.wrap(function _callee19$(_context19) {
               while (1) {
                 switch (_context19.prev = _context19.next) {
                   case 0:
-                    return _context19.abrupt("return", this.socketAdapter.request("updatePost", {
-                      id: post_id,
-                      content: content
+                    return _context19.abrupt("return", this.socketAdapter.request('deletePost', {
+                      id: post_id
                     }));
 
                   case 1:
@@ -903,6 +904,27 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                 }
               }
             }, _callee19, this);
+          }));
+        }
+      }, {
+        key: "updatePostContent",
+        value: function updatePostContent(post_id, content) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+            return regeneratorRuntime.wrap(function _callee20$(_context20) {
+              while (1) {
+                switch (_context20.prev = _context20.next) {
+                  case 0:
+                    return _context20.abrupt("return", this.socketAdapter.request("updatePost", {
+                      id: post_id,
+                      content: content
+                    }));
+
+                  case 1:
+                  case "end":
+                    return _context20.stop();
+                }
+              }
+            }, _callee20, this);
           }));
         }
       }]);
@@ -995,19 +1017,19 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(UploadAdapter, [{
         key: "uploadPhoto",
         value: function uploadPhoto(file) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
-            return regeneratorRuntime.wrap(function _callee20$(_context20) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+            return regeneratorRuntime.wrap(function _callee21$(_context21) {
               while (1) {
-                switch (_context20.prev = _context20.next) {
+                switch (_context21.prev = _context21.next) {
                   case 0:
-                    return _context20.abrupt("return", this.post('uploadphoto', file));
+                    return _context21.abrupt("return", this.post('uploadphoto', file));
 
                   case 1:
                   case "end":
-                    return _context20.stop();
+                    return _context21.stop();
                 }
               }
-            }, _callee20, this);
+            }, _callee21, this);
           }));
         }
       }]);
@@ -1093,30 +1115,12 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(UserAdapter, [{
         key: "getUsers",
         value: function getUsers() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-            return regeneratorRuntime.wrap(function _callee21$(_context21) {
-              while (1) {
-                switch (_context21.prev = _context21.next) {
-                  case 0:
-                    return _context21.abrupt("return", this.socketAdapter.request('getUsers'));
-
-                  case 1:
-                  case "end":
-                    return _context21.stop();
-                }
-              }
-            }, _callee21, this);
-          }));
-        }
-      }, {
-        key: "createNewUser",
-        value: function createNewUser(userName) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
             return regeneratorRuntime.wrap(function _callee22$(_context22) {
               while (1) {
                 switch (_context22.prev = _context22.next) {
                   case 0:
-                    return _context22.abrupt("return", this.socketAdapter.request('createUser', userName));
+                    return _context22.abrupt("return", this.socketAdapter.request('getUsers'));
 
                   case 1:
                   case "end":
@@ -1127,17 +1131,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "updateUserPhoto",
-        value: function updateUserPhoto(user_id, avatarUrl) {
+        key: "createNewUser",
+        value: function createNewUser(userName) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
             return regeneratorRuntime.wrap(function _callee23$(_context23) {
               while (1) {
                 switch (_context23.prev = _context23.next) {
                   case 0:
-                    return _context23.abrupt("return", this.socketAdapter.request("updateUserPhoto", {
-                      id: user_id,
-                      avatar: avatarUrl
-                    }));
+                    return _context23.abrupt("return", this.socketAdapter.request('createUser', userName));
 
                   case 1:
                   case "end":
@@ -1145,6 +1146,27 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                 }
               }
             }, _callee23, this);
+          }));
+        }
+      }, {
+        key: "updateUserPhoto",
+        value: function updateUserPhoto(user_id, avatarUrl) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+            return regeneratorRuntime.wrap(function _callee24$(_context24) {
+              while (1) {
+                switch (_context24.prev = _context24.next) {
+                  case 0:
+                    return _context24.abrupt("return", this.socketAdapter.request("updateUserPhoto", {
+                      id: user_id,
+                      avatar: avatarUrl
+                    }));
+
+                  case 1:
+                  case "end":
+                    return _context24.stop();
+                }
+              }
+            }, _callee24, this);
           }));
         }
       }]);
@@ -2862,38 +2884,38 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(AuthGuardService, [{
         key: "canActivate",
         value: function canActivate() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
             var auth;
-            return regeneratorRuntime.wrap(function _callee24$(_context24) {
+            return regeneratorRuntime.wrap(function _callee25$(_context25) {
               while (1) {
-                switch (_context24.prev = _context24.next) {
+                switch (_context25.prev = _context25.next) {
                   case 0:
-                    _context24.next = 2;
+                    _context25.next = 2;
                     return this.authStore.isAuthenticated();
 
                   case 2:
-                    auth = _context24.sent;
+                    auth = _context25.sent;
 
                     if (auth) {
-                      _context24.next = 7;
+                      _context25.next = 7;
                       break;
                     }
 
-                    _context24.next = 6;
+                    _context25.next = 6;
                     return this.router.navigateByUrl('login');
 
                   case 6:
-                    return _context24.abrupt("return", auth);
+                    return _context25.abrupt("return", auth);
 
                   case 7:
-                    return _context24.abrupt("return", auth);
+                    return _context25.abrupt("return", auth);
 
                   case 8:
                   case "end":
-                    return _context24.stop();
+                    return _context25.stop();
                 }
               }
-            }, _callee24, this);
+            }, _callee25, this);
           }));
         }
       }]);
@@ -2989,9 +3011,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
     var LikeStore = /*#__PURE__*/function () {
-      /*USE_MOCK: boolean = false;*/
       function LikeStore(root, likeAdapter) {
-        var _this4 = this;
+        var _this3 = this;
 
         _classCallCheck(this, LikeStore);
 
@@ -3001,35 +3022,35 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         window['likeStore'] = this;
         this.root.likeStore = this;
         Object(mobx__WEBPACK_IMPORTED_MODULE_3__["reaction"])(function () {
-          return _this4.root.ps.posts;
+          return _this3.root.ps.posts;
         }, function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this4, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-            var _this5 = this;
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this3, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+            var _this4 = this;
 
             var currentUser;
-            return regeneratorRuntime.wrap(function _callee25$(_context25) {
+            return regeneratorRuntime.wrap(function _callee26$(_context26) {
               while (1) {
-                switch (_context25.prev = _context25.next) {
+                switch (_context26.prev = _context26.next) {
                   case 0:
                     currentUser = this.root.log.currentUser;
 
                     if (!currentUser) {
-                      _context25.next = 7;
+                      _context26.next = 7;
                       break;
                     }
 
-                    _context25.next = 4;
+                    _context26.next = 4;
                     return this.getCurrentUserLikes(currentUser._id);
 
                   case 4:
                     this.currentUserLikes.map(function (like) {
-                      return _this5.root.ps.posts.map(function (post) {
+                      return _this4.root.ps.posts.map(function (post) {
                         post.likedByCurrentUser = post.postedBy._id === like.user_id._id;
                         !post.likes_amount ? post.likedByCurrentUser = false : post.likedByCurrentUser = true;
                         return post;
                       });
                     });
-                    _context25.next = 8;
+                    _context26.next = 8;
                     break;
 
                   case 7:
@@ -3037,10 +3058,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
                   case 8:
                   case "end":
-                    return _context25.stop();
+                    return _context26.stop();
                 }
               }
-            }, _callee25, this);
+            }, _callee26, this);
           }));
         }, {
           fireImmediately: false
@@ -3050,41 +3071,18 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(LikeStore, [{
         key: "getCurrentUserLikes",
         value: function getCurrentUserLikes(user_id) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-            return regeneratorRuntime.wrap(function _callee26$(_context26) {
-              while (1) {
-                switch (_context26.prev = _context26.next) {
-                  case 0:
-                    _context26.next = 2;
-                    return this.likeAdapter.getUserLikes(user_id);
-
-                  case 2:
-                    this.currentUserLikes = _context26.sent;
-
-                  case 3:
-                  case "end":
-                    return _context26.stop();
-                }
-              }
-            }, _callee26, this);
-          }));
-        }
-      }, {
-        key: "createLike",
-        value: function createLike(post) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-            var likeInput;
             return regeneratorRuntime.wrap(function _callee27$(_context27) {
               while (1) {
                 switch (_context27.prev = _context27.next) {
                   case 0:
-                    likeInput = {
-                      user_id: this.root.log.currentUser._id,
-                      post_id: post._id
-                    };
-                    return _context27.abrupt("return", this.likeAdapter.createLike(likeInput));
+                    _context27.next = 2;
+                    return this.likeAdapter.getUserLikes(user_id);
 
                   case 2:
+                    this.currentUserLikes = _context27.sent;
+
+                  case 3:
                   case "end":
                     return _context27.stop();
                 }
@@ -3093,16 +3091,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "unlike",
-        value: function unlike(like_id) {
+        key: "createLike",
+        value: function createLike(post) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
+            var likeInput;
             return regeneratorRuntime.wrap(function _callee28$(_context28) {
               while (1) {
                 switch (_context28.prev = _context28.next) {
                   case 0:
-                    return _context28.abrupt("return", this.likeAdapter.unlike(like_id));
+                    likeInput = {
+                      user_id: this.root.log.currentUser._id,
+                      post_id: post._id
+                    };
+                    return _context28.abrupt("return", this.likeAdapter.createLike(likeInput));
 
-                  case 1:
+                  case 2:
                   case "end":
                     return _context28.stop();
                 }
@@ -3111,100 +3114,118 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "handleLike",
-        value: function handleLike(post) {
+        key: "unlike",
+        value: function unlike(like_id) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
-            var _this6 = this;
-
-            var postLikes, found, likeToDelete, index, newLike;
             return regeneratorRuntime.wrap(function _callee29$(_context29) {
               while (1) {
                 switch (_context29.prev = _context29.next) {
                   case 0:
-                    _context29.next = 2;
-                    return this.root.likeStore.getPostLikes(post._id);
+                    return _context29.abrupt("return", this.likeAdapter.unlike(like_id));
 
-                  case 2:
-                    postLikes = _context29.sent;
-                    found = postLikes.find(function (like) {
-                      return like.user_id._id === _this6.root.log.currentUser._id;
-                    });
-                    _context29.prev = 4;
-
-                    if (!found) {
-                      _context29.next = 15;
-                      break;
-                    }
-
-                    _context29.next = 8;
-                    return this.unlike(found._id);
-
-                  case 8:
-                    likeToDelete = _context29.sent;
-                    index = this.currentUserLikes.indexOf(found);
-                    this.currentUserLikes.splice(index, 1);
-                    post.likes_amount = likeToDelete.postLikeCount;
-                    post.likedByCurrentUser = false;
-                    _context29.next = 21;
-                    break;
-
-                  case 15:
-                    _context29.next = 17;
-                    return this.createLike(post);
-
-                  case 17:
-                    newLike = _context29.sent;
-                    this.currentUserLikes.push(newLike.like);
-                    post.likes_amount = newLike.postLikeCount;
-                    post.likedByCurrentUser = true;
-
-                  case 21:
-                    _context29.next = 26;
-                    break;
-
-                  case 23:
-                    _context29.prev = 23;
-                    _context29.t0 = _context29["catch"](4);
-                    console.log(_context29.t0);
-
-                  case 26:
+                  case 1:
                   case "end":
                     return _context29.stop();
                 }
               }
-            }, _callee29, this, [[4, 23]]);
+            }, _callee29, this);
+          }));
+        }
+      }, {
+        key: "handleLike",
+        value: function handleLike(post) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+            var _this5 = this;
+
+            var postLikes, found, likeToDelete, index, newLike;
+            return regeneratorRuntime.wrap(function _callee30$(_context30) {
+              while (1) {
+                switch (_context30.prev = _context30.next) {
+                  case 0:
+                    _context30.next = 2;
+                    return this.root.likeStore.getPostLikes(post._id);
+
+                  case 2:
+                    postLikes = _context30.sent;
+                    found = postLikes.find(function (like) {
+                      return like.user_id._id === _this5.root.log.currentUser._id;
+                    });
+                    _context30.prev = 4;
+
+                    if (!found) {
+                      _context30.next = 15;
+                      break;
+                    }
+
+                    _context30.next = 8;
+                    return this.unlike(found._id);
+
+                  case 8:
+                    likeToDelete = _context30.sent;
+                    index = this.currentUserLikes.indexOf(found);
+                    this.currentUserLikes.splice(index, 1);
+                    post.likes_amount = likeToDelete.postLikeCount;
+                    post.likedByCurrentUser = false;
+                    _context30.next = 21;
+                    break;
+
+                  case 15:
+                    _context30.next = 17;
+                    return this.createLike(post);
+
+                  case 17:
+                    newLike = _context30.sent;
+                    console.log(newLike, 'newLike');
+                    post.likes_amount = newLike.postLikeCount;
+                    post.likedByCurrentUser = true;
+
+                  case 21:
+                    _context30.next = 26;
+                    break;
+
+                  case 23:
+                    _context30.prev = 23;
+                    _context30.t0 = _context30["catch"](4);
+                    console.log(_context30.t0);
+
+                  case 26:
+                  case "end":
+                    return _context30.stop();
+                }
+              }
+            }, _callee30, this, [[4, 23]]);
           }));
         }
       }, {
         key: "getPostLikes",
         value: function getPostLikes(post_id) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
-            return regeneratorRuntime.wrap(function _callee30$(_context30) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+            return regeneratorRuntime.wrap(function _callee31$(_context31) {
               while (1) {
-                switch (_context30.prev = _context30.next) {
+                switch (_context31.prev = _context31.next) {
                   case 0:
-                    return _context30.abrupt("return", this.likeAdapter.getPostLikes(post_id));
+                    return _context31.abrupt("return", this.likeAdapter.getPostLikes(post_id));
 
                   case 1:
                   case "end":
-                    return _context30.stop();
+                    return _context31.stop();
                 }
               }
-            }, _callee30, this);
+            }, _callee31, this);
           }));
         }
       }, {
         key: "checkedLikedPosts",
         value: function checkedLikedPosts() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
-            var _this7 = this;
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
+            var _this6 = this;
 
-            return regeneratorRuntime.wrap(function _callee31$(_context31) {
+            return regeneratorRuntime.wrap(function _callee32$(_context32) {
               while (1) {
-                switch (_context31.prev = _context31.next) {
+                switch (_context32.prev = _context32.next) {
                   case 0:
                     this.root.ps.posts.forEach(function (post) {
-                      _this7.currentUserLikes.forEach(function (like) {
+                      _this6.currentUserLikes.forEach(function (like) {
                         if (post._id === like.post_id) {
                           post.likedByCurrentUser = true;
                         }
@@ -3213,10 +3234,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
                   case 1:
                   case "end":
-                    return _context31.stop();
+                    return _context32.stop();
                 }
               }
-            }, _callee31, this);
+            }, _callee32, this);
           }));
         }
       }]);
@@ -3346,7 +3367,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var PostStore = /*#__PURE__*/function () {
       function PostStore(root, postAdapter, dialog) {
-        var _this8 = this;
+        var _this7 = this;
 
         _classCallCheck(this, PostStore);
 
@@ -3358,72 +3379,43 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
         window['postStore'] = this;
         Object(mobx__WEBPACK_IMPORTED_MODULE_4__["reaction"])(function () {
-          return _this8.postContent;
+          return _this7.postContent;
         }, function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this8, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
-            return regeneratorRuntime.wrap(function _callee32$(_context32) {
-              while (1) {
-                switch (_context32.prev = _context32.next) {
-                  case 0:
-                    _context32.next = 2;
-                    return this.createPost(this.postContent);
-
-                  case 2:
-                  case "end":
-                    return _context32.stop();
-                }
-              }
-            }, _callee32, this);
-          }));
-        });
-        this.getPosts().then(function (data) {
-          return console.log('get posts');
-        });
-      }
-
-      _createClass(PostStore, [{
-        key: "getPosts",
-        value: function getPosts() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this7, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
             return regeneratorRuntime.wrap(function _callee33$(_context33) {
               while (1) {
                 switch (_context33.prev = _context33.next) {
                   case 0:
                     _context33.next = 2;
-                    return this.postAdapter.getPosts();
+                    return this.createPost(this.postContent);
 
                   case 2:
-                    this.posts = _context33.sent;
-
-                  case 3:
                   case "end":
                     return _context33.stop();
                 }
               }
             }, _callee33, this);
           }));
-        }
-      }, {
-        key: "createPost",
-        value: function createPost(content) {
+        });
+        this.listenToUpdates();
+      }
+
+      _createClass(PostStore, [{
+        key: "listenToUpdates",
+        value: function listenToUpdates() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-            var newPost;
+            var _this8 = this;
+
             return regeneratorRuntime.wrap(function _callee34$(_context34) {
               while (1) {
                 switch (_context34.prev = _context34.next) {
                   case 0:
-                    this.root.ups.loading = true;
-                    _context34.next = 3;
-                    return this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl);
+                    _context34.next = 2;
+                    return this.postAdapter.socketAdapter.listenToEvent('postsUpdate', function (posts) {
+                      _this8.posts = posts;
+                    });
 
-                  case 3:
-                    newPost = _context34.sent;
-                    console.log(newPost, 'newPost');
-                    this.root.ups.loading = false;
-                    _context34.next = 8;
-                    return this.getPosts();
-
-                  case 8:
+                  case 2:
                   case "end":
                     return _context34.stop();
                 }
@@ -3432,21 +3424,20 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "deletePost",
-        value: function deletePost(post) {
+        key: "getPosts",
+        value: function getPosts() {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
             return regeneratorRuntime.wrap(function _callee35$(_context35) {
               while (1) {
                 switch (_context35.prev = _context35.next) {
                   case 0:
                     _context35.next = 2;
-                    return this.postAdapter.deletePost(post._id);
+                    return this.postAdapter.getPosts();
 
                   case 2:
-                    _context35.next = 4;
-                    return this.getPosts();
+                    this.posts = _context35.sent;
 
-                  case 4:
+                  case 3:
                   case "end":
                     return _context35.stop();
                 }
@@ -3455,57 +3446,145 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           }));
         }
       }, {
-        key: "onImgPost",
-        value: function onImgPost(event) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
-            return regeneratorRuntime.wrap(function _callee36$(_context36) {
-              while (1) {
-                switch (_context36.prev = _context36.next) {
-                  case 0:
-                    this.root.ups.loading = true;
-                    this.uploadEvent = event;
-                    _context36.next = 4;
-                    return this.root.ups.onFileUpload(this.uploadEvent);
-
-                  case 4:
-                    this.postImgUrl = _context36.sent;
-                    this.root.ups.loading = false;
-                    _context36.next = 8;
-                    return this.handleDialog();
-
-                  case 8:
-                  case "end":
-                    return _context36.stop();
-                }
-              }
-            }, _callee36, this);
-          }));
-        }
-      }, {
-        key: "handleDialog",
-        value: function handleDialog() {
+        key: "createPost",
+        value: function createPost(content) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
-            var dialogRef;
+            var _this9 = this;
+
             return regeneratorRuntime.wrap(function _callee37$(_context37) {
               while (1) {
                 switch (_context37.prev = _context37.next) {
                   case 0:
-                    dialogRef = this.dialog.open(_components_post_dialog_box_post_dialog_box_component__WEBPACK_IMPORTED_MODULE_3__["PostDialogBoxComponent"], {
-                      data: this.postImgUrl
-                    });
+                    this.root.ups.loading = true;
                     _context37.next = 3;
-                    return dialogRef.afterClosed().toPromise();
+                    return this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl);
 
                   case 3:
-                    this.postContent = _context37.sent;
-                    console.log(this.postContent);
+                    setTimeout(function () {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this9, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+                        return regeneratorRuntime.wrap(function _callee36$(_context36) {
+                          while (1) {
+                            switch (_context36.prev = _context36.next) {
+                              case 0:
+                                _context36.next = 2;
+                                return this.getPosts();
 
-                  case 5:
+                              case 2:
+                                this.root.ups.loading = false;
+
+                              case 3:
+                              case "end":
+                                return _context36.stop();
+                            }
+                          }
+                        }, _callee36, this);
+                      }));
+                    }, 3000);
+
+                  case 4:
                   case "end":
                     return _context37.stop();
                 }
               }
             }, _callee37, this);
+          }));
+        }
+      }, {
+        key: "deletePost",
+        value: function deletePost(post) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
+            var _this10 = this;
+
+            return regeneratorRuntime.wrap(function _callee39$(_context39) {
+              while (1) {
+                switch (_context39.prev = _context39.next) {
+                  case 0:
+                    this.root.ups.loading = true;
+                    _context39.next = 3;
+                    return this.postAdapter.deletePost(post._id);
+
+                  case 3:
+                    setTimeout(function () {
+                      return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this10, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
+                        return regeneratorRuntime.wrap(function _callee38$(_context38) {
+                          while (1) {
+                            switch (_context38.prev = _context38.next) {
+                              case 0:
+                                _context38.next = 2;
+                                return this.getPosts();
+
+                              case 2:
+                                this.root.ups.loading = false;
+
+                              case 3:
+                              case "end":
+                                return _context38.stop();
+                            }
+                          }
+                        }, _callee38, this);
+                      }));
+                    }, 1500);
+
+                  case 4:
+                  case "end":
+                    return _context39.stop();
+                }
+              }
+            }, _callee39, this);
+          }));
+        }
+      }, {
+        key: "onImgPost",
+        value: function onImgPost(event) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+            return regeneratorRuntime.wrap(function _callee40$(_context40) {
+              while (1) {
+                switch (_context40.prev = _context40.next) {
+                  case 0:
+                    this.root.ups.loading = true;
+                    this.uploadEvent = event;
+                    _context40.next = 4;
+                    return this.root.ups.onFileUpload(this.uploadEvent);
+
+                  case 4:
+                    this.postImgUrl = _context40.sent;
+                    this.root.ups.loading = false;
+                    _context40.next = 8;
+                    return this.handleDialog();
+
+                  case 8:
+                  case "end":
+                    return _context40.stop();
+                }
+              }
+            }, _callee40, this);
+          }));
+        }
+      }, {
+        key: "handleDialog",
+        value: function handleDialog() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
+            var dialogRef;
+            return regeneratorRuntime.wrap(function _callee41$(_context41) {
+              while (1) {
+                switch (_context41.prev = _context41.next) {
+                  case 0:
+                    dialogRef = this.dialog.open(_components_post_dialog_box_post_dialog_box_component__WEBPACK_IMPORTED_MODULE_3__["PostDialogBoxComponent"], {
+                      data: this.postImgUrl
+                    });
+                    _context41.next = 3;
+                    return dialogRef.afterClosed().toPromise();
+
+                  case 3:
+                    this.postContent = _context41.sent;
+                    console.log(this.postContent);
+
+                  case 5:
+                  case "end":
+                    return _context41.stop();
+                }
+              }
+            }, _callee41, this);
           }));
         }
       }, {
@@ -3518,38 +3597,38 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       }, {
         key: "updatePostContent",
         value: function updatePostContent(post_id, content) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
-            return regeneratorRuntime.wrap(function _callee38$(_context38) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
+            return regeneratorRuntime.wrap(function _callee42$(_context42) {
               while (1) {
-                switch (_context38.prev = _context38.next) {
+                switch (_context42.prev = _context42.next) {
                   case 0:
-                    _context38.next = 2;
+                    _context42.next = 2;
                     return this.postAdapter.updatePostContent(post_id, content);
 
                   case 2:
                   case "end":
-                    return _context38.stop();
+                    return _context42.stop();
                 }
               }
-            }, _callee38, this);
+            }, _callee42, this);
           }));
         }
       }, {
         key: "userPosts",
         get: function get() {
-          var _this9 = this;
+          var _this11 = this;
 
           return this.posts.filter(function (post) {
-            return post.postedBy._id === _this9.root.log.currentUser._id;
+            return post.postedBy._id === _this11.root.log.currentUser._id;
           });
         }
       }, {
         key: "filteredPosts",
         get: function get() {
-          var _this10 = this;
+          var _this12 = this;
 
           return this.root.fs.searchTerm ? this.posts.filter(function (post) {
-            return post.content.includes(_this10.root.fs.searchTerm) || post.postedBy.name.includes(_this10.root.fs.searchTerm);
+            return post.content.includes(_this12.root.fs.searchTerm) || post.postedBy.name.includes(_this12.root.fs.searchTerm);
           }) : this.posts;
         }
       }]);
@@ -3690,53 +3769,53 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(UserStore, [{
         key: "getUsers",
         value: function getUsers() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
-            return regeneratorRuntime.wrap(function _callee39$(_context39) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
+            return regeneratorRuntime.wrap(function _callee43$(_context43) {
               while (1) {
-                switch (_context39.prev = _context39.next) {
+                switch (_context43.prev = _context43.next) {
                   case 0:
-                    _context39.next = 2;
+                    _context43.next = 2;
                     return this.userAdapter.getUsers();
 
                   case 2:
-                    return _context39.abrupt("return", this.users = _context39.sent);
+                    return _context43.abrupt("return", this.users = _context43.sent);
 
                   case 3:
                   case "end":
-                    return _context39.stop();
+                    return _context43.stop();
                 }
               }
-            }, _callee39, this);
+            }, _callee43, this);
           }));
         }
       }, {
         key: "onProfilePictureUpload",
         value: function onProfilePictureUpload(event) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
             var res;
-            return regeneratorRuntime.wrap(function _callee40$(_context40) {
+            return regeneratorRuntime.wrap(function _callee44$(_context44) {
               while (1) {
-                switch (_context40.prev = _context40.next) {
+                switch (_context44.prev = _context44.next) {
                   case 0:
                     this.root.ups.loading = true;
-                    _context40.next = 3;
+                    _context44.next = 3;
                     return this.root.ups.onFileUpload(event);
 
                   case 3:
-                    this.avatarUrl = _context40.sent;
+                    this.avatarUrl = _context44.sent;
 
                     if (!this.root.log.currentUser) {
-                      _context40.next = 12;
+                      _context44.next = 12;
                       break;
                     }
 
                     console.log('working');
                     this.root.log.currentUser.avatar = this.avatarUrl;
-                    _context40.next = 9;
+                    _context44.next = 9;
                     return this.updateProfilePicture();
 
                   case 9:
-                    res = _context40.sent;
+                    res = _context44.sent;
                     this.root.ups.loading = false;
                     console.log(res);
 
@@ -3745,29 +3824,29 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
                   case 13:
                   case "end":
-                    return _context40.stop();
+                    return _context44.stop();
                 }
               }
-            }, _callee40, this);
+            }, _callee44, this);
           }));
         }
       }, {
         key: "updateProfilePicture",
         value: function updateProfilePicture() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
-            return regeneratorRuntime.wrap(function _callee41$(_context41) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+            return regeneratorRuntime.wrap(function _callee45$(_context45) {
               while (1) {
-                switch (_context41.prev = _context41.next) {
+                switch (_context45.prev = _context45.next) {
                   case 0:
-                    _context41.next = 2;
+                    _context45.next = 2;
                     return this.userAdapter.updateUserPhoto(this.root.log.currentUser._id, this.avatarUrl);
 
                   case 2:
                   case "end":
-                    return _context41.stop();
+                    return _context45.stop();
                 }
               }
-            }, _callee41, this);
+            }, _callee45, this);
           }));
         }
       }]);
@@ -3952,32 +4031,32 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(UploadStore, [{
         key: "onFileUpload",
         value: function onFileUpload(event) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
-            return regeneratorRuntime.wrap(function _callee42$(_context42) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
+            return regeneratorRuntime.wrap(function _callee46$(_context46) {
               while (1) {
-                switch (_context42.prev = _context42.next) {
+                switch (_context46.prev = _context46.next) {
                   case 0:
                     this.selectedFile = event.target.files[0];
                     this.formData.append('file', this.selectedFile, this.selectedFile.name);
-                    _context42.prev = 2;
-                    _context42.next = 5;
+                    _context46.prev = 2;
+                    _context46.next = 5;
                     return this.uploadAdapter.uploadPhoto(this.formData);
 
                   case 5:
-                    this.uploadUrl = _context42.sent;
-                    return _context42.abrupt("return", this.uploadUrl);
+                    this.uploadUrl = _context46.sent;
+                    return _context46.abrupt("return", this.uploadUrl);
 
                   case 9:
-                    _context42.prev = 9;
-                    _context42.t0 = _context42["catch"](2);
-                    console.log(_context42.t0);
+                    _context46.prev = 9;
+                    _context46.t0 = _context46["catch"](2);
+                    console.log(_context46.t0);
 
                   case 12:
                   case "end":
-                    return _context42.stop();
+                    return _context46.stop();
                 }
               }
-            }, _callee42, this, [[2, 9]]);
+            }, _callee46, this, [[2, 9]]);
           }));
         }
       }]);
@@ -4077,7 +4156,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var AuthStore = /*#__PURE__*/function () {
       function AuthStore(root, authAdapter) {
-        var _this11 = this;
+        var _this13 = this;
 
         _classCallCheck(this, AuthStore);
 
@@ -4087,30 +4166,30 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.root.as = this;
 
         (function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this11, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
-            return regeneratorRuntime.wrap(function _callee43$(_context43) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this13, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+            return regeneratorRuntime.wrap(function _callee47$(_context47) {
               while (1) {
-                switch (_context43.prev = _context43.next) {
+                switch (_context47.prev = _context47.next) {
                   case 0:
-                    _context43.prev = 0;
-                    _context43.next = 3;
+                    _context47.prev = 0;
+                    _context47.next = 3;
                     return this.getCurrentUser();
 
                   case 3:
-                    _context43.next = 8;
+                    _context47.next = 8;
                     break;
 
                   case 5:
-                    _context43.prev = 5;
-                    _context43.t0 = _context43["catch"](0);
-                    console.log(_context43.t0, 'e');
+                    _context47.prev = 5;
+                    _context47.t0 = _context47["catch"](0);
+                    console.log(_context47.t0, 'e');
 
                   case 8:
                   case "end":
-                    return _context43.stop();
+                    return _context47.stop();
                 }
               }
-            }, _callee43, this, [[0, 5]]);
+            }, _callee47, this, [[0, 5]]);
           }));
         })();
       }
@@ -4118,41 +4197,41 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(AuthStore, [{
         key: "isAuthenticated",
         value: function isAuthenticated() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
-            return regeneratorRuntime.wrap(function _callee44$(_context44) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
+            return regeneratorRuntime.wrap(function _callee48$(_context48) {
               while (1) {
-                switch (_context44.prev = _context44.next) {
+                switch (_context48.prev = _context48.next) {
                   case 0:
-                    return _context44.abrupt("return", this.authAdapter.isAuthenticated());
+                    return _context48.abrupt("return", this.authAdapter.isAuthenticated());
 
                   case 1:
                   case "end":
-                    return _context44.stop();
+                    return _context48.stop();
                 }
               }
-            }, _callee44, this);
+            }, _callee48, this);
           }));
         }
       }, {
         key: "getCurrentUser",
         value: function getCurrentUser() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
-            return regeneratorRuntime.wrap(function _callee45$(_context45) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
+            return regeneratorRuntime.wrap(function _callee49$(_context49) {
               while (1) {
-                switch (_context45.prev = _context45.next) {
+                switch (_context49.prev = _context49.next) {
                   case 0:
-                    _context45.next = 2;
+                    _context49.next = 2;
                     return this.authAdapter.getCurrentUser();
 
                   case 2:
-                    this.root.log.currentUser = _context45.sent;
+                    this.root.log.currentUser = _context49.sent;
 
                   case 3:
                   case "end":
-                    return _context45.stop();
+                    return _context49.stop();
                 }
               }
-            }, _callee45, this);
+            }, _callee49, this);
           }));
         }
       }]);
@@ -4279,56 +4358,56 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(FeedStore, [{
         key: "handLikesleDialog",
         value: function handLikesleDialog(post) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
-            return regeneratorRuntime.wrap(function _callee46$(_context46) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
+            return regeneratorRuntime.wrap(function _callee50$(_context50) {
               while (1) {
-                switch (_context46.prev = _context46.next) {
+                switch (_context50.prev = _context50.next) {
                   case 0:
-                    _context46.next = 2;
+                    _context50.next = 2;
                     return this.root.likeStore.getPostLikes(post._id);
 
                   case 2:
-                    this.postLikes = _context46.sent;
+                    this.postLikes = _context50.sent;
                     this.dialog.open(_components_like_dialog_box_like_dialog_box_component__WEBPACK_IMPORTED_MODULE_4__["LikeDialogBoxComponent"], {
                       data: this.dateFormattedLikes
                     });
 
                   case 4:
                   case "end":
-                    return _context46.stop();
+                    return _context50.stop();
                 }
               }
-            }, _callee46, this);
+            }, _callee50, this);
           }));
         }
       }, {
         key: "onSearch",
         value: function onSearch(value) {
-          var _this12 = this;
+          var _this14 = this;
 
           setTimeout(function () {
-            _this12.searchTerm = value;
+            _this14.searchTerm = value;
           }, 750);
         }
       }, {
         key: "handleEditPostDialog",
         value: function handleEditPostDialog(post) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
             var dialogRef, postNewContent;
-            return regeneratorRuntime.wrap(function _callee47$(_context47) {
+            return regeneratorRuntime.wrap(function _callee51$(_context51) {
               while (1) {
-                switch (_context47.prev = _context47.next) {
+                switch (_context51.prev = _context51.next) {
                   case 0:
                     dialogRef = this.dialog.open(_components_post_edit_dialog_post_edit_dialog_component__WEBPACK_IMPORTED_MODULE_5__["PostEditDialogComponent"], {
                       data: post
                     });
-                    _context47.next = 3;
+                    _context51.next = 3;
                     return dialogRef.afterClosed().toPromise();
 
                   case 3:
-                    postNewContent = _context47.sent;
+                    postNewContent = _context51.sent;
                     this.root.ups.loading = true;
-                    _context47.next = 7;
+                    _context51.next = 7;
                     return this.root.ps.updatePostContent(post._id, postNewContent);
 
                   case 7:
@@ -4337,10 +4416,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
                   case 9:
                   case "end":
-                    return _context47.stop();
+                    return _context51.stop();
                 }
               }
-            }, _callee47, this);
+            }, _callee51, this);
           }));
         }
       }, {
@@ -4461,39 +4540,39 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(LayoutStore, [{
         key: "routeToFeed",
         value: function routeToFeed() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
-            return regeneratorRuntime.wrap(function _callee48$(_context48) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
+            return regeneratorRuntime.wrap(function _callee52$(_context52) {
               while (1) {
-                switch (_context48.prev = _context48.next) {
+                switch (_context52.prev = _context52.next) {
                   case 0:
-                    _context48.next = 2;
+                    _context52.next = 2;
                     return this.router.navigateByUrl('feed');
 
                   case 2:
                   case "end":
-                    return _context48.stop();
+                    return _context52.stop();
                 }
               }
-            }, _callee48, this);
+            }, _callee52, this);
           }));
         }
       }, {
         key: "routeToProfile",
         value: function routeToProfile() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
-            return regeneratorRuntime.wrap(function _callee49$(_context49) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
+            return regeneratorRuntime.wrap(function _callee53$(_context53) {
               while (1) {
-                switch (_context49.prev = _context49.next) {
+                switch (_context53.prev = _context53.next) {
                   case 0:
-                    _context49.next = 2;
+                    _context53.next = 2;
                     return this.router.navigateByUrl('profile');
 
                   case 2:
                   case "end":
-                    return _context49.stop();
+                    return _context53.stop();
                 }
               }
-            }, _callee49, this);
+            }, _callee53, this);
           }));
         }
       }]);
@@ -4602,83 +4681,83 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(LoginStore, [{
         key: "verifyUser",
         value: function verifyUser(loginDetails) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
-            return regeneratorRuntime.wrap(function _callee50$(_context50) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
+            return regeneratorRuntime.wrap(function _callee54$(_context54) {
               while (1) {
-                switch (_context50.prev = _context50.next) {
+                switch (_context54.prev = _context54.next) {
                   case 0:
-                    return _context50.abrupt("return", this.loginAdapter.login(loginDetails));
+                    return _context54.abrupt("return", this.loginAdapter.login(loginDetails));
 
                   case 1:
                   case "end":
-                    return _context50.stop();
+                    return _context54.stop();
                 }
               }
-            }, _callee50, this);
+            }, _callee54, this);
           }));
         }
       }, {
         key: "handleLogin",
         value: function handleLogin(loginDetails) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
             var details;
-            return regeneratorRuntime.wrap(function _callee51$(_context51) {
+            return regeneratorRuntime.wrap(function _callee55$(_context55) {
               while (1) {
-                switch (_context51.prev = _context51.next) {
+                switch (_context55.prev = _context55.next) {
                   case 0:
                     details = {
                       email: loginDetails.email.toLowerCase(),
                       password: loginDetails.password
                     };
-                    _context51.prev = 1;
-                    _context51.next = 4;
+                    _context55.prev = 1;
+                    _context55.next = 4;
                     return this.verifyUser(details);
 
                   case 4:
-                    this.currentUser = _context51.sent;
-                    _context51.next = 7;
+                    this.currentUser = _context55.sent;
+                    _context55.next = 7;
                     return this.router.navigateByUrl('feed');
 
                   case 7:
-                    _context51.next = 12;
+                    _context55.next = 12;
                     break;
 
                   case 9:
-                    _context51.prev = 9;
-                    _context51.t0 = _context51["catch"](1);
-                    this.loginError = _context51.t0.error.msg;
+                    _context55.prev = 9;
+                    _context55.t0 = _context55["catch"](1);
+                    this.loginError = _context55.t0.error.msg;
 
                   case 12:
                   case "end":
-                    return _context51.stop();
+                    return _context55.stop();
                 }
               }
-            }, _callee51, this, [[1, 9]]);
+            }, _callee55, this, [[1, 9]]);
           }));
         }
       }, {
         key: "handleLogout",
         value: function handleLogout() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-            return regeneratorRuntime.wrap(function _callee52$(_context52) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
+            return regeneratorRuntime.wrap(function _callee56$(_context56) {
               while (1) {
-                switch (_context52.prev = _context52.next) {
+                switch (_context56.prev = _context56.next) {
                   case 0:
-                    _context52.next = 2;
+                    _context56.next = 2;
                     return this.loginAdapter.logout();
 
                   case 2:
                     this.currentUser = undefined;
                     console.log('logged out');
-                    _context52.next = 6;
+                    _context56.next = 6;
                     return this.router.navigateByUrl('/login');
 
                   case 6:
                   case "end":
-                    return _context52.stop();
+                    return _context56.stop();
                 }
               }
-            }, _callee52, this);
+            }, _callee56, this);
           }));
         }
       }, {
@@ -4811,30 +4890,30 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(SignupStore, [{
         key: "routeToLogin",
         value: function routeToLogin() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
-            return regeneratorRuntime.wrap(function _callee53$(_context53) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
+            return regeneratorRuntime.wrap(function _callee57$(_context57) {
               while (1) {
-                switch (_context53.prev = _context53.next) {
+                switch (_context57.prev = _context57.next) {
                   case 0:
-                    _context53.next = 2;
+                    _context57.next = 2;
                     return this.router.navigateByUrl('login');
 
                   case 2:
                   case "end":
-                    return _context53.stop();
+                    return _context57.stop();
                 }
               }
-            }, _callee53, this);
+            }, _callee57, this);
           }));
         }
       }, {
         key: "handleSignUp",
         value: function handleSignUp(user) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee58() {
             var userResponse;
-            return regeneratorRuntime.wrap(function _callee54$(_context54) {
+            return regeneratorRuntime.wrap(function _callee58$(_context58) {
               while (1) {
-                switch (_context54.prev = _context54.next) {
+                switch (_context58.prev = _context58.next) {
                   case 0:
                     user.email = user.email.toLowerCase();
                     user.name = user.name.toLowerCase();
@@ -4843,42 +4922,42 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
                       user.avatar = this.root.us.avatarUrl;
                     }
 
-                    _context54.prev = 3;
-                    _context54.next = 6;
+                    _context58.prev = 3;
+                    _context58.next = 6;
                     return this.userAdapter.createNewUser(user);
 
                   case 6:
-                    userResponse = _context54.sent;
+                    userResponse = _context58.sent;
                     console.log(userResponse.isCreated, 'userResponse.isCreated');
 
                     if (userResponse.isCreated) {
-                      _context54.next = 11;
+                      _context58.next = 11;
                       break;
                     }
 
                     this.errorMessage = userResponse.msg;
-                    return _context54.abrupt("return");
+                    return _context58.abrupt("return");
 
                   case 11:
                     console.log(userResponse.msg);
-                    _context54.next = 14;
+                    _context58.next = 14;
                     return this.routeToLogin();
 
                   case 14:
-                    _context54.next = 19;
+                    _context58.next = 19;
                     break;
 
                   case 16:
-                    _context54.prev = 16;
-                    _context54.t0 = _context54["catch"](3);
-                    console.log(_context54.t0);
+                    _context58.prev = 16;
+                    _context58.t0 = _context58["catch"](3);
+                    console.log(_context58.t0);
 
                   case 19:
                   case "end":
-                    return _context54.stop();
+                    return _context58.stop();
                 }
               }
-            }, _callee54, this, [[3, 16]]);
+            }, _callee58, this, [[3, 16]]);
           }));
         }
       }]);
@@ -5094,38 +5173,39 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var FeedComponent = /*#__PURE__*/function () {
       function FeedComponent(fs) {
-        var _this13 = this;
+        var _this15 = this;
 
         _classCallCheck(this, FeedComponent);
 
         this.fs = fs;
+        window['feedComp'] = this;
 
         (function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this13, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
-            return regeneratorRuntime.wrap(function _callee55$(_context55) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee59() {
+            return regeneratorRuntime.wrap(function _callee59$(_context59) {
               while (1) {
-                switch (_context55.prev = _context55.next) {
+                switch (_context59.prev = _context59.next) {
                   case 0:
-                    _context55.prev = 0;
-                    _context55.next = 3;
+                    _context59.prev = 0;
+                    _context59.next = 3;
                     return this.fs.root.ps.getPosts();
 
                   case 3:
                     console.log('got posts');
-                    _context55.next = 9;
+                    _context59.next = 9;
                     break;
 
                   case 6:
-                    _context55.prev = 6;
-                    _context55.t0 = _context55["catch"](0);
-                    console.log('there was problem getting', _context55.t0);
+                    _context59.prev = 6;
+                    _context59.t0 = _context59["catch"](0);
+                    console.log('there was problem getting', _context59.t0);
 
                   case 9:
                   case "end":
-                    return _context55.stop();
+                    return _context59.stop();
                 }
               }
-            }, _callee55, this, [[0, 6]]);
+            }, _callee59, this, [[0, 6]]);
           }));
         })();
       }
@@ -5133,16 +5213,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(FeedComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
-            return regeneratorRuntime.wrap(function _callee56$(_context56) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee60() {
+            return regeneratorRuntime.wrap(function _callee60$(_context60) {
               while (1) {
-                switch (_context56.prev = _context56.next) {
+                switch (_context60.prev = _context60.next) {
                   case 0:
+                    console.log('init');
+                    _context60.next = 3;
+                    return this.fs.root.ps.getPosts();
+
+                  case 3:
                   case "end":
-                    return _context56.stop();
+                    return _context60.stop();
                 }
               }
-            }, _callee56);
+            }, _callee60, this);
           }));
         }
       }]);
@@ -5392,7 +5477,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var LayoutComponent = /*#__PURE__*/function () {
       function LayoutComponent(root, ps, us, log, likeStore, fs, ls, sus, as) {
-        var _this14 = this;
+        var _this16 = this;
 
         _classCallCheck(this, LayoutComponent);
 
@@ -5407,25 +5492,25 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
         this.as = as; //IIFE
 
         (function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this14, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
-            return regeneratorRuntime.wrap(function _callee57$(_context57) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this16, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee61() {
+            return regeneratorRuntime.wrap(function _callee61$(_context61) {
               while (1) {
-                switch (_context57.prev = _context57.next) {
+                switch (_context61.prev = _context61.next) {
                   case 0:
                     if (!this.log.currentUser) {
-                      _context57.next = 3;
+                      _context61.next = 3;
                       break;
                     }
 
-                    _context57.next = 3;
+                    _context61.next = 3;
                     return this.ps.getPosts();
 
                   case 3:
                   case "end":
-                    return _context57.stop();
+                    return _context61.stop();
                 }
               }
-            }, _callee57, this);
+            }, _callee61, this);
           }));
         })();
       }
@@ -5723,7 +5808,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Welcome ", ctx.currentUser.name, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.currentUser.name, " ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
@@ -6586,27 +6671,27 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
     var UserProfileComponent = /*#__PURE__*/function () {
       function UserProfileComponent(us) {
-        var _this15 = this;
+        var _this17 = this;
 
         _classCallCheck(this, UserProfileComponent);
 
         this.us = us;
 
         (function () {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this15, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee58() {
-            return regeneratorRuntime.wrap(function _callee58$(_context58) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this17, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee62() {
+            return regeneratorRuntime.wrap(function _callee62$(_context62) {
               while (1) {
-                switch (_context58.prev = _context58.next) {
+                switch (_context62.prev = _context62.next) {
                   case 0:
-                    _context58.next = 2;
+                    _context62.next = 2;
                     return this.us.root.ps.getPosts();
 
                   case 2:
                   case "end":
-                    return _context58.stop();
+                    return _context62.stop();
                 }
               }
-            }, _callee58, this);
+            }, _callee62, this);
           }));
         })();
       }
@@ -6614,16 +6699,16 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       _createClass(UserProfileComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee59() {
-            return regeneratorRuntime.wrap(function _callee59$(_context59) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee63() {
+            return regeneratorRuntime.wrap(function _callee63$(_context63) {
               while (1) {
-                switch (_context59.prev = _context59.next) {
+                switch (_context63.prev = _context63.next) {
                   case 0:
                   case "end":
-                    return _context59.stop();
+                    return _context63.stop();
                 }
               }
-            }, _callee59);
+            }, _callee63);
           }));
         }
       }]);
@@ -6817,7 +6902,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /Users/rotemx/Web/Netcraft/memez-project2/client/memez/projects/memez/src/main.ts */
+    /*! /Users/idanyadgar/Documents/class-projects/memez/client/memez/projects/memez/src/main.ts */
     "./src/main.ts");
     /***/
   }

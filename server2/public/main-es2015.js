@@ -116,6 +116,12 @@ class BaseAjaxAdapter {
                 .toPromise();
         });
     }
+    listenToEvent(event_name, fn) {
+        return;
+    }
+    stopListeningToEvent(event_name) {
+        return;
+    }
 }
 
 
@@ -151,17 +157,8 @@ class BaseSocketAdapter {
         this.socket.on("connect", () => {
             console.log("SOCKET CONNECTED!!");
         });
-        this.socket.on('getUsers', (users) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            console.log('received getUsers reply', users);
-        }));
-        this.socket.on('getPosts', (posts) => {
-            console.log(posts, 'posts');
-        });
         this.socket.on("reconnect", () => {
             console.log("SOCKET RECONNECTED!!");
-        });
-        this.socket.on('pong', () => {
-            console.log('pong');
         });
         this.socket.on("disconnect", () => {
             console.log("SOCKET DISCONNECTED :(");
@@ -188,6 +185,16 @@ class BaseSocketAdapter {
                     console.log("SocketAPI: no sockets connected...");
                 }
             });
+        });
+    }
+    listenToEvent(event_name, fn) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.socket && this.socket.on(event_name, fn);
+        });
+    }
+    stopListeningToEvent(event_name) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.socket && this.socket.off(event_name);
         });
     }
 }
@@ -1357,7 +1364,6 @@ __webpack_require__.r(__webpack_exports__);
 
 //endregion
 class LikeStore {
-    /*USE_MOCK: boolean = false;*/
     constructor(root, likeAdapter) {
         this.root = root;
         this.likeAdapter = likeAdapter;
@@ -1412,7 +1418,7 @@ class LikeStore {
                 }
                 else {
                     const newLike = yield this.createLike(post);
-                    this.currentUserLikes.push(newLike.like);
+                    console.log(newLike, 'newLike');
                     post.likes_amount = newLike.postLikeCount;
                     post.likedByCurrentUser = true;
                 }
@@ -1512,7 +1518,7 @@ class PostStore {
         Object(mobx__WEBPACK_IMPORTED_MODULE_4__["reaction"])(() => this.postContent, () => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             yield this.createPost(this.postContent);
         }));
-        this.getPosts().then(data => console.log('get posts'));
+        this.listenToUpdates();
     }
     get userPosts() {
         return this.posts
@@ -1522,6 +1528,15 @@ class PostStore {
         return this.root.fs.searchTerm ? this.posts.filter((post) => {
             return post.content.includes(this.root.fs.searchTerm) || post.postedBy.name.includes(this.root.fs.searchTerm);
         }) : this.posts;
+    }
+    listenToUpdates() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            yield this.postAdapter
+                .socketAdapter
+                .listenToEvent('postsUpdate', posts => {
+                this.posts = posts;
+            });
+        });
     }
     getPosts() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
@@ -1533,16 +1548,21 @@ class PostStore {
     createPost(content) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.root.ups.loading = true;
-            const newPost = yield this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl);
-            console.log(newPost, 'newPost');
-            this.root.ups.loading = false;
-            yield this.getPosts();
+            yield this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl);
+            setTimeout(() => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+                yield this.getPosts();
+                this.root.ups.loading = false;
+            }), 3000);
         });
     }
     deletePost(post) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.root.ups.loading = true;
             yield this.postAdapter.deletePost(post._id);
-            yield this.getPosts();
+            setTimeout(() => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+                yield this.getPosts();
+                this.root.ups.loading = false;
+            }), 1500);
         });
     }
     onImgPost(event) {
@@ -2255,6 +2275,7 @@ function FeedComponent_div_3_Template(rf, ctx) { if (rf & 1) {
 class FeedComponent {
     constructor(fs) {
         this.fs = fs;
+        window['feedComp'] = this;
         (() => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
                 yield this.fs.root.ps.getPosts();
@@ -2267,6 +2288,8 @@ class FeedComponent {
     }
     ngOnInit() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            console.log('init');
+            yield this.fs.root.ps.getPosts();
         });
     }
 }
@@ -2495,7 +2518,7 @@ NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
     } if (rf & 2) {
         const _r68 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" Welcome ", ctx.currentUser.name, " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.currentUser.name, " ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("matMenuTriggerFor", _r68);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -3008,7 +3031,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/rotemx/Web/Netcraft/memez-project2/client/memez/projects/memez/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/idanyadgar/Documents/class-projects/memez/client/memez/projects/memez/src/main.ts */"./src/main.ts");
 
 
 /***/ })

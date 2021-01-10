@@ -35,7 +35,8 @@ export class PostStore {
       async () => {
         await this.createPost(this.postContent)
       })
-    this.getPosts().then(data => console.log('get posts'))
+
+    this.listenToUpdates()
 
 
   }
@@ -53,6 +54,14 @@ export class PostStore {
     }) : this.posts
   }
 
+  async listenToUpdates() {
+    await this.postAdapter
+      .socketAdapter
+      .listenToEvent('postsUpdate', posts => {
+        this.posts = posts
+
+      })
+  }
 
   @action
   async getPosts() {
@@ -66,20 +75,26 @@ export class PostStore {
   @action
   async createPost(content: string) {
     this.root.ups.loading = true
-    const newPost = await this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl)
-    console.log(newPost, 'newPost');
-    this.root.ups.loading = false
 
-    await this.getPosts()
+    await this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl)
+    setTimeout(async () => {
+      await this.getPosts()
+      this.root.ups.loading = false
+    }, 3000)
+
 
   }
 
   @action
   async deletePost(post: IPost) {
-
+    this.root.ups.loading = true
     await this.postAdapter.deletePost(post._id);
 
-    await this.getPosts()
+    setTimeout(async () => {
+      await this.getPosts()
+      this.root.ups.loading = false
+    }, 1500)
+
 
   }
 

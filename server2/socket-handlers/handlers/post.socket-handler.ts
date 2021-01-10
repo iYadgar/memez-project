@@ -53,8 +53,7 @@ export async function deletePostHandler(this: IHttpController, socket, data, req
 				.all([
 					this.main.likeController.deletePostLikes(parsedData.id),
 					this.main.postController.deletePost(parsedData.id)])
-
-		// socket.emit('deletePost', [postToDelete, `likes deleted ${likesToDelete.deletedCount}`], req_id)
+		socket.emit('deletePost', [postToDelete, `likes deleted ${likesToDelete.deletedCount}`], req_id)
 	} catch (e) {
 		console.log('post was not deleted ' + e)
 	}
