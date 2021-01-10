@@ -13,9 +13,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="update public version 3">
+      <change beforePath="$PROJECT_DIR$/frmIshurimRprt.aspx.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/memez-ec2-private-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/config/config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +182,7 @@
       <workItem from="1610007793288" duration="9066000" />
       <workItem from="1610091104329" duration="3192000" />
       <workItem from="1610284654602" duration="109000" />
-      <workItem from="1610284804546" duration="490000" />
+      <workItem from="1610284804546" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -351,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610285265171</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="update public version 3">
+      <created>1610285313303</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1610285313303</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="get request added" />
     <MESSAGE value="Post &amp; Delete added to BE (Lots of bugs)" />
     <MESSAGE value="Removed post functionality on profile page" />
     <MESSAGE value="Added mongoDB for get and post requests" />
@@ -396,7 +403,8 @@
     <MESSAGE value="Fixed auth + all entities are now calling the server with socket" />
     <MESSAGE value="update public version" />
     <MESSAGE value="update public version 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update public version 2" />
+    <MESSAGE value="update public version 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update public version 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
