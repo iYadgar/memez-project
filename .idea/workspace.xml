@@ -13,10 +13,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="update public version 3">
-      <change beforePath="$PROJECT_DIR$/frmIshurimRprt.aspx.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/memez-ec2-private-key.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/config/config.ts" beforeDir="false" />
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/memez.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/memez.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,7 @@
       <recent name="$PROJECT_DIR$/server2" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="Node.js.server">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -182,7 +183,7 @@
       <workItem from="1610007793288" duration="9066000" />
       <workItem from="1610091104329" duration="3192000" />
       <workItem from="1610284654602" duration="109000" />
-      <workItem from="1610284804546" duration="810000" />
+      <workItem from="1610284804546" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -359,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610285313303</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="update public version 4">
+      <created>1610285639153</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1610285639153</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +387,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Post &amp; Delete added to BE (Lots of bugs)" />
     <MESSAGE value="Removed post functionality on profile page" />
     <MESSAGE value="Added mongoDB for get and post requests" />
     <MESSAGE value="added server 2" />
@@ -404,7 +411,8 @@
     <MESSAGE value="update public version" />
     <MESSAGE value="update public version 2" />
     <MESSAGE value="update public version 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="update public version 3" />
+    <MESSAGE value="update public version 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update public version 4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

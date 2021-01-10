@@ -14,6 +14,7 @@ import * as socketio                                   from "socket.io";
 import {Server as IOServer, Socket as SocketIO_Socket} from "socket.io";
 import * as http                                       from "http";
 import {event_mapper}                                  from "../socket-handlers/event-mapper";
+import * as path                                       from "path";
 
 
 //endregion
@@ -50,6 +51,7 @@ export class HttpController extends BaseController implements IHttpController {
 		this.express_app.use(cors({origin: true, credentials: true}))
 		this.express_app.use(cookieParser())
 		//**//
+		this.express_app.use('/', express.static(path.join(__dirname, '../public')))
 
 		this.registerEndpoints()
 

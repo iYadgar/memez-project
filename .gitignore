@@ -51,3 +51,4 @@ rm /server2/config
 ./memez-ec2-private-key.pem
 
 .idea
+/server2/config/
