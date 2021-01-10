@@ -181,7 +181,7 @@
       <workItem from="1610007793288" duration="9066000" />
       <workItem from="1610091104329" duration="3192000" />
       <workItem from="1610284654602" duration="109000" />
-      <workItem from="1610284804546" duration="442000" />
+      <workItem from="1610284804546" duration="490000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -344,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610285099645</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update public version 2">
+      <created>1610285265171</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1610285265171</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +395,8 @@
     <MESSAGE value="all post endpoints works with socket" />
     <MESSAGE value="Fixed auth + all entities are now calling the server with socket" />
     <MESSAGE value="update public version" />
-    <option name="LAST_COMMIT_MESSAGE" value="update public version" />
+    <MESSAGE value="update public version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update public version 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

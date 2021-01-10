@@ -48,4 +48,6 @@ typings
 Thumbs.db
 
 rm /server2/config
-rm memez-ec2-private-key.pem
+./memez-ec2-private-key.pem
+
+.idea
