@@ -47,4 +47,5 @@ typings
 .DS_Store
 Thumbs.db
 
-/server2/config
+rm /server2/config
+rm memez-ec2-private-key.pem
