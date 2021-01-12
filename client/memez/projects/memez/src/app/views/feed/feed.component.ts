@@ -1,22 +1,45 @@
-import {Component, OnInit} from '@angular/core';
-import {RootStore}         from '../../stores/root.store';
-import {PostStore}         from '../../stores/entities/post.store';
-import {FeedStore}         from '../../stores/views/feed.store';
+//region imports
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {FeedStore}                                  from '../../stores/views/feed.store';
+import {iif}                                        from "rxjs";
+import {toJS}                                       from "mobx";
+import {PostStore}                                  from "../../stores/entities/post.store";
+
+//endregion
 
 
 @Component({
-  selector   : 'mem-feed',
-  templateUrl: './feed.component.html',
-  styleUrls  : ['./feed.component.css']
+  selector       : 'mem-feed',
+  templateUrl    : './feed.component.html',
+  styleUrls      : ['./feed.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
 })
 export class FeedComponent implements OnInit {
 
   constructor(
     public fs: FeedStore
   ) {
+    window['feedComp'] = this;
+    (async () => {
+
+        try {
+          await this.fs.root.ps.getPosts()
+          console.log('got posts')
+        } catch (e) {
+          console.log('there was problem getting', e);
+        }
+
+
+      }
+    )();
+
+
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    console.log('init')
+    await this.fs.root.ps.getPosts()
   }
 
 }

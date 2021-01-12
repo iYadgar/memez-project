@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/memez",
+            "outputPath": "../../server2/public",
             "index": "projects/memez/src/index.html",
             "main": "projects/memez/src/main.ts",
             "polyfills": "projects/memez/src/polyfills.ts",
@@ -114,6 +114,7 @@
               "projects/memez/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/memez/src/styles.css"
             ],
             "scripts": []

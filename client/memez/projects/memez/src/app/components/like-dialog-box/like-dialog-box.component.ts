@@ -1,24 +1,28 @@
+//region imports
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {toJS} from 'mobx';
-import {IUser} from '../../types/Entities/IUser';
+import {MAT_DIALOG_DATA}           from '@angular/material/dialog';
+import {ILike}                     from "../../../../../../../../shared/types/Entities/ILike";
+
+//endregion
+
 
 @Component({
-  selector: 'mem-dialog-box',
+  selector   : 'mem-dialog-box',
   templateUrl: './like-dialog-box.component.html',
-  styleUrls: ['./like-dialog-box.component.css']
+  styleUrls  : ['./like-dialog-box.component.css']
 })
 export class LikeDialogBoxComponent implements OnInit {
 
 
+
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: IUser[]) {
+    @Inject(MAT_DIALOG_DATA) public likes: ILike[]) {
     window['likeDialogBox'] = this;
 
   }
 
   ngOnInit(): void {
-    console.log(this.data);
+
   }
 
 }

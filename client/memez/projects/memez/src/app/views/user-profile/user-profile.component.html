@@ -2,27 +2,52 @@
 
 
   <div class="user-card">
-    <div class="user-picture">picture</div>
-    <div class="user-name">{{us.root.log.currentUser.name}}</div>
-    <div class="user-details">
-      This is the user details.
+    <div class="user-picture" *mobxAutorun>
+      <mem-profile-img
+        *ngIf="!us.root.ups.loading"
+        [url]="us.root.log.currentUser.avatar"
+        (imgClicked)="us.root.ps.openImgDialog($event)"
+      >
+      </mem-profile-img>
+      <mat-spinner
+        *ngIf="us.root.ups.loading">
+      </mat-spinner>
+    </div>
+    <label for="photo-input"
+           class="form-label btn">
+      Change Profile Picture</label>
+
+    <input
+      id="photo-input"
+      type="file"
+      name="file"
+      hidden
+      (change)="us.onProfilePictureUpload($event)"
+    >
+
+
+    <div class="user-name">
+      {{us.root.log.currentUser.name}}
     </div>
     <div class="user-details">
-      This is the user details.
-    </div>
-    <div class="user-details">
-      This is the user details.
-    </div>
-    <div class="user-details">
-      This is the user details.
+      {{us.root.log.currentUser.email}}
     </div>
 
   </div>
 
-  <mem-post-box (newPost)="us.root.ps.post($event)"></mem-post-box>
+
   <div class="posts-container" *mobxAutorun>
     <mem-post
-      *ngFor="let post of us.root.ps.posts"
-      [post]="post"></mem-post>
+      *ngFor="let post of us.root.ps.userPosts"
+      [post]="post"
+      [currentUser]="us.root.log.currentUser"
+      (postDeleted)="us.root.ps.deletePost($event)"
+      (postLiked)="us.root.likeStore.handleLike($event)"
+      (dashboardClicked)="us.root.fs.handLikesleDialog($event)"
+      (imgClicked)="us.root.ps.openImgDialog($event)"
+      (editClicked)="us.root.fs.handleEditPostDialog($event)"
+    ></mem-post>
   </div>
+
+
 </div>

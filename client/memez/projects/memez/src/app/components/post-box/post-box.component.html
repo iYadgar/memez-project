@@ -1,14 +1,29 @@
 <div class="post-box">
 
-  <div class="post-box-title">post your meme</div>
 
   <div class="post-box-input">
-    <input #post_input
-           (keydown.enter)="postToFeed(post_input.value)"
-           class="post-input" type="text" placeholder="write something...">
+    <div class=post-meme-input>
+      <input #post_input
+             class="post-input post-box-input-input" type="text" placeholder="write something...">
+      <input
+        type="file"
+        id="upload-btn"
+        (change)="onImgUpload($event)"
+        hidden>
+      <label
+        class="upload-btn"
+        for="upload-btn">
+        <img class="upload-img"
+             src="./assets/svg's/up-arrow.svg">
+      </label>
+    </div>
     <div class="post-box-btn btn" (click)="postToFeed(post_input.value)">
       POST
     </div>
   </div>
 
+
+
 </div>
+
+

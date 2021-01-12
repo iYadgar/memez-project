@@ -1,42 +1,65 @@
+//region imports
 import {Injectable}         from '@angular/core';
 import {action, observable} from 'mobx-angular';
 import {RootStore}          from '../root.store';
-import {IUser}              from '../../types/Entities/IUser';
+import {IUser}              from '../../../../../../../../shared/types/Entities/IUser';
+import {UserAdapter}        from "../../adapters/user.adapter";
+import {UploadAdapter}      from "../../adapters/upload.adapter";
+import {UploadStore}        from "../upload.store";
+import {NgIf}               from "@angular/common";
 
-import {autorun}    from 'mobx';
-import {MOCK_USERS} from '../../../../../../../../shared/mock/MOCK_USERS';
-import {ILike}      from '../../types/Entities/ILike';
+/*import {MOCK_USERS}         from '../../../../../../../../shared/mock/MOCK_USERS';*/
+
+//endregion
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserStore {
-  useMock: boolean                  = true;
+  /*useMock: boolean = false;*/
   @observable public users: IUser[] = [];
+  @observable avatarUrl: string
+
 
   constructor(
-    public root: RootStore
+    public root: RootStore,
+    private userAdapter: UserAdapter,
+    private uploadStore: UploadStore
   ) {
-    this.root.us        = this;
+    this.root.us = this;
     window['userStore'] = this;
-    autorun(() => {
-      console.log(`users array has changed to ${this.users.map(user => user.name)}`);
-    });
+
   }
 
   @action
   async getUsers(): Promise<IUser[]> {
-    if (this.useMock) {
-      this.users = MOCK_USERS;
-      return this.users;
+
+
+    return this.users = await this
+      .userAdapter
+      .getUsers();
+  }
+
+  @action
+  async onProfilePictureUpload(event) {
+    this.root.ups.loading = true
+    this.avatarUrl = await this.root.ups.onFileUpload(event)
+
+    if (this.root.log.currentUser) {
+      console.log('working')
+      this.root.log.currentUser.avatar = this.avatarUrl
+      const res = await this.updateProfilePicture()
+      this.root.ups.loading = false
+      console.log(res)
     }
-
-    return this.users = await this.root
-                                  .userAdapter
-                                  .getUsers();
+    this.root.ups.loading = false
   }
 
-  @action likedPost(like: ILike) {
-    this.root.log.currentUser.likes.push(like);
+  @action
+  async updateProfilePicture() {
+    await this.userAdapter.updateUserPhoto(this.root.log.currentUser._id, this.avatarUrl)
   }
+
+
 }

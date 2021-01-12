@@ -3,27 +3,45 @@
   <div class="post-profile">
 
     <div class="post-avatar">
-      avatar
+      <mem-profile-img
+        [url]="post.postedBy.avatar">
+      </mem-profile-img>
     </div>
 
-    <div class="post-user-name">
-      User Name
+    <div
+      *mobxAutorun
+      class="post-user-name">
+      {{post.postedBy.name}}
     </div>
 
     <div class="delete-and-date">
 
-      <div class="delete-btn"
-           (click)="onPostDeleted(post)">
-        <img class="delete-icon" src="./assets/svg's/delete.svg" alt="">
+      <div
+        class="post-update-dashboards"
+        *ngIf="currentUser._id === post.postedBy._id">
+
+        <div class="edit-btn"
+             (click)="onPostEdit(post)">
+          <mat-icon
+            class="edit-btn"
+          >edit
+          </mat-icon>
+
+        </div>
+        <div class="edit-btn"
+             (click)="onPostDeleted(post)">
+          <mat-icon class="edit-btn">delete</mat-icon>
+        </div>
+
       </div>
 
 
       <div class="post-date-time">
         <div class="post-date">
-          {{post.date}}
+          {{postDate}}
         </div>
         <div class="post-time">
-          {{post.time}}
+          {{postTime}}
         </div>
       </div>
 
@@ -33,20 +51,39 @@
   </div>
 
 
-  <div class="post-content">
+  <div
+    *mobxAutorun
+    class="post-content">
     {{post.content}}
   </div>
-  <div class="like-dashboard">
-    <div class="like-btn">
-      <mat-icon (click)="onPostLiked(post)"
-                class="like-icon">favorite
-      </mat-icon>
 
-    </div>
-    <div class="likes-amount"
-         *ngIf="post.likes.length"
-         (click)="onDashboardClicked(post)">
-      {{post.likes.length}}</div>
+  <div class="post-img-wrapper"
+       *mobxAutorun
+       (click)="onImgClick(post.postMeme)"
+  >
+    <img *ngIf="post.postMeme"
+         [src]="post.postMeme"
+         class="post-img">
+  </div>
+
+  <div class="like-dashboard"
+  >
+    <ng-container *mobxAutorun>
+      <div class="like-btn">
+        <mat-icon (click)="onPostLiked(post)"
+                  [class.current-user-liked]=" post.likedByCurrentUser"
+                  class="like-icon">favorite
+        </mat-icon>
+
+      </div>
+    </ng-container>
+    <ng-container *mobxAutorun>
+      <div class="likes-amount"
+           *ngIf="post.likes_amount"
+           (click)="onDashboardClicked(post)">
+        {{post.likes_amount}}
+      </div>
+    </ng-container>
   </div>
 
 

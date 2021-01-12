@@ -1,69 +1,130 @@
-import {Injectable} from '@angular/core';
-import {action, observable} from 'mobx-angular';
-import {RootStore} from '../root.store';
-import {IPost} from '../../types/Entities/IPost';
+//region imports
+import {Injectable}                   from '@angular/core';
+import {action, computed, observable} from 'mobx-angular';
+import {RootStore}                    from '../root.store';
+import {IPost}                        from '../../../../../../../../shared/types/Entities/IPost';
+import {PostAdapter}                  from "../../adapters/post.adapter";
+import {MatDialog}                    from "@angular/material/dialog";
+import {PostDialogBoxComponent}       from "../../components/post-dialog-box/post-dialog-box.component";
+import {reaction}                     from "mobx";
+import {PostImgDialogComponent}       from "../../components/post-img-dialog/post-img-dialog.component";
 
-import * as dayjs from 'dayjs';
-import {autorun} from 'mobx';
-import {MOCK_POSTS} from '../../../../../../../../shared/mock/MOCK_POSTS';
-import {ILike} from '../../types/Entities/ILike';
+
+//endregion
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostStore {
   @observable posts: IPost[] = [];
-  useMock: boolean = true;
+  @observable postImgUrl: string
+  @observable uploadEvent;
+  @observable postContent: string
+
 
   constructor(
-    public root: RootStore
+    public root: RootStore,
+    private postAdapter: PostAdapter,
+    public dialog: MatDialog
   ) {
     this.root.ps = this;  //self-registration at root store
     window['postStore'] = this;
+    reaction(
+      () => this.postContent,
+      async () => {
+        await this.createPost(this.postContent)
+      })
+
+    this.listenToUpdates()
+
+
+  }
+
+
+  @computed get userPosts() {
+    return this.posts
+      .filter(post => post.postedBy._id === this.root.log.currentUser._id)
+
+  }
+
+  @computed get filteredPosts() {
+    return this.root.fs.searchTerm ? this.posts.filter((post) => {
+      return post.content.includes(this.root.fs.searchTerm) || post.postedBy.name.includes(this.root.fs.searchTerm)
+    }) : this.posts
+  }
+
+  async listenToUpdates() {
+    await this.postAdapter
+      .socketAdapter
+      .listenToEvent('postsUpdate', posts => {
+        this.posts = posts
+
+      })
+  }
+
+  @action
+  async getPosts() {
+    this.posts = await this
+      .postAdapter
+      .getPosts();
+
 
   }
 
   @action
-  async getPosts(): Promise<IPost[]> {
-    if (this.useMock) {
-      return this.posts = MOCK_POSTS;
-    } else {
-      this.posts = await this.root
-        .postAdapter
-        .getPosts();
-    }
-  }
+  async createPost(content: string) {
+    this.root.ups.loading = true
 
-  @action post(str: string) {
-    let newPost: IPost = {
-      id: 1,
-      user_id: 5,
-      content: str,
-      date: dayjs().format('DD.MM.YY'),
-      time: dayjs().format('HH:mm'),
-      likes: []
-    }
-    this.posts.unshift(newPost);
-    this.root.log.currentUser.posts.push(newPost)
+    await this.postAdapter.createPost(this.root.log.currentUser._id, content, this.postImgUrl)
+    setTimeout(async () => {
+      await this.getPosts()
+      this.root.ups.loading = false
+    }, 3000)
 
 
   }
 
-  @action deletePost(post: IPost) {
-    let index = this.posts.indexOf(post);
-    this.posts.splice(index, 1);
+  @action
+  async deletePost(post: IPost) {
+    this.root.ups.loading = true
+    await this.postAdapter.deletePost(post._id);
+
+    setTimeout(async () => {
+      await this.getPosts()
+      this.root.ups.loading = false
+    }, 1500)
+
+
   }
 
-  @action postLiked(post: IPost, newLike: ILike) {
-    // Find if the current user has already liked the post
-    let found = post.likes.find(like => like.user_id === newLike.user_id);
-    if (found) {
-      // If found unlike
-      let index = post.likes.indexOf(found);
-      post.likes.splice(index, 1);
-    } else {
-      // if not found like
-      post.likes.push(newLike);
-    }
+
+  @action
+  async onImgPost(event) {
+    this.root.ups.loading = true
+    this.uploadEvent = event
+    this.postImgUrl = await this.root.ups.onFileUpload(this.uploadEvent)
+    this.root.ups.loading = false
+    await this.handleDialog()
+
+
   }
+
+  @action
+  async handleDialog() {
+    const dialogRef = this.dialog.open(PostDialogBoxComponent, {data: this.postImgUrl})
+    this.postContent = await dialogRef.afterClosed().toPromise()
+    console.log(this.postContent)
+
+  }
+
+  openImgDialog(memeUrl: string) {
+    this.dialog.open(PostImgDialogComponent, {data: memeUrl})
+  }
+
+  @action
+  async updatePostContent(post_id: string, content: string) {
+    await this.postAdapter.updatePostContent(post_id, content)
+  }
+
 }

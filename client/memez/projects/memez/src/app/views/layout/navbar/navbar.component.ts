@@ -1,12 +1,23 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+//region imports
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Router}                                         from '@angular/router';
+import {IUser}                                          from "../../../../../../../../../shared/types/Entities/IUser";
+
+//endregion
+
 
 @Component({
-  selector: 'mem-navbar',
+  selector   : 'mem-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls  : ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @Input() currentUser: IUser
+  @Output() profileClick = new EventEmitter()
+  @Output() feedClick = new EventEmitter()
+  @Output() logoutClick = new EventEmitter()
+  @Output() headerClick = new EventEmitter()
+  @Output() onSearch = new EventEmitter()
 
   constructor(
     private router: Router
@@ -17,15 +28,24 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  routeToProfile() {
-    this.router.navigateByUrl('profile')
-      .then(r => r);
-
+  profileClicked() {
+    this.profileClick.emit();
   }
 
-  routeToFeed() {
-    this.router.navigateByUrl('feed')
-      .then(r => r);
-
+  feedClicked() {
+    this.feedClick.emit();
   }
+
+  headerClicked() {
+    this.headerClick.emit();
+  }
+
+  logoutClicked() {
+    this.logoutClick.emit();
+  }
+
+  searched(value) {
+    this.onSearch.emit(value)
+  }
+
 }

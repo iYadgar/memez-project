@@ -1,9 +1,11 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+//region imports
+import {enableProdMode}         from '@angular/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
-import { AppModule }   from './app/app.module';
-import { environment } from './environments/environment';
-import {toJS}          from 'mobx';
+import {AppModule}   from './app/app.module';
+import {environment} from './environments/environment';
+//endregion
+
 
 if (environment.production) {
   enableProdMode();

@@ -1,0 +1,16 @@
+export type APIEvent =
+	'getPosts'
+	| 'createPost'
+	| 'deletePost'
+	| 'updatePost'
+	| 'getUsers'
+	| 'getUser'
+	| 'createUser'
+	| 'updateUserPhoto'
+	| 'getLikes'
+	| 'createLike'
+	| 'unlike'
+	| 'getUserLikes'
+	| 'getPostLikes'
+	| 'postsUpdate'
+

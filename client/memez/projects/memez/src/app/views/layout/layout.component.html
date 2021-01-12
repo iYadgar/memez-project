@@ -1,6 +1,15 @@
 <div class="app-wrapper">
 
-  <mem-navbar *ngIf="log.currentUser"></mem-navbar>
+  <ng-container *mobxAutorun>
+    <mem-navbar *ngIf="log.currentUser"
+                (profileClick)="ls.routeToProfile()"
+                (headerClick)="ls.routeToFeed()"
+                (feedClick)="ls.routeToFeed()"
+                (logoutClick)="ls.root.log.handleLogout()"
+                [currentUser]="ls.root.log.currentUser"
+                (onSearch)="ls.root.fs.onSearch($event)"
+    ></mem-navbar>
+  </ng-container>
 
 
   <div class="app-content">

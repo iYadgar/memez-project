@@ -1,7 +1,13 @@
 <ul class="liked-user-list"
-    *ngFor="let user of data">
-  <li class="liked-user">{{user.name}}</li>
+
+>
+  <li *ngFor="let like of likes"
+      class="liked-user">
+    <div class="like-user-name">{{like.user_id.name}}</div>
+    <span class="like-timestamp">{{like.created}}</span>
+  </li>
 
 </ul>
+
 
 

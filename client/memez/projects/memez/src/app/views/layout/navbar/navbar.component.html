@@ -1,22 +1,56 @@
 <div class="app-navbar">
 
-  <div class="main-header">
+  <div class="main-header"
+       (click)="headerClicked()">
     <div class="main-title">MEMEZ</div>
     <img class="title-img" src="../../../../assets/svg's/Trollface.svg" alt="">
   </div>
 
-  <div class="navbar-btns">
-    <div class="profile-btn navbar-btn "
-         (click)="routeToProfile()">
-      profile
+  <div class="navbar-search-input-wrapper">
+    <input
+      #search_input
+      (keyup)="searched(search_input.value)"
+      type="text"
+      class="navbar-search-input">
+    <mat-icon class="search-icon">search</mat-icon>
+  </div>
+
+
+  <div class="welcome-menu-container">
+    <div class="navbar-welcome">
+      {{currentUser.name}}
     </div>
 
-    <div class="feed-btn navbar-btn "
-         (click)="routeToFeed()">
-      feed
+    <div class="navbar-profile-img"
+         [matMenuTriggerFor]="profile_menu"
+    >
+      <mem-profile-img
+        [url]="currentUser.avatar"
+      >
+      </mem-profile-img>
     </div>
-    <div class="navbar-btn ">
-      button
-    </div>
+
+    <mat-menu #profile_menu="matMenu">
+      <button
+        mat-menu-item
+        class="menu-button"
+        (click)="profileClicked()"
+      >profile
+      </button>
+      <button
+        mat-menu-item
+        class="menu-button"
+        (click)="feedClicked()"
+      >feed
+      </button>
+      <button
+        mat-menu-item
+        class="menu-button"
+        (click)="logoutClicked()"
+      >logout
+      </button>
+
+    </mat-menu>
   </div>
+
 </div>

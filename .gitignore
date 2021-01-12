@@ -1,5 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-.idea
+./.idea
 # compiled output
 dist
 tmp
@@ -16,6 +16,8 @@ speed-measure-plugin*.json
 
 # IDEs and editors
 client/memez/.idea
+server2/.idea
+server.old/.idea
 .project
 .classpath
 .c9/
@@ -44,3 +46,9 @@ typings
 # System Files
 .DS_Store
 Thumbs.db
+
+rm /server2/config
+./memez-ec2-private-key.pem
+
+.idea
+/server2/config/

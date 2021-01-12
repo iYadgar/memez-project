@@ -1,4 +1,7 @@
+//region imports
 import { browser, by, element } from 'protractor';
+//endregion
+ 
 
 export class AppPage {
   navigateTo(): Promise<unknown> {
