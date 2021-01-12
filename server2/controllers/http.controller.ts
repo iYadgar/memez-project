@@ -4,7 +4,6 @@ import {Express, NextFunction, Request, Response} from "express";
 import * as events                                from 'events'
 import {BaseController, IBaseController}          from "./base.controller";
 import {config}                                   from "../config/config";
-import * as bodyParser                            from "body-parser";
 import * as cors                                  from "cors";
 import * as cookieParser                          from "cookie-parser";
 import * as Multer                                from 'multer'
@@ -47,13 +46,20 @@ export class HttpController extends BaseController implements IHttpController {
 
 	async init() {
 		//middlewares
-		this.express_app.use(bodyParser.json())
+		this.express_app.use(express.json())
 		this.express_app.use(cors({origin: true, credentials: true}))
 		this.express_app.use(cookieParser())
 		//**//
-		this.express_app.use('/', express.static(path.join(__dirname, '../public')))
+
 
 		this.registerEndpoints()
+
+		//Production !
+		this.express_app
+			.use(express.static(path.join(__dirname, '../public')))
+			.get('*', (req: Request, res: Response) => {
+				res.sendFile(path.join(__dirname, '../public/index.html'))
+			})
 
 		//turn server on
 		this.http_server = this.runServer();
@@ -95,7 +101,6 @@ export class HttpController extends BaseController implements IHttpController {
 
 
 	registerEndpoints() {
-
 
 		//handle Login
 		this.express_app.post('/api/login', (req: Request, res: Response) => {
