@@ -10,7 +10,7 @@ import {APIEvent}                 from "../../../../../../../shared/types/api/ap
 //endregion
 
 
-const URL = 'http://localhost:4000';
+const URL = 'http://ec2-3-139-87-172.us-east-2.compute.amazonaws.com:4000';
 
 
 

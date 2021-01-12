@@ -14,37 +14,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server2/public/3rdpartylicenses.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/main-es2015.b2478ed12cacfc8fe21d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/main-es5.b2478ed12cacfc8fe21d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/polyfills-es2015.ae79de0078ff00e84570.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/polyfills-es5.9410f83205fbd0f725ba.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/runtime-es2015.0811dcefd377500b5b1a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/runtime-es5.0811dcefd377500b5b1a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server2/public/styles.8240262751fcf8f3125f.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/controllers/http.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server2/controllers/http.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server2/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/main-es2015.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/main-es2015.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/main-es5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/main-es5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/polyfills-es2015.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/polyfills-es2015.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/polyfills-es5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/polyfills-es5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/runtime-es2015.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/runtime-es2015.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/runtime-es5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/runtime-es5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/styles-es2015.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/styles-es2015.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/styles-es5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/styles-es5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/vendor-es2015.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/vendor-es2015.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/vendor-es5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/public/vendor-es5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-ajax.adapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-ajax.adapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-socket-adapter.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/memez/projects/memez/src/app/adapters/base-socket-adapter.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +184,7 @@
       <workItem from="1610284654602" duration="109000" />
       <workItem from="1610284804546" duration="6029000" />
       <workItem from="1610292626099" duration="861000" />
-      <workItem from="1610436312899" duration="175000" />
+      <workItem from="1610436312899" duration="1140000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -403,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610287106152</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updated public version (routes supposed to work now)">
+      <created>1610436656255</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1610436656255</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added mongoDB for get and post requests" />
     <MESSAGE value="added server 2" />
     <MESSAGE value="added HTTP Controller" />
     <MESSAGE value="added controllers and handlers architecture" />
@@ -448,7 +426,8 @@
     <MESSAGE value="update public version 3" />
     <MESSAGE value="update public version 4" />
     <MESSAGE value="Updated public version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated public version" />
+    <MESSAGE value="Updated public version (routes supposed to work now)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated public version (routes supposed to work now)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
