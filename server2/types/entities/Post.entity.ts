@@ -1,18 +1,18 @@
 //region imports
-import {IPost} from "../../../shared/types/Entities/IPost";
-import {IUser} from "../../../shared/types/Entities/IUser";
+import {IUser}   from "../../../shared/types/Entities/IUser";
+import {IPostDB} from "../../../shared/types/Entities/IPostDB";
 
 //endregion
 
 
-export class Post implements IPost {
+export class Post implements IPostDB {
 
 	created: number = Date.now();
 
 
 	constructor(
 		public content: string,
-		public postedBy: IUser,
+		public user_id: string,
 		public postMeme: string
 	) {
 

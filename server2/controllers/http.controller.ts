@@ -14,6 +14,8 @@ import {Server as IOServer, Socket as SocketIO_Socket} from "socket.io";
 import * as http                                       from "http";
 import {event_mapper}                                  from "../socket-handlers/event-mapper";
 import * as path                                       from "path";
+import {isProduction}                                  from "../../shared/isProduction";
+import {APIEvent}                                      from "../../shared/types/api/api-event";
 
 
 //endregion
@@ -21,6 +23,9 @@ import * as path                                       from "path";
 
 export interface IHttpController extends IBaseController {
 	events: events.EventEmitter
+
+	updateClient(event: APIEvent, data: any, where: string): void;
+
 	// app: Express  /// IMPLEMENTATION DETAIL  - DO NOT EXPOSE !
 }
 
@@ -47,7 +52,9 @@ export class HttpController extends BaseController implements IHttpController {
 	async init() {
 		//middlewares
 		this.express_app.use(express.json())
-		this.express_app.use(cors({origin: true, credentials: true}))
+		if (!isProduction) {
+			this.express_app.use(cors({origin: true, credentials: true}))
+		}
 		this.express_app.use(cookieParser())
 		//**//
 
@@ -55,11 +62,13 @@ export class HttpController extends BaseController implements IHttpController {
 		this.registerEndpoints()
 
 		//Production !
-		this.express_app
-			.use(express.static(path.join(__dirname, '../public')))
-			.get('*', (req: Request, res: Response) => {
-				res.sendFile(path.join(__dirname, '../public/index.html'))
-			})
+		if (isProduction) {
+			this.express_app
+				.use(express.static(path.join(__dirname, '../public')))
+				.get('*', (req: Request, res: Response) => {
+					res.sendFile(path.join(__dirname, '../public/index.html'))
+				})
+		}
 
 		//turn server on
 		this.http_server = this.runServer();
@@ -72,11 +81,13 @@ export class HttpController extends BaseController implements IHttpController {
 		// @ts-ignore
 		this.io_server = socketio(this.http_server);
 
-		this.io_server.on('connection', function (socket: SocketIO_Socket) {
+		this.io_server.on('connection', async function (socket: SocketIO_Socket) {
 			This.sockets.push(socket);
 			const idx = This.sockets.indexOf(socket)
-			socket.send('hello world')
 			console.log(`SOCKET CONNECTED to slot ${idx}. Total ${This.sockets.length} clients connected.  `);
+			//update posts after refresh
+			const posts = await This.main.postController.getPosts()
+			This.updateClient("postsUpdate", posts, 'connection')
 
 
 			socket.on('disconnect', () => {
@@ -130,4 +141,11 @@ export class HttpController extends BaseController implements IHttpController {
 
 	}
 
+	updateClient(event: APIEvent, data: any, where: string) {
+		this.sockets.forEach(sock => {
+			sock.emit(event, data)
+			console.count(`post updated from ${where} `)
+
+		})
+	}
 }

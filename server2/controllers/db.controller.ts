@@ -5,6 +5,7 @@ import {IPost}                                                         from "../
 import {IUser}                                                         from "../../shared/types/Entities/IUser";
 import {Collection, Db, FindAndModifyWriteOpResultObject, MongoClient} from "mongodb";
 import {config}                                                        from "../config/config";
+import {IPostDB}                                                       from "../../shared/types/Entities/IPostDB";
 //endregion
 
 //MongoDB Constants
@@ -15,13 +16,13 @@ const
 export interface IDBController extends IBaseController {
 	saveLike(like: ILike): Promise<any>
 
-	savePost(post: IPost): Promise<any>
+	savePost(post: IPostDB): Promise<any>
 
 	saveUser(user: IUser): Promise<any>
 
 	getLikes(): Promise<ILike[]>
 
-	getPosts(): Promise<IPost[]>
+	getPosts(): Promise<IPostDB[]>
 
 	getUsers(): Promise<IUser[]>
 
@@ -101,7 +102,7 @@ export class DBController extends BaseController implements IDBController {
 		return this.likesCollection.find({}).toArray()
 	}
 
-	async getPosts(): Promise<IPost[]> {
+	async getPosts(): Promise<IPostDB[]> {
 		return this.postsCollection.find({}).toArray()
 	}
 
@@ -116,7 +117,7 @@ export class DBController extends BaseController implements IDBController {
 
 	}
 
-	async savePost(post: IPost): Promise<any> {
+	async savePost(post: IPostDB): Promise<any> {
 		const newPost = await this.postsCollection.insertOne(post)
 		return newPost.ops
 	}

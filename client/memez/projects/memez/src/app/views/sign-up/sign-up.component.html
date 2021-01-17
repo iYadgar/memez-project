@@ -19,8 +19,12 @@
     <form class="sign-up-form-form"
           [formGroup]="signupForm" (ngSubmit)="sus.handleSignUp(signupForm.value)">
 
-      <label for="photo-input"
-             class="form-label btn">
+      <label
+        *mobxAutorun
+        for="photo-input"
+        class="form-label btn"
+        [class.disabled]="sus.root.log.currentUser"
+      >
         Upload Photo</label>
 
       <input

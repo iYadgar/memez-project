@@ -1,7 +1,10 @@
+//region imports
 import {Injectable}         from "@angular/core";
 import {action, observable} from "mobx-angular";
 import {UploadAdapter}      from "../adapters/upload.adapter";
 import {RootStore}          from "./root.store";
+//endregion
+
 
 @Injectable({
   providedIn: "root"

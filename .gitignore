@@ -47,7 +47,7 @@ typings
 .DS_Store
 Thumbs.db
 
-rm /server2/config
+./server2/config
 ./memez-ec2-private-key.pem
 
 .idea

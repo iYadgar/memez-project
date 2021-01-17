@@ -1,9 +1,9 @@
 //region imports
 import {Request, Response} from "express";
 import * as jwt            from 'jsonwebtoken'
-import {IMainController}   from "../controllers/main.controller";
-import {IPost}             from "../../shared/types/Entities/IPost";
-import {IUser}             from "../../shared/types/Entities/IUser";
+import {IMainController} from "../controllers/main.controller";
+import {IPost}           from "../../shared/types/Entities/IPost";
+import {IUser}           from "../../shared/types/Entities/IUser";
 import {Post}              from "../types/entities/Post.entity";
 //endregion
 

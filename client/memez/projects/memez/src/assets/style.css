@@ -879,3 +879,8 @@ mem-post-edit-dialog.ng-star-inserted {
   align-items: center;
   justify-content: space-between;
 }
+
+.disabled {
+  color: #548edb;
+  pointer-events: none;
+}

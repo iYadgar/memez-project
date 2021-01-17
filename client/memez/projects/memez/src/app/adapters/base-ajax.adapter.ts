@@ -1,15 +1,16 @@
 //region imports
-import {HttpClient} from '@angular/common/http';
-import {APIEvent}   from "../../../../../../../shared/types/api/api-event";
+import {HttpClient}   from '@angular/common/http';
+import {APIEvent}     from "../../../../../../../shared/types/api/api-event";
+import {isProduction} from "../../../../../../../shared/isProduction";
 
 
 //endregion
 export interface IBaseAdapter {
   request<T>(event: APIEvent, data: any): Promise<T>;
 
-  listenToEvent<T = any>(event_name: APIEvent, fn: Function): Promise<void>;
+  listenToEvent<T = any>(event_name: APIEvent, fn: Function): void
 
-  stopListeningToEvent<T = any>(event_name: APIEvent): Promise<void>;
+  stopListeningToEvent<T = any>(event_name: APIEvent): void
 
   // post<T>(path: string, body: string): Promise<T>
 
@@ -19,7 +20,8 @@ export interface IBaseAdapter {
 }
 
 export abstract class BaseAjaxAdapter implements IBaseAdapter {
-  BASE_URL = 'http://ec2-3-139-87-172.us-east-2.compute.amazonaws.com:4000/api';
+  BASE_URL = isProduction ? 'http://ec2-34-211-177-84.us-west-2.compute.amazonaws.com:4000/api'
+                          : 'http://localhost:4000/api';
 
   protected constructor(
     private http: HttpClient,
@@ -51,11 +53,11 @@ export abstract class BaseAjaxAdapter implements IBaseAdapter {
       .toPromise()
   }
 
-  listenToEvent<T = any>(event_name: APIEvent, fn: Function): Promise<void> {
+  listenToEvent<T = any>(event_name: APIEvent, fn: Function): void {
     return;
   }
 
-  stopListeningToEvent<T = any>(event_name: APIEvent): Promise<void> {
+  stopListeningToEvent<T = any>(event_name: APIEvent): void {
     return;
   }
 }

@@ -8,6 +8,7 @@ import {MatDialog}                    from "@angular/material/dialog";
 import {PostDialogBoxComponent}       from "../../components/post-dialog-box/post-dialog-box.component";
 import {reaction}                     from "mobx";
 import {PostImgDialogComponent}       from "../../components/post-img-dialog/post-img-dialog.component";
+import {IUser}                        from "../../../../../../../../shared/types/Entities/IUser";
 
 
 //endregion
@@ -44,13 +45,19 @@ export class PostStore {
 
   @computed get userPosts() {
     return this.posts
-      .filter(post => post.postedBy._id === this.root.log.currentUser._id)
+      .filter((post: IPost) => {
+        return post.postedBy['_id'] === this.root.log.currentUser._id
+
+      })
 
   }
 
   @computed get filteredPosts() {
     return this.root.fs.searchTerm ? this.posts.filter((post) => {
-      return post.content.includes(this.root.fs.searchTerm) || post.postedBy.name.includes(this.root.fs.searchTerm)
+
+      if (post.postedBy as IUser) {
+        return post.content.includes(this.root.fs.searchTerm) || post.postedBy.name.includes(this.root.fs.searchTerm)
+      }
     }) : this.posts
   }
 

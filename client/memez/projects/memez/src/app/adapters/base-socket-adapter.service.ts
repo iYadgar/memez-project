@@ -6,13 +6,9 @@ import {v4 as uuidv4}             from "uuid";
 import {IBaseAdapter}             from "./base-ajax.adapter";
 import Emitter                    from 'component-emitter';
 import {APIEvent}                 from "../../../../../../../shared/types/api/api-event";
+import {isProduction}             from "../../../../../../../shared/isProduction";
 
 //endregion
-
-
-const URL = 'http://ec2-3-139-87-172.us-east-2.compute.amazonaws.com:4000';
-
-
 
 
 @Injectable({
@@ -21,12 +17,14 @@ const URL = 'http://ec2-3-139-87-172.us-east-2.compute.amazonaws.com:4000';
 export class BaseSocketAdapter implements IBaseAdapter {
   socket: SocketIOClient;
   user;
+  BASE_URL = isProduction ? 'http://ec2-34-211-177-84.us-west-2.compute.amazonaws.com:4000'
+                          : 'http://localhost:4000';
 
   constructor() {
 
 
     // @ts-ignore
-    this.socket = io(URL, {transports: ['websocket'], upgrade: false});
+    this.socket = io(this.BASE_URL, {transports: ['websocket'], upgrade: false});
 
     this.socket.on("connect", () => {
         console.log("SOCKET CONNECTED!!");
@@ -74,7 +72,7 @@ export class BaseSocketAdapter implements IBaseAdapter {
 
   }
 
-  async listenToEvent<T = any>(event_name: APIEvent, fn: Function) {
+  listenToEvent<T = any>(event_name: APIEvent, fn: Function) {
     this.socket && this.socket.on(event_name, fn)
 
   }

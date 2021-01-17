@@ -1,5 +1,9 @@
+//region imports
+
 import {APIEvent}                  from "../../shared/types/api/api-event";
 import {Socket as SocketIO_Socket} from "socket.io/dist/socket";
+
+ 
 import {
 	createPostHandler,
 	deletePostHandler,
@@ -20,7 +24,7 @@ import {
 	updateUserPhotoHandler
 }                                  from "./handlers/user.socket-handler";
 
-
+//endregion¬
 export const event_mapper: { [event_name in APIEvent]: (socket: SocketIO_Socket, data: any, req_id: string) => void } = {
 
 	createUser     : createUserHandler,
