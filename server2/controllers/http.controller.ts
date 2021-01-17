@@ -106,6 +106,7 @@ export class HttpController extends BaseController implements IHttpController {
 
 	runServer(): http.Server {
 		return this.express_app.listen(config.port, () => {
+
 			console.log(`server is up on port ${config.port} `)
 		})
 	}
