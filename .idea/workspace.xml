@@ -13,9 +13,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4f13af5c-ffeb-43be-85d9-93a236328acd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +182,7 @@
       <workItem from="1610284804546" duration="6029000" />
       <workItem from="1610292626099" duration="861000" />
       <workItem from="1610436312899" duration="1140000" />
-      <workItem from="1610874610985" duration="5126000" />
+      <workItem from="1610874610985" duration="5445000" />
     </task>
     <task id="LOCAL-00001" summary="get request added">
       <created>1606654895103</created>
@@ -403,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610879320864</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Version Update (refresh Works) - production true - edited pckg json2">
+      <created>1610885748561</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1610885748561</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +428,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="For Omer" />
     <MESSAGE value="For Omer 2" />
     <MESSAGE value="Problem with likes" />
     <MESSAGE value="Flat Problem" />
@@ -448,7 +452,8 @@
     <MESSAGE value="Version Update (refresh Works)" />
     <MESSAGE value="Version Update (refresh Works) - production true" />
     <MESSAGE value="Version Update (refresh Works) - production true - edited pckg json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Update (refresh Works) - production true - edited pckg json" />
+    <MESSAGE value="Version Update (refresh Works) - production true - edited pckg json2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Update (refresh Works) - production true - edited pckg json2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

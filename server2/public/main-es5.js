@@ -39,7 +39,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       return isProduction;
     });
 
-    var isProduction = false;
+    var isProduction = true;
     /***/
   },
 
