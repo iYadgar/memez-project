@@ -1,1 +1,1 @@
-export const isProduction: boolean = false
+export const isProduction: boolean = true
